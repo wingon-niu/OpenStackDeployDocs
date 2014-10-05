@@ -1,0 +1,24 @@
+Begin time of controller-node-part-2-install:
+2014年 10月 05日 星期日 20:44:14 CST
+DB_NODE_TYPE === FollowNode
+ERROR 1062 (23000) at line 1: Duplicate entry '%-haproxy_check' for key 'PRIMARY'
+MQ_NODE_TYPE === FollowNode
+ * Starting message broker rabbitmq-server
+   ...done.
+Stopping node rabbit@controller03 ...
+...done.
+Clustering node rabbit@controller03 with rabbit@controller01 ...
+...done.
+Starting node rabbit@controller03 ...
+...done.
+Wait 5 seconds......
+Setting policy "HA" for pattern "^(?!amq\\.).*" to "{\"ha-mode\": \"all\"}" with priority "0" ...
+...done.
+Cluster status of node rabbit@controller03 ...
+[{nodes,[{disc,[rabbit@controller01,rabbit@controller02,
+                rabbit@controller03]}]},
+ {running_nodes,[rabbit@controller01,rabbit@controller02,rabbit@controller03]},
+ {partitions,[]}]
+...done.
+End time of controller-node-part-2-install:
+2014年 10月 05日 星期日 20:44:26 CST

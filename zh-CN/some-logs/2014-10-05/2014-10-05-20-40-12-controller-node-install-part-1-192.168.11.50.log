@@ -1,0 +1,225 @@
+Begin time of controller-node-part-1-install:
+2014年 10月 05日 星期日 20:42:05 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+libaio1 is already the newest version.
+libdbd-mysql-perl is already the newest version.
+libdbi-perl is already the newest version.
+mysql-client is already the newest version.
+libssl0.9.8 is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+(正在读取数据库 ... 系统当前共安装有 114515 个文件和目录。)
+Preparing to unpack .../galera-23.2.4-amd64.deb ...
+Unpacking galera (23.2.4) over (23.2.4) ...
+正在设置 galera (23.2.4) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+ureadahead will be reprofiled on next reboot
+(正在读取数据库 ... 系统当前共安装有 114515 个文件和目录。)
+Preparing to unpack .../mysql-server-wsrep-5.5.28-23.7-amd64.deb ...
+ * Stopping MySQL database server mysqld
+   ...done.
+ * Reloading AppArmor profiles
+Skipping profile in /etc/apparmor.d/disable: usr.sbin.rsyslogd
+   ...done.
+Unpacking mysql-server-wsrep (5.5.28-23.7) over (5.5.28-23.7) ...
+正在设置 mysql-server-wsrep (5.5.28-23.7) ...
+Installing MySQL system tables...
+OK
+Filling help tables...
+OK
+
+To start mysqld at boot time you have to copy
+support-files/mysql.server to the right place for your system
+
+PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+To do so, start the server, then issue the following commands:
+
+/usr/bin/mysqladmin -u root password 'new-password'
+/usr/bin/mysqladmin -u root -h controller03 password 'new-password'
+
+Alternatively you can run:
+/usr/bin/mysql_secure_installation
+
+which will also give you the option of removing the test
+databases and anonymous user created by default.  This is
+strongly recommended for production servers.
+
+See the manual for more instructions.
+
+You can start the MySQL daemon with:
+cd /usr ; /usr/bin/mysqld_safe &
+
+You can test the MySQL daemon with mysql-test-run.pl
+cd /usr/mysql-test ; perl mysql-test-run.pl
+
+Please report any problems with the /usr/scripts/mysqlbug script!
+
+ * Reloading AppArmor profiles
+Skipping profile in /etc/apparmor.d/disable: usr.sbin.rsyslogd
+   ...done.
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+ * Stopping MySQL database server mysqld
+   ...done.
+ * Starting MySQL database server mysqld
+   ...done.
+Wait 5 seconds......
+Database
+information_schema
+cinder
+glance
+keystone
+mysql
+neutron
+niu_db
+nova
+performance_schema
+test
+spawn mysql_secure_installation
+
+
+
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MySQL
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+
+In order to log into MySQL to secure it, we'll need the current
+password for the root user.  If you've just installed MySQL, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MySQL
+root user without the proper authorisation.
+
+Set root password? [Y/n] Y
+New password: 
+Re-enter new password: 
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] Y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] n
+ ... skipping.
+
+By default, MySQL comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] Y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] Y
+ ... Success!
+
+Cleaning up...
+
+
+
+All done!  If you've completed all of the above steps, your MySQL
+installation should now be secure.
+
+Thanks for using MySQL!
+
+
+ * Stopping MySQL database server mysqld
+ * Killing MySQL database server by signal mysqld
+   ...done.
+DB_NODE_TYPE === FollowNode
+ * Starting MySQL database server mysqld
+   ...done.
+Wait 5 seconds......
+Variable_name	Value
+wsrep_local_state_uuid	3ac7b53c-cfbf-11e3-0800-20e2a1b3bfd9
+wsrep_protocol_version	4
+wsrep_last_committed	20428457
+wsrep_replicated	0
+wsrep_replicated_bytes	0
+wsrep_received	1
+wsrep_received_bytes	265
+wsrep_local_commits	0
+wsrep_local_cert_failures	0
+wsrep_local_bf_aborts	0
+wsrep_local_replays	0
+wsrep_local_send_queue	0
+wsrep_local_send_queue_avg	0.333333
+wsrep_local_recv_queue	0
+wsrep_local_recv_queue_avg	0.000000
+wsrep_flow_control_paused	0.000000
+wsrep_flow_control_sent	0
+wsrep_flow_control_recv	0
+wsrep_cert_deps_distance	0.000000
+wsrep_apply_oooe	0.000000
+wsrep_apply_oool	0.000000
+wsrep_apply_window	0.000000
+wsrep_commit_oooe	0.000000
+wsrep_commit_oool	0.000000
+wsrep_commit_window	0.000000
+wsrep_local_state	1
+wsrep_local_state_comment	Joining: receiving State Transfer
+wsrep_cert_index_size	0
+wsrep_causal_reads	0
+wsrep_incoming_addresses	172.16.0.50:3306,172.16.0.48:3306,172.16.0.49:3306
+wsrep_cluster_conf_id	3
+wsrep_cluster_size	3
+wsrep_cluster_state_uuid	3ac7b53c-cfbf-11e3-0800-20e2a1b3bfd9
+wsrep_cluster_status	Primary
+wsrep_connected	ON
+wsrep_local_index	0
+wsrep_provider_name	Galera
+wsrep_provider_vendor	Codership Oy <info@codership.com>
+wsrep_provider_version	23.2.4(r147)
+wsrep_ready	OFF
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+rabbitmq-server is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+Wait 5 seconds......
+Stopping and halting node rabbit@controller03 ...
+Error: unable to connect to node rabbit@controller03: nodedown
+
+DIAGNOSTICS
+===========
+
+nodes in question: [rabbit@controller03]
+
+hosts, their running nodes and ports:
+- controller03: [{rabbitmqctl22101,44956}]
+
+current node details:
+- node name: rabbitmqctl22101@controller03
+- home dir: /var/lib/rabbitmq
+- cookie hash: sFCX8sYTA8inxfWb9MUI/Q==
+
+End time of controller-node-part-1-install:
+2014年 10月 05日 星期日 20:42:49 CST

@@ -1,0 +1,218 @@
+resolvconf stop/waiting
+resolvconf start/running
+Generating locales...
+  zh_CN.UTF-8... up-to-date
+Generation complete.
+------------------------------------------------------------
+-------  hostname  -----------------------------------------
+hk02
+-------  hostname -f  --------------------------------------
+hk02.com
+-------  /etc/hostname  ------------------------------------
+hk02
+-------  /etc/hosts     ------------------------------------
+127.0.0.1    localhost
+127.0.1.1    hk02.com    hk02
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+-------  /etc/resolv.conf  ---------------------------------
+nameserver 211.155.27.88
+nameserver 211.155.23.88
+-------  locale  -------------------------------------------
+LANG="zh_CN.UTF-8"
+LANGUAGE="zh_CN:zh"
+LC_NUMERIC="zh_CN.UTF-8"
+LC_TIME="zh_CN.UTF-8"
+LC_MONETARY="zh_CN.UTF-8"
+LC_PAPER="zh_CN.UTF-8"
+LC_NAME="zh_CN.UTF-8"
+LC_ADDRESS="zh_CN.UTF-8"
+LC_TELEPHONE="zh_CN.UTF-8"
+LC_MEASUREMENT="zh_CN.UTF-8"
+LC_IDENTIFICATION="zh_CN.UTF-8"
+------------------------------------------------------------
+------------------------------------------------------------
+忽略 http://172.16.0.63 precise-updates/icehouse InRelease
+忽略 http://192.168.11.63 trusty InRelease
+命中 http://172.16.0.63 precise-updates/icehouse Release.gpg
+忽略 http://192.168.11.63 trusty-security InRelease
+命中 http://172.16.0.63 precise-updates/icehouse Release
+忽略 http://192.168.11.63 trusty-updates InRelease
+命中 http://192.168.11.63 trusty Release.gpg
+命中 http://192.168.11.63 trusty-security Release.gpg
+命中 http://192.168.11.63 trusty-updates Release.gpg
+命中 http://192.168.11.63 trusty Release
+命中 http://192.168.11.63 trusty-security Release
+命中 http://192.168.11.63 trusty-updates Release
+命中 http://172.16.0.63 precise-updates/icehouse/main amd64 Packages
+命中 http://172.16.0.63 precise-updates/icehouse/main i386 Packages
+命中 http://192.168.11.63 trusty/main Sources
+命中 http://192.168.11.63 trusty/restricted Sources
+命中 http://192.168.11.63 trusty/universe Sources
+命中 http://192.168.11.63 trusty/multiverse Sources
+命中 http://192.168.11.63 trusty/main amd64 Packages
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh_CN
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh
+命中 http://192.168.11.63 trusty/restricted amd64 Packages
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-en
+命中 http://192.168.11.63 trusty/universe amd64 Packages
+命中 http://192.168.11.63 trusty/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty/main i386 Packages
+命中 http://192.168.11.63 trusty/restricted i386 Packages
+命中 http://192.168.11.63 trusty/universe i386 Packages
+命中 http://192.168.11.63 trusty/multiverse i386 Packages
+命中 http://192.168.11.63 trusty/main Translation-zh_CN
+命中 http://192.168.11.63 trusty/main Translation-en
+命中 http://192.168.11.63 trusty/multiverse Translation-zh_CN
+命中 http://192.168.11.63 trusty/multiverse Translation-en
+命中 http://192.168.11.63 trusty/restricted Translation-zh_CN
+命中 http://192.168.11.63 trusty/restricted Translation-en
+命中 http://192.168.11.63 trusty/universe Translation-zh_CN
+命中 http://192.168.11.63 trusty/universe Translation-en
+命中 http://192.168.11.63 trusty-security/main Sources
+命中 http://192.168.11.63 trusty-security/restricted Sources
+命中 http://192.168.11.63 trusty-security/universe Sources
+命中 http://192.168.11.63 trusty-security/multiverse Sources
+命中 http://192.168.11.63 trusty-security/main amd64 Packages
+命中 http://192.168.11.63 trusty-security/restricted amd64 Packages
+命中 http://192.168.11.63 trusty-security/universe amd64 Packages
+命中 http://192.168.11.63 trusty-security/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty-security/main i386 Packages
+命中 http://192.168.11.63 trusty-security/restricted i386 Packages
+命中 http://192.168.11.63 trusty-security/universe i386 Packages
+命中 http://192.168.11.63 trusty-security/multiverse i386 Packages
+命中 http://192.168.11.63 trusty-security/main Translation-en
+命中 http://192.168.11.63 trusty-security/multiverse Translation-en
+命中 http://192.168.11.63 trusty-security/restricted Translation-en
+命中 http://192.168.11.63 trusty-security/universe Translation-en
+命中 http://192.168.11.63 trusty-updates/main Sources
+命中 http://192.168.11.63 trusty-updates/restricted Sources
+命中 http://192.168.11.63 trusty-updates/universe Sources
+命中 http://192.168.11.63 trusty-updates/multiverse Sources
+命中 http://192.168.11.63 trusty-updates/main amd64 Packages
+命中 http://192.168.11.63 trusty-updates/restricted amd64 Packages
+命中 http://192.168.11.63 trusty-updates/universe amd64 Packages
+命中 http://192.168.11.63 trusty-updates/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty-updates/main i386 Packages
+命中 http://192.168.11.63 trusty-updates/restricted i386 Packages
+命中 http://192.168.11.63 trusty-updates/universe i386 Packages
+命中 http://192.168.11.63 trusty-updates/multiverse i386 Packages
+命中 http://192.168.11.63 trusty-updates/main Translation-en
+命中 http://192.168.11.63 trusty-updates/multiverse Translation-en
+命中 http://192.168.11.63 trusty-updates/restricted Translation-en
+命中 http://192.168.11.63 trusty-updates/universe Translation-en
+忽略 http://192.168.11.63 trusty/main Translation-zh
+忽略 http://192.168.11.63 trusty/multiverse Translation-zh
+忽略 http://192.168.11.63 trusty/restricted Translation-zh
+忽略 http://192.168.11.63 trusty/universe Translation-zh
+正在读取软件包列表...
+忽略 http://172.16.0.63 precise-updates/icehouse InRelease
+命中 http://172.16.0.63 precise-updates/icehouse Release.gpg
+忽略 http://192.168.11.63 trusty InRelease
+命中 http://172.16.0.63 precise-updates/icehouse Release
+忽略 http://192.168.11.63 trusty-security InRelease
+忽略 http://192.168.11.63 trusty-updates InRelease
+命中 http://192.168.11.63 trusty Release.gpg
+命中 http://192.168.11.63 trusty-security Release.gpg
+命中 http://192.168.11.63 trusty-updates Release.gpg
+命中 http://192.168.11.63 trusty Release
+命中 http://192.168.11.63 trusty-security Release
+命中 http://192.168.11.63 trusty-updates Release
+命中 http://172.16.0.63 precise-updates/icehouse/main amd64 Packages
+命中 http://172.16.0.63 precise-updates/icehouse/main i386 Packages
+命中 http://192.168.11.63 trusty/main Sources
+命中 http://192.168.11.63 trusty/restricted Sources
+命中 http://192.168.11.63 trusty/universe Sources
+命中 http://192.168.11.63 trusty/multiverse Sources
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh_CN
+命中 http://192.168.11.63 trusty/main amd64 Packages
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-en
+命中 http://192.168.11.63 trusty/restricted amd64 Packages
+命中 http://192.168.11.63 trusty/universe amd64 Packages
+命中 http://192.168.11.63 trusty/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty/main i386 Packages
+命中 http://192.168.11.63 trusty/restricted i386 Packages
+命中 http://192.168.11.63 trusty/universe i386 Packages
+命中 http://192.168.11.63 trusty/multiverse i386 Packages
+命中 http://192.168.11.63 trusty/main Translation-zh_CN
+命中 http://192.168.11.63 trusty/main Translation-en
+命中 http://192.168.11.63 trusty/multiverse Translation-zh_CN
+命中 http://192.168.11.63 trusty/multiverse Translation-en
+命中 http://192.168.11.63 trusty/restricted Translation-zh_CN
+命中 http://192.168.11.63 trusty/restricted Translation-en
+命中 http://192.168.11.63 trusty/universe Translation-zh_CN
+命中 http://192.168.11.63 trusty/universe Translation-en
+命中 http://192.168.11.63 trusty-security/main Sources
+命中 http://192.168.11.63 trusty-security/restricted Sources
+命中 http://192.168.11.63 trusty-security/universe Sources
+命中 http://192.168.11.63 trusty-security/multiverse Sources
+命中 http://192.168.11.63 trusty-security/main amd64 Packages
+命中 http://192.168.11.63 trusty-security/restricted amd64 Packages
+命中 http://192.168.11.63 trusty-security/universe amd64 Packages
+命中 http://192.168.11.63 trusty-security/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty-security/main i386 Packages
+命中 http://192.168.11.63 trusty-security/restricted i386 Packages
+命中 http://192.168.11.63 trusty-security/universe i386 Packages
+命中 http://192.168.11.63 trusty-security/multiverse i386 Packages
+命中 http://192.168.11.63 trusty-security/main Translation-en
+命中 http://192.168.11.63 trusty-security/multiverse Translation-en
+命中 http://192.168.11.63 trusty-security/restricted Translation-en
+命中 http://192.168.11.63 trusty-security/universe Translation-en
+命中 http://192.168.11.63 trusty-updates/main Sources
+命中 http://192.168.11.63 trusty-updates/restricted Sources
+命中 http://192.168.11.63 trusty-updates/universe Sources
+命中 http://192.168.11.63 trusty-updates/multiverse Sources
+命中 http://192.168.11.63 trusty-updates/main amd64 Packages
+命中 http://192.168.11.63 trusty-updates/restricted amd64 Packages
+命中 http://192.168.11.63 trusty-updates/universe amd64 Packages
+命中 http://192.168.11.63 trusty-updates/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty-updates/main i386 Packages
+命中 http://192.168.11.63 trusty-updates/restricted i386 Packages
+命中 http://192.168.11.63 trusty-updates/universe i386 Packages
+命中 http://192.168.11.63 trusty-updates/multiverse i386 Packages
+命中 http://192.168.11.63 trusty-updates/main Translation-en
+命中 http://192.168.11.63 trusty-updates/multiverse Translation-en
+命中 http://192.168.11.63 trusty-updates/restricted Translation-en
+命中 http://192.168.11.63 trusty-updates/universe Translation-en
+忽略 http://192.168.11.63 trusty/main Translation-zh
+忽略 http://192.168.11.63 trusty/multiverse Translation-zh
+忽略 http://192.168.11.63 trusty/restricted Translation-zh
+忽略 http://192.168.11.63 trusty/universe Translation-zh
+正在读取软件包列表...
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+ntp is already the newest version.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+bridge-utils is already the newest version.
+build-essential is already the newest version.
+expect is already the newest version.
+python-mysqldb is already the newest version.
+python-psutil is already the newest version.
+python-setuptools is already the newest version.
+screen is already the newest version.
+sysstat is already the newest version.
+vim is already the newest version.
+vlan is already the newest version.
+python-iniparse is already the newest version.
+curl is already the newest version.
+mysql-client is already the newest version.
+openssl is already the newest version.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+net.ipv4.ip_forward = 1
+Node prepared OK.

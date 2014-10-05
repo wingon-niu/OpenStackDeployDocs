@@ -1,0 +1,32 @@
+Begin time of compute-node-install:
+2014年 10月 05日 星期日 20:45:41 CST
+Begin time of compute-node-nova-install:
+2014年 10月 05日 星期日 20:45:41 CST
+COMPUTE_NODE_LIBVIRT_TYPE = kvm
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+python-guestfs is already the newest version.
+nova-compute-kvm is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  alembic openvswitch-common openvswitch-switch python-jsonrpclib python-mako
+  python-neutron python-novaclient
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+dpkg-statoverride: error: an override for '/boot/vmlinuz-3.13.0-36-generic' already exists; aborting
+NETWORK_API_CLASS = nova-network
+rm: cannot remove ‘/var/lib/nova/nova.sqlite’: No such file or directory
+stop: Unknown instance: 
+nova-compute start/running, process 3302
+nova-network stop/waiting
+nova-network start/running, process 3317
+nova-api-metadata stop/waiting
+nova-api-metadata start/running, process 3334
+nova-compute start/running, process 3302
+nova-network start/running, process 3317
+nova-api-metadata start/running, process 3334
+End time of compute-node-nova-install:
+2014年 10月 05日 星期日 20:45:44 CST
+NETWORK_API_CLASS = nova-network
+End time of compute-node-install:
+2014年 10月 05日 星期日 20:45:44 CST

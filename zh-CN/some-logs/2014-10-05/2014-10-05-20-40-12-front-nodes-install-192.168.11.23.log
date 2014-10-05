@@ -1,0 +1,33 @@
+Begin time of haproxy-keepalived-node-install:
+2014年 10月 05日 星期日 20:40:00 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+libpopt-dev is already the newest version.
+sharutils is already the newest version.
+mailutils is already the newest version.
+sendmail is already the newest version.
+libssl-dev is already the newest version.
+openssl is already the newest version.
+rsyslog is already the newest version.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+haproxy is already the newest version.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+keepalived is already the newest version.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+net.ipv4.ip_forward = 1
+net.ipv4.ip_nonlocal_bind = 1
+ * Stopping keepalived keepalived
+   ...done.
+ * Stopping haproxy haproxy
+   ...done.
+ * Starting keepalived keepalived
+   ...done.
+End time of haproxy-keepalived-node-install:
+2014年 10月 05日 星期日 20:40:02 CST

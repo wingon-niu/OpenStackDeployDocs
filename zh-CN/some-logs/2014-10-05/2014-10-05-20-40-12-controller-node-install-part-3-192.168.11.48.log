@@ -1,0 +1,639 @@
+Begin time of controller-node-part-3-install:
+2014年 10月 05日 星期日 20:44:39 CST
+Begin time of keystone-install:
+2014年 10月 05日 星期日 20:44:39 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+keystone is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+stop: Unknown instance: 
+keystone start/running, process 22500
+Wait 2 seconds......
+FIRST_KEYSTONE_NODE = Yes
+Conflict occurred attempting to store project. (IntegrityError) (1062, "Duplicate entry 'default-admin' for key 'domain_id'") 'INSERT INTO project (id, name, domain_id, description, enabled, extra) VALUES (%s, %s, %s, %s, %s, %s)' ('e23f303d64cb44c1bb27d35f2c5193d8', 'admin', 'default', None, 1, '{}') (HTTP 409)
+Conflict occurred attempting to store project. (IntegrityError) (1062, "Duplicate entry 'default-service' for key 'domain_id'") 'INSERT INTO project (id, name, domain_id, description, enabled, extra) VALUES (%s, %s, %s, %s, %s, %s)' ('3d5dbea73513430fbbb887583c86e7ed', 'service', 'default', None, 1, '{}') (HTTP 409)
+Conflict occurred attempting to store user. (IntegrityError) (1062, "Duplicate entry 'default-admin' for key 'domain_id'") 'INSERT INTO user (id, name, domain_id, password, enabled, extra, default_project_id) VALUES (%s, %s, %s, %s, %s, %s, %s)' ('874bfbac06274926a5e51ca1850fc7b7', 'admin', 'default', '$6$rounds=40000$ZvNQr7266RmxrzpD$Ta1pdVTExGisTIw5wsJJ0Jwxk/HpzAvfmSOT9C.4T/KuSpfbJ7sO2rJzZP.ZZKQXTGBOQHkq9sF/0xFF5.PGo1', 1, '{"email": "admin@domain.com"}', None) (HTTP 409)
+Conflict occurred attempting to store role. (IntegrityError) (1062, "Duplicate entry 'admin' for key 'name'") 'INSERT INTO role (id, name, extra) VALUES (%s, %s, %s)' ('bef4810f132b4ba4810b793a780e4f2d', 'admin', '{}') (HTTP 409)
+Conflict occurred attempting to store role. (IntegrityError) (1062, "Duplicate entry 'KeystoneAdmin' for key 'name'") 'INSERT INTO role (id, name, extra) VALUES (%s, %s, %s)' ('3822518f317a49fbb6b83117bfb0c7cf', 'KeystoneAdmin', '{}') (HTTP 409)
+Conflict occurred attempting to store role. (IntegrityError) (1062, "Duplicate entry 'KeystoneServiceAdmin' for key 'name'") 'INSERT INTO role (id, name, extra) VALUES (%s, %s, %s)' ('75db051692b9459ebed568197b3aafd7', 'KeystoneServiceAdmin', '{}') (HTTP 409)
+usage: keystone user-role-add --user <user> --role <role> [--tenant <tenant>]
+keystone user-role-add: error: argument --user/--user-id/--user_id: expected one argument
+usage: keystone user-role-add --user <user> --role <role> [--tenant <tenant>]
+keystone user-role-add: error: argument --user/--user-id/--user_id: expected one argument
+usage: keystone user-role-add --user <user> --role <role> [--tenant <tenant>]
+keystone user-role-add: error: argument --user/--user-id/--user_id: expected one argument
+Conflict occurred attempting to store role. (IntegrityError) (1062, "Duplicate entry 'Member' for key 'name'") 'INSERT INTO role (id, name, extra) VALUES (%s, %s, %s)' ('5f32e20ed95d456c95510ff35441078b', 'Member', '{}') (HTTP 409)
+usage: keystone user-create --name <user-name> [--tenant <tenant>]
+                            [--pass [<pass>]] [--email <email>]
+                            [--enabled <true|false>]
+keystone user-create: error: argument --tenant/--tenant-id: expected one argument
+usage: keystone user-role-add --user <user> --role <role> [--tenant <tenant>]
+keystone user-role-add: error: argument --tenant/--tenant-id: expected one argument
+usage: keystone user-create --name <user-name> [--tenant <tenant>]
+                            [--pass [<pass>]] [--email <email>]
+                            [--enabled <true|false>]
+keystone user-create: error: argument --tenant/--tenant-id: expected one argument
+usage: keystone user-role-add --user <user> --role <role> [--tenant <tenant>]
+keystone user-role-add: error: argument --tenant/--tenant-id: expected one argument
+usage: keystone user-create --name <user-name> [--tenant <tenant>]
+                            [--pass [<pass>]] [--email <email>]
+                            [--enabled <true|false>]
+keystone user-create: error: argument --tenant/--tenant-id: expected one argument
+usage: keystone user-role-add --user <user> --role <role> [--tenant <tenant>]
+keystone user-role-add: error: argument --tenant/--tenant-id: expected one argument
+usage: keystone user-create --name <user-name> [--tenant <tenant>]
+                            [--pass [<pass>]] [--email <email>]
+                            [--enabled <true|false>]
+keystone user-create: error: argument --tenant/--tenant-id: expected one argument
+usage: keystone user-role-add --user <user> --role <role> [--tenant <tenant>]
+keystone user-role-add: error: argument --tenant/--tenant-id: expected one argument
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+| description |    OpenStack Compute Service     |
+|   enabled   |               True               |
+|      id     | ca2a0b1019514b368af833a2df74a816 |
+|     name    |               nova               |
+|     type    |             compute              |
++-------------+----------------------------------+
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+| description |     OpenStack Volume Service     |
+|   enabled   |               True               |
+|      id     | a034a24a7ed14c1eaa55a46353fd1aa9 |
+|     name    |              cinder              |
+|     type    |              volume              |
++-------------+----------------------------------+
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+| description |     OpenStack Image Service      |
+|   enabled   |               True               |
+|      id     | 545c127770674064842e97389d693031 |
+|     name    |              glance              |
+|     type    |              image               |
++-------------+----------------------------------+
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+| description |        OpenStack Identity        |
+|   enabled   |               True               |
+|      id     | efd46a9019b14299a1e2b2ebeac1af70 |
+|     name    |             keystone             |
+|     type    |             identity             |
++-------------+----------------------------------+
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+| description |      OpenStack EC2 service       |
+|   enabled   |               True               |
+|      id     | a23778d41b8242dfb9f0606daebdb46b |
+|     name    |               ec2                |
+|     type    |               ec2                |
++-------------+----------------------------------+
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+| description |   OpenStack Networking service   |
+|   enabled   |               True               |
+|      id     | 57d2ad4172654eec8db4d42e67da6a42 |
+|     name    |             neutron              |
+|     type    |             network              |
++-------------+----------------------------------+
++-------------+--------------------------------------------+
+|   Property  |                   Value                    |
++-------------+--------------------------------------------+
+|   adminurl  |  http://172.16.0.20:8774/v2/$(tenant_id)s  |
+|      id     |      787e85cea5044e129f579695a74bb2d6      |
+| internalurl |  http://172.16.0.20:8774/v2/$(tenant_id)s  |
+|  publicurl  | http://192.168.11.20:8774/v2/$(tenant_id)s |
+|    region   |                 regionOne                  |
+|  service_id |      3104284de2ce4696a76903619c9f9b8a      |
++-------------+--------------------------------------------+
++-------------+--------------------------------------------+
+|   Property  |                   Value                    |
++-------------+--------------------------------------------+
+|   adminurl  |  http://172.16.0.20:8776/v1/$(tenant_id)s  |
+|      id     |      804201f853db4973a781f64f6933a523      |
+| internalurl |  http://172.16.0.20:8776/v1/$(tenant_id)s  |
+|  publicurl  | http://192.168.11.20:8776/v1/$(tenant_id)s |
+|    region   |                 regionOne                  |
+|  service_id |      6ac427ffc00848da9a4928a3500d028e      |
++-------------+--------------------------------------------+
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+|   adminurl  |     http://172.16.0.20:9292/     |
+|      id     | 0b2621ff6cc84a5d903f7435f20f62b5 |
+| internalurl |     http://172.16.0.20:9292/     |
+|  publicurl  |    http://192.168.11.20:9292/    |
+|    region   |            regionOne             |
+|  service_id | 43443c213e8741f1b6ad8f88dc1136b5 |
++-------------+----------------------------------+
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+|   adminurl  |  http://172.16.0.20:35357/v2.0   |
+|      id     | effcd9c44da6486eb730c6a2c77389e5 |
+| internalurl |   http://172.16.0.20:5000/v2.0   |
+|  publicurl  |  http://192.168.11.20:5000/v2.0  |
+|    region   |            regionOne             |
+|  service_id | 0e47682999d746378fd410aeeed5178b |
++-------------+----------------------------------+
++-------------+------------------------------------------+
+|   Property  |                  Value                   |
++-------------+------------------------------------------+
+|   adminurl  |  http://172.16.0.20:8773/services/Admin  |
+|      id     |     11b384ecaa5c41b1b27bd79fd14ad15b     |
+| internalurl |  http://172.16.0.20:8773/services/Cloud  |
+|  publicurl  | http://192.168.11.20:8773/services/Cloud |
+|    region   |                regionOne                 |
+|  service_id |     141d1d1a96994e6a8a72a5b2d0f673e4     |
++-------------+------------------------------------------+
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+|   adminurl  |     http://172.16.0.20:9696/     |
+|      id     | 0d13a55103e64a3c95fc88d5c0992bc9 |
+| internalurl |     http://172.16.0.20:9696/     |
+|  publicurl  |    http://192.168.11.20:9696/    |
+|    region   |            regionOne             |
+|  service_id | 57d2ad4172654eec8db4d42e67da6a42 |
++-------------+----------------------------------+
+keystone start/running, process 22500
+End time of keystone-install:
+2014年 10月 05日 星期日 20:44:51 CST
+Begin time of glance-install:
+2014年 10月 05日 星期日 20:44:51 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+python-glanceclient is already the newest version.
+glance is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+stop: Unknown instance: 
+glance-api start/running, process 22764
+stop: Unknown instance: 
+glance-registry start/running, process 22773
+FIRST_GLANCE_NODE = Yes
+2014-10-05 20:44:53.874 22775 DEBUG glance.openstack.common.db.sqlalchemy.session [-] MySQL server mode set to STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,TRADITIONAL,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION _mysql_check_effective_sql_mode /usr/lib/python2.7/dist-packages/glance/openstack/common/db/sqlalchemy/session.py:562
+2014-10-05 20:44:53.876 22775 WARNING glance.cmd.manage [-] Warning: The db_enforce_mysql_charset option is now deprecated and will be removed in the Juno release. Please migrate DB manually e.g. convert data of all tables to UTF-8 charset.
+2014-10-05 20:44:53.876 22775 DEBUG migrate.versioning.repository [-] Loading repository /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/repository.py:76
+2014-10-05 20:44:53.896 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/001_add_images_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.896 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/001_add_images_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.896 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/002_add_image_properties_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.896 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/002_add_image_properties_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.897 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_add_disk_format.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.897 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_add_disk_format.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.897 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.897 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.898 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_sqlite_upgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.898 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_sqlite_upgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.898 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/004_add_checksum.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.898 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/004_add_checksum.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.898 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/005_size_big_integer.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.899 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/005_size_big_integer.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.899 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_mysql_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.899 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_mysql_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.899 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.899 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.900 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_sqlite_upgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.900 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_sqlite_upgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.900 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_key_to_name.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.900 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_key_to_name.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.901 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_mysql_upgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.901 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_mysql_upgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.901 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/007_add_owner.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.901 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/007_add_owner.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.901 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/008_add_image_members_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.902 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/008_add_image_members_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.902 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/009_add_mindisk_and_minram.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.902 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/009_add_mindisk_and_minram.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.902 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/010_default_update_at.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.902 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/010_default_update_at.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.903 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_make_mindisk_and_minram_notnull.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.903 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_make_mindisk_and_minram_notnull.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.903 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.903 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.903 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_sqlite_upgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.904 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_sqlite_upgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.904 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/012_id_to_uuid.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.904 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/012_id_to_uuid.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.904 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/013_add_protected.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.904 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/013_add_protected.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.904 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/013_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.905 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/013_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.905 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/014_add_image_tags_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.905 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/014_add_image_tags_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.905 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/015_quote_swift_credentials.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.905 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/015_quote_swift_credentials.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.906 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/016_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.906 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/016_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.906 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/016_add_status_image_member.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.906 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/016_add_status_image_member.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.906 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/017_quote_encrypted_swift_credentials.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.906 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/017_quote_encrypted_swift_credentials.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.907 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/018_add_image_locations_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.907 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/018_add_image_locations_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.907 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/019_migrate_image_locations.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.907 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/019_migrate_image_locations.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.907 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/020_drop_images_table_location.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.907 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/020_drop_images_table_location.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.908 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/021_set_engine_mysql_innodb.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.908 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/021_set_engine_mysql_innodb.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.908 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/022_image_member_index.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.908 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/022_image_member_index.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.908 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/023_placeholder.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.909 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/023_placeholder.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.909 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/024_placeholder.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.909 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/024_placeholder.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.909 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/025_placeholder.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.909 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/025_placeholder.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.909 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/026_add_location_storage_information.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.910 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/026_add_location_storage_information.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.910 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/027_checksum_index.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.910 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/027_checksum_index.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.910 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/028_owner_index.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.910 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/028_owner_index.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.911 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/029_location_meta_data_pickle_to_string.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.911 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/029_location_meta_data_pickle_to_string.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.911 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/030_add_tasks_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.911 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/030_add_tasks_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.911 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/031_remove_duplicated_locations.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.911 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/031_remove_duplicated_locations.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.912 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/032_add_task_info_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.912 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/032_add_task_info_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.912 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/033_add_location_status.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.912 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/033_add_location_status.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.912 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/034_add_virtual_size.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.913 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/034_add_virtual_size.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.913 22775 DEBUG migrate.versioning.repository [-] Repository /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/repository.py:82
+2014-10-05 20:44:53.913 22775 DEBUG migrate.versioning.repository [-] Config: OrderedDict([('db_settings', OrderedDict([('__name__', 'db_settings'), ('repository_id', 'Glance Migrations'), ('version_table', 'migrate_version'), ('required_dbs', '[]')]))]) __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/repository.py:83
+2014-10-05 20:44:53.945 22775 DEBUG migrate.versioning.repository [-] Loading repository /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/repository.py:76
+2014-10-05 20:44:53.946 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/001_add_images_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.947 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/001_add_images_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.947 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/002_add_image_properties_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.947 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/002_add_image_properties_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.947 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_add_disk_format.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.948 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_add_disk_format.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.948 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.948 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.948 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_sqlite_upgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.948 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/003_sqlite_upgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.949 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/004_add_checksum.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.949 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/004_add_checksum.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.949 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/005_size_big_integer.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.949 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/005_size_big_integer.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.950 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_mysql_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.950 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_mysql_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.950 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.950 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.951 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_sqlite_upgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.951 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_sqlite_upgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.951 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_key_to_name.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.951 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_key_to_name.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.951 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_mysql_upgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.952 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/006_mysql_upgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.952 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/007_add_owner.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.952 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/007_add_owner.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.952 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/008_add_image_members_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.953 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/008_add_image_members_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.953 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/009_add_mindisk_and_minram.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.953 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/009_add_mindisk_and_minram.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.953 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/010_default_update_at.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.953 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/010_default_update_at.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.954 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_make_mindisk_and_minram_notnull.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.954 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_make_mindisk_and_minram_notnull.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.954 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.954 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.955 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_sqlite_upgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.955 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/011_sqlite_upgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.955 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/012_id_to_uuid.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.955 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/012_id_to_uuid.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.956 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/013_add_protected.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.956 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/013_add_protected.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.956 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/013_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.956 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/013_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.956 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/014_add_image_tags_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.957 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/014_add_image_tags_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.957 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/015_quote_swift_credentials.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.957 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/015_quote_swift_credentials.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.957 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/016_sqlite_downgrade.sql... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.958 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/016_sqlite_downgrade.sql loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.958 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/016_add_status_image_member.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.958 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/016_add_status_image_member.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.958 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/017_quote_encrypted_swift_credentials.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.959 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/017_quote_encrypted_swift_credentials.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.959 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/018_add_image_locations_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.959 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/018_add_image_locations_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.959 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/019_migrate_image_locations.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.959 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/019_migrate_image_locations.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.960 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/020_drop_images_table_location.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.960 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/020_drop_images_table_location.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.960 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/021_set_engine_mysql_innodb.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.960 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/021_set_engine_mysql_innodb.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.961 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/022_image_member_index.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.961 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/022_image_member_index.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.961 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/023_placeholder.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.961 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/023_placeholder.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.962 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/024_placeholder.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.962 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/024_placeholder.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.962 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/025_placeholder.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.962 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/025_placeholder.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.962 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/026_add_location_storage_information.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.963 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/026_add_location_storage_information.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.963 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/027_checksum_index.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.963 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/027_checksum_index.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.963 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/028_owner_index.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.964 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/028_owner_index.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.964 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/029_location_meta_data_pickle_to_string.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.964 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/029_location_meta_data_pickle_to_string.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.964 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/030_add_tasks_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.964 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/030_add_tasks_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.965 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/031_remove_duplicated_locations.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.965 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/031_remove_duplicated_locations.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.965 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/032_add_task_info_table.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.965 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/032_add_task_info_table.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.966 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/033_add_location_status.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.966 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/033_add_location_status.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.966 22775 DEBUG migrate.versioning.script.base [-] Loading script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/034_add_virtual_size.py... __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:27
+2014-10-05 20:44:53.966 22775 DEBUG migrate.versioning.script.base [-] Script /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo/versions/034_add_virtual_size.py loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/script/base.py:30
+2014-10-05 20:44:53.967 22775 DEBUG migrate.versioning.repository [-] Repository /usr/lib/python2.7/dist-packages/glance/db/sqlalchemy/migrate_repo loaded successfully __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/repository.py:82
+2014-10-05 20:44:53.967 22775 DEBUG migrate.versioning.repository [-] Config: OrderedDict([('db_settings', OrderedDict([('__name__', 'db_settings'), ('repository_id', 'Glance Migrations'), ('version_table', 'migrate_version'), ('required_dbs', '[]')]))]) __init__ /usr/lib/python2.7/dist-packages/migrate/versioning/repository.py:83
+glance-api start/running, process 22764
+glance-registry start/running, process 22773
+End time of glance-install:
+2014年 10月 05日 星期日 20:44:54 CST
+Begin time of cinder-install:
+2014年 10月 05日 星期日 20:44:54 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+cinder-api is already the newest version.
+cinder-scheduler is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+lvm2 is already the newest version.
+cinder-volume is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+0+0 records in
+0+0 records out
+0 bytes (0 B) copied, 0.000177981 s, 0.0 kB/s
+  Physical volume "/dev/loop2" successfully created
+  Volume group "cinder-volumes" successfully created
+spawn fdisk /dev/loop2
+Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
+Building a new DOS disklabel with disk identifier 0x956acb88.
+Changes will remain in memory only, until you decide to write them.
+After that, of course, the previous content won't be recoverable.
+
+Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): p
+Partition number (1-4, default 1): 1
+First sector (2048-41943039, default 2048): 
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-41943039, default 41943039): 
+Using default value 41943039
+
+Command (m for help): t
+Selected partition 1
+Hex code (type L to list codes): 8e
+Changed system type of partition 1 to 8e (Linux LVM)
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error 22: Invalid argument.
+The kernel still uses the old table. The new table will be used at
+the next reboot or after you run partprobe(8) or kpartx(8)
+Syncing disks.
+------------------------------------------------------------
+------------------------------------------------------------
+-rw-r--r-- 1 root root 20G 10月  5 20:44 /root/OpenStack-Install-HA/my-cinder-volumes-file-2
+/dev/loop2: [fc00]:5243045 (/root/OpenStack-Install-HA/my-cinder-volumes-file-2)
+  --- Physical volume ---
+  PV Name               /dev/sda5
+  VG Name               controller01-vg
+  PV Size               232.65 GiB / not usable 2.00 MiB
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              59557
+  Free PE               1
+  Allocated PE          59556
+  PV UUID               fpkR2k-CWz4-PsKZ-481R-UUbJ-0eW1-Flp7Dx
+   
+  --- Physical volume ---
+  PV Name               /dev/loop2
+  VG Name               cinder-volumes
+  PV Size               20.00 GiB / not usable 4.00 MiB
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              5119
+  Free PE               5119
+  Allocated PE          0
+  PV UUID               JX0PgD-nlNe-LVl8-n7SJ-iavQ-8jvb-xxcD1Q
+   
+  --- Volume group ---
+  VG Name               controller01-vg
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  3
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               232.64 GiB
+  PE Size               4.00 MiB
+  Total PE              59557
+  Alloc PE / Size       59556 / 232.64 GiB
+  Free  PE / Size       1 / 4.00 MiB
+  VG UUID               U5mhDf-SEDB-TJPh-LzKg-5WEG-KvS1-kX6Sxe
+   
+  --- Volume group ---
+  VG Name               cinder-volumes
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               20.00 GiB
+  PE Size               4.00 MiB
+  Total PE              5119
+  Alloc PE / Size       0 / 0   
+  Free  PE / Size       5119 / 20.00 GiB
+  VG UUID               OZ71qY-b91I-SEo3-tYQ4-Nmxs-hxFv-muUviz
+   
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+
+
+
+
+losetup /dev/loop2 /root/OpenStack-Install-HA/my-cinder-volumes-file-2
+pvcreate /dev/loop2
+vgcreate cinder-volumes /dev/loop2
+
+exit 0
+
+Disk /dev/loop2: 21.5 GB, 21474836480 bytes
+213 heads, 34 sectors/track, 5791 cylinders, total 41943040 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x956acb88
+
+      Device Boot      Start         End      Blocks   Id  System
+/dev/loop2p1            2048    41943039    20970496   8e  Linux LVM
+------------------------------------------------------------
+------------------------------------------------------------
+FIRST_CINDER_NODE = Yes
++-------------+----------------------------------+
+|   Property  |              Value               |
++-------------+----------------------------------+
+| description |    OpenStack Block Storage v2    |
+|   enabled   |               True               |
+|      id     | ff9166c4b4e14d95b86369e9bc80f491 |
+|     name    |             cinderv2             |
+|     type    |             volumev2             |
++-------------+----------------------------------+
+usage: keystone [--version] [--timeout <seconds>]
+                [--os-username <auth-user-name>]
+                [--os-password <auth-password>]
+                [--os-tenant-name <auth-tenant-name>]
+                [--os-tenant-id <tenant-id>] [--os-auth-url <auth-url>]
+                [--os-region-name <region-name>]
+                [--os-identity-api-version <identity-api-version>]
+                [--os-token <service-token>]
+                [--os-endpoint <service-endpoint>]
+                [--os-cacert <ca-certificate>] [--insecure]
+                [--os-cert <certificate>] [--os-key <key>] [--os-cache]
+                [--force-new-token] [--stale-duration <seconds>]
+                <subcommand> ...
+keystone: error: unrecognized arguments: d807c00b76934d3aa3501a3a2e14764b ff9166c4b4e14d95b86369e9bc80f491
+stop: Unknown instance: 
+cinder-scheduler start/running, process 22902
+stop: Unknown instance: 
+cinder-api start/running, process 22916
+stop: Unknown instance: 
+cinder-volume start/running, process 22930
+stop: Unknown instance: 
+tgt start/running, process 22940
+cinder-scheduler start/running, process 22902
+cinder-api start/running, process 22916
+cinder-volume start/running, process 22930
+tgt start/running, process 22940
+End time of cinder-install:
+2014年 10月 05日 星期日 20:44:59 CST
+Begin time of controller-node-nova-install:
+2014年 10月 05日 星期日 20:44:59 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+python-novaclient is already the newest version.
+nova-api is already the newest version.
+nova-cert is already the newest version.
+nova-scheduler is already the newest version.
+nova-conductor is already the newest version.
+nova-consoleauth is already the newest version.
+nova-novncproxy is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+NETWORK_API_CLASS = nova-network
+FIRST_NOVA_NODE = Yes
+stop: Unknown instance: 
+nova-api start/running, process 23060
+stop: Unknown instance: 
+nova-cert start/running, process 23074
+stop: Unknown instance: 
+nova-consoleauth start/running, process 23088
+stop: Unknown instance: 
+nova-scheduler start/running, process 23102
+stop: Unknown instance: 
+nova-conductor start/running, process 23118
+stop: Unknown instance: 
+nova-novncproxy start/running, process 23134
+nova-api start/running, process 23060
+nova-cert start/running, process 23074
+nova-consoleauth start/running, process 23088
+nova-scheduler start/running, process 23102
+nova-conductor start/running, process 23118
+nova-novncproxy start/running, process 23134
+End time of controller-node-nova-install:
+2014年 10月 05日 星期日 20:45:02 CST
+NETWORK_API_CLASS = nova-network
+Begin time of horizon-install:
+2014年 10月 05日 星期日 20:45:02 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+memcached is already the newest version.
+apache2 is already the newest version.
+libapache2-mod-wsgi is already the newest version.
+openstack-dashboard is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Package 'openstack-dashboard-ubuntu-theme' is not installed, so not removed
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+ * Restarting web server apache2
+   ...done.
+Restarting memcached: memcached.
+End time of horizon-install:
+2014年 10月 05日 星期日 20:45:06 CST
+End time of controller-node-part-3-install:
+2014年 10月 05日 星期日 20:45:06 CST

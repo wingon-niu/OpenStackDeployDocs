@@ -1,0 +1,22 @@
+Begin time of controller-node-part-2-install:
+2014年 10月 05日 星期日 20:42:59 CST
+DB_NODE_TYPE === FirstNode
+ERROR 1007 (HY000) at line 3: Can't create database 'keystone'; database exists
+ERROR 1007 (HY000) at line 6: Can't create database 'glance'; database exists
+ERROR 1007 (HY000) at line 9: Can't create database 'neutron'; database exists
+ERROR 1007 (HY000) at line 12: Can't create database 'nova'; database exists
+ERROR 1007 (HY000) at line 15: Can't create database 'cinder'; database exists
+ERROR 1062 (23000) at line 1: Duplicate entry '%-haproxy_check' for key 'PRIMARY'
+MQ_NODE_TYPE === FirstNode
+ * Starting message broker rabbitmq-server
+   ...done.
+Wait 5 seconds......
+Setting policy "HA" for pattern "^(?!amq\\.).*" to "{\"ha-mode\": \"all\"}" with priority "0" ...
+...done.
+Cluster status of node rabbit@controller01 ...
+[{nodes,[{disc,[rabbit@controller01]}]},
+ {running_nodes,[rabbit@controller01]},
+ {partitions,[]}]
+...done.
+End time of controller-node-part-2-install:
+2014年 10月 05日 星期日 20:43:44 CST

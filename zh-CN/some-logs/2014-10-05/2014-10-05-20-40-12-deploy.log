@@ -1,0 +1,273 @@
+欢迎
+正在检查OpenStack集群服务器是否可以连通...
+------------------------------
+can ping 192.168.11.21
+can ping 192.168.11.22
+can ping 192.168.11.23
+can ping 192.168.11.24
+can ping 192.168.11.48
+can ping 192.168.11.49
+can ping 192.168.11.50
+------------------------------
+can ssh 192.168.11.21
+can ssh 192.168.11.22
+can ssh 192.168.11.23
+can ssh 192.168.11.24
+can ssh 192.168.11.48
+can ssh 192.168.11.49
+can ssh 192.168.11.50
+------------------------------
+All servers are now running.
+1.正在复制文件到OpenStack集群服务器，可以使用 'screen -r niu' 查看复制过程...
+....
+2.正在进行OpenStack集群服务器基本软件安装配置，可以使用 'screen -r niu' 查看安装过程，完毕之后所有服务器将会重新启动...
+.......
+完毕，所有服务器正在重新启动...
+正在检查OpenStack集群服务器是否可以连通...
+------------------------------
+can not ping 192.168.11.21
+can not ping 192.168.11.22
+can not ping 192.168.11.23
+can not ping 192.168.11.24
+can ping 192.168.11.48
+can ping 192.168.11.49
+can ping 192.168.11.50
+------------------------------
+Test ping again after 30 seconds...
+can not ping 192.168.11.21
+can ping 192.168.11.22
+can ping 192.168.11.23
+can ping 192.168.11.24
+can ping 192.168.11.48
+can ping 192.168.11.49
+can ping 192.168.11.50
+------------------------------
+Test ping again after 30 seconds...
+can ping 192.168.11.21
+can ping 192.168.11.22
+can ping 192.168.11.23
+can ping 192.168.11.24
+can ping 192.168.11.48
+can ping 192.168.11.49
+can ping 192.168.11.50
+------------------------------
+can ssh 192.168.11.21
+can ssh 192.168.11.22
+can ssh 192.168.11.23
+can ssh 192.168.11.24
+can ssh 192.168.11.48
+can ssh 192.168.11.49
+can ssh 192.168.11.50
+------------------------------
+All servers are now running.
+保存日志文件到本机...
+receiving incremental file list
+2014-10-05-20-40-12-prepare-front-node-192.168.11.23.log
+
+sent 43 bytes  received 11,929 bytes  23,944.00 bytes/sec
+total size is 11,788  speedup is 0.98
+receiving incremental file list
+2014-10-05-20-40-12-prepare-front-node-192.168.11.24.log
+
+sent 43 bytes  received 11,930 bytes  23,946.00 bytes/sec
+total size is 11,788  speedup is 0.98
+receiving incremental file list
+2014-10-05-20-40-12-prepare-backend-node-192.168.11.21.log
+
+sent 43 bytes  received 13,017 bytes  26,120.00 bytes/sec
+total size is 12,874  speedup is 0.99
+receiving incremental file list
+2014-10-05-20-40-12-prepare-backend-node-192.168.11.22.log
+
+sent 43 bytes  received 13,018 bytes  8,707.33 bytes/sec
+total size is 12,874  speedup is 0.99
+receiving incremental file list
+2014-10-05-20-40-12-prepare-backend-node-192.168.11.48.log
+
+sent 43 bytes  received 12,661 bytes  25,408.00 bytes/sec
+total size is 12,517  speedup is 0.99
+receiving incremental file list
+2014-10-05-20-40-12-prepare-backend-node-192.168.11.49.log
+
+sent 43 bytes  received 12,661 bytes  25,408.00 bytes/sec
+total size is 12,517  speedup is 0.99
+receiving incremental file list
+2014-10-05-20-40-12-prepare-backend-node-192.168.11.50.log
+
+sent 43 bytes  received 12,661 bytes  8,469.33 bytes/sec
+total size is 12,517  speedup is 0.99
+3.开始安装配置前端节点，请稍候，可以使用 'screen -r niu' 查看安装过程...
+...
+前端节点安装配置完成，稍候会自动重启并生效...
+保存日志文件到本机...
+receiving incremental file list
+2014-10-05-20-40-12-front-nodes-install-192.168.11.23.log
+
+sent 43 bytes  received 1,533 bytes  3,152.00 bytes/sec
+total size is 1,390  speedup is 0.88
+receiving incremental file list
+2014-10-05-20-40-12-front-nodes-install-192.168.11.24.log
+
+sent 43 bytes  received 1,533 bytes  1,050.67 bytes/sec
+total size is 1,390  speedup is 0.88
+4.开始安装配置控制节点，请稍候，可以使用 'screen -r niu' 查看安装过程...
+4.1 正在控制节点1上面安装第1部分...
+..........
+4.2 正在控制节点2上面安装第1部分...
+..........
+4.3 正在控制节点3上面安装第1部分...
+..........
+receiving incremental file list
+
+sent 20 bytes  received 66 bytes  57.33 bytes/sec
+total size is 20  speedup is 0.23
+sending incremental file list
+.erlang.cookie
+
+sent 114 bytes  received 35 bytes  298.00 bytes/sec
+total size is 20  speedup is 0.13
+sending incremental file list
+.erlang.cookie
+
+sent 114 bytes  received 35 bytes  99.33 bytes/sec
+total size is 20  speedup is 0.13
+4.4 正在控制节点1上面安装第2部分...
+..........
+4.5 正在控制节点2上面安装第2部分...
+....
+4.6 正在控制节点3上面安装第2部分...
+....
+------------------------------
+can ping 192.168.11.23
+can ping 192.168.11.24
+------------------------------
+can ssh 192.168.11.23
+can ssh 192.168.11.24
+------------------------------
+All servers are now running.
+4.7 正在所有控制节点上面安装第3部分...
+.......
+所有控制节点安装完成.
+保存日志文件到本机...
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-1-192.168.11.48.log
+
+sent 43 bytes  received 7,231 bytes  14,548.00 bytes/sec
+total size is 7,077  speedup is 0.97
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-2-192.168.11.48.log
+
+sent 43 bytes  received 1,196 bytes  2,478.00 bytes/sec
+total size is 1,043  speedup is 0.84
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-3-192.168.11.48.log
+
+sent 43 bytes  received 73,256 bytes  146,598.00 bytes/sec
+total size is 73,090  speedup is 1.00
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-1-192.168.11.49.log
+
+sent 43 bytes  received 7,248 bytes  4,860.67 bytes/sec
+total size is 7,095  speedup is 0.97
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-2-192.168.11.49.log
+
+sent 43 bytes  received 1,014 bytes  2,114.00 bytes/sec
+total size is 860  speedup is 0.81
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-3-192.168.11.49.log
+
+sent 43 bytes  received 10,909 bytes  7,301.33 bytes/sec
+total size is 10,755  speedup is 0.98
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-1-192.168.11.50.log
+
+sent 43 bytes  received 7,294 bytes  14,674.00 bytes/sec
+total size is 7,140  speedup is 0.97
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-2-192.168.11.50.log
+
+sent 43 bytes  received 1,071 bytes  742.67 bytes/sec
+total size is 917  speedup is 0.82
+receiving incremental file list
+2014-10-05-20-40-12-controller-node-install-part-3-192.168.11.50.log
+
+sent 43 bytes  received 10,909 bytes  21,904.00 bytes/sec
+total size is 10,755  speedup is 0.98
+5.开始安装配置网络节点，请稍候，可以使用 'screen -r niu' 查看安装过程...
+Network-api-class = nova-network
+...
+所有网络节点安装配置完成.
+------------------------------
+can ping 192.168.11.21
+can ping 192.168.11.22
+------------------------------
+can ssh 192.168.11.21
+can ssh 192.168.11.22
+------------------------------
+All servers are now running.
+保存日志文件到本机...
+receiving incremental file list
+2014-10-05-20-40-12-network-node-install-192.168.11.21.log
+
+sent 43 bytes  received 1,766 bytes  3,618.00 bytes/sec
+total size is 1,622  speedup is 0.90
+receiving incremental file list
+2014-10-05-20-40-12-network-node-install-192.168.11.22.log
+
+sent 43 bytes  received 1,766 bytes  3,618.00 bytes/sec
+total size is 1,622  speedup is 0.90
+6.开始安装配置计算节点，请稍候，可以使用 'screen -r niu' 查看安装过程...
+...
+所有计算节点安装配置完成.
+保存日志文件到本机...
+receiving incremental file list
+2014-10-05-20-40-12-compute-node-install-192.168.11.21.log
+
+sent 43 bytes  received 1,609 bytes  1,101.33 bytes/sec
+total size is 1,465  speedup is 0.89
+receiving incremental file list
+2014-10-05-20-40-12-compute-node-install-192.168.11.22.log
+
+sent 43 bytes  received 1,609 bytes  3,304.00 bytes/sec
+total size is 1,465  speedup is 0.89
+由于现在没有共享存储，所以需要停止控制节点2和控制节点3上面的5个服务.
+192.168.11.49
+glance-api stop/waiting
+glance-registry stop/waiting
+cinder-scheduler stop/waiting
+cinder-api stop/waiting
+cinder-volume stop/waiting
+tgt stop/waiting
+ * Stopping web server apache2
+ * 
+Stopping memcached: memcached.
+nova-consoleauth stop/waiting
+nova-novncproxy stop/waiting
+192.168.11.50
+glance-api stop/waiting
+glance-registry stop/waiting
+cinder-scheduler stop/waiting
+cinder-api stop/waiting
+cinder-volume stop/waiting
+tgt stop/waiting
+ * Stopping web server apache2
+ * 
+Stopping memcached: memcached.
+nova-consoleauth stop/waiting
+nova-novncproxy stop/waiting
+7.正在进行安装后处理，请稍候，可以使用 'screen -r niu' 查看运行过程...
+.......
+安装后处理完毕.
+保存日志文件到本机...
+receiving incremental file list
+2014-10-05-20-40-12-post-install-script-192.168.11.48.log
+
+sent 43 bytes  received 3,180 bytes  6,446.00 bytes/sec
+total size is 3,037  speedup is 0.94
+完成
+访问地址：
+  http://192.168.11.20/horizon
+  http://172.16.0.20/horizon
+感谢
+

@@ -1,0 +1,279 @@
+Begin time of controller-node-part-3-install:
+2014年 10月 05日 星期日 20:44:39 CST
+Begin time of keystone-install:
+2014年 10月 05日 星期日 20:44:39 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+keystone is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+stop: Unknown instance: 
+keystone start/running, process 22684
+Wait 2 seconds......
+FIRST_KEYSTONE_NODE = No
+keystone start/running, process 22684
+End time of keystone-install:
+2014年 10月 05日 星期日 20:44:42 CST
+Begin time of glance-install:
+2014年 10月 05日 星期日 20:44:42 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+python-glanceclient is already the newest version.
+glance is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+stop: Unknown instance: 
+glance-api start/running, process 22764
+stop: Unknown instance: 
+glance-registry start/running, process 22773
+FIRST_GLANCE_NODE = No
+glance-api start/running, process 22764
+glance-registry start/running, process 22773
+End time of glance-install:
+2014年 10月 05日 星期日 20:44:44 CST
+Begin time of cinder-install:
+2014年 10月 05日 星期日 20:44:44 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+cinder-api is already the newest version.
+cinder-scheduler is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+lvm2 is already the newest version.
+cinder-volume is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+0+0 records in
+0+0 records out
+0 bytes (0 B) copied, 0.000180021 s, 0.0 kB/s
+  Physical volume "/dev/loop2" successfully created
+  Volume group "cinder-volumes" successfully created
+spawn fdisk /dev/loop2
+Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
+Building a new DOS disklabel with disk identifier 0x09c00758.
+Changes will remain in memory only, until you decide to write them.
+After that, of course, the previous content won't be recoverable.
+
+Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): p
+Partition number (1-4, default 1): 1
+First sector (2048-41943039, default 2048): 
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-41943039, default 41943039): 
+Using default value 41943039
+
+Command (m for help): t
+Selected partition 1
+Hex code (type L to list codes): 8e
+Changed system type of partition 1 to 8e (Linux LVM)
+
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error 22: Invalid argument.
+The kernel still uses the old table. The new table will be used at
+the next reboot or after you run partprobe(8) or kpartx(8)
+Syncing disks.
+------------------------------------------------------------
+------------------------------------------------------------
+-rw-r--r-- 1 root root 20G 10月  5 20:44 /root/OpenStack-Install-HA/my-cinder-volumes-file-2
+/dev/loop2: [fc00]:3932309 (/root/OpenStack-Install-HA/my-cinder-volumes-file-2)
+  --- Physical volume ---
+  PV Name               /dev/sda5
+  VG Name               controller02-vg
+  PV Size               232.65 GiB / not usable 2.00 MiB
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              59557
+  Free PE               1
+  Allocated PE          59556
+  PV UUID               qvwzvB-V2CB-H117-LRKX-8966-uQf8-eq6ud0
+   
+  --- Physical volume ---
+  PV Name               /dev/loop2
+  VG Name               cinder-volumes
+  PV Size               20.00 GiB / not usable 4.00 MiB
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              5119
+  Free PE               5119
+  Allocated PE          0
+  PV UUID               0oAbF4-7T1r-uB0w-Z6to-gG2r-Q3Ag-YifGPa
+   
+  --- Volume group ---
+  VG Name               controller02-vg
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  3
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               232.64 GiB
+  PE Size               4.00 MiB
+  Total PE              59557
+  Alloc PE / Size       59556 / 232.64 GiB
+  Free  PE / Size       1 / 4.00 MiB
+  VG UUID               U6laBP-LfWM-UOJ1-ccdE-Lwf2-iedm-j5cGXd
+   
+  --- Volume group ---
+  VG Name               cinder-volumes
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               20.00 GiB
+  PE Size               4.00 MiB
+  Total PE              5119
+  Alloc PE / Size       0 / 0   
+  Free  PE / Size       5119 / 20.00 GiB
+  VG UUID               545dLr-n2Nd-TIOT-xAU7-Yg9f-HpEk-fgGnOd
+   
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+
+
+losetup /dev/loop2 /root/OpenStack-Install-HA/my-cinder-volumes-file-2
+pvcreate /dev/loop2
+vgcreate cinder-volumes /dev/loop2
+
+exit 0
+
+Disk /dev/loop2: 21.5 GB, 21474836480 bytes
+213 heads, 34 sectors/track, 5791 cylinders, total 41943040 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x09c00758
+
+      Device Boot      Start         End      Blocks   Id  System
+/dev/loop2p1            2048    41943039    20970496   8e  Linux LVM
+------------------------------------------------------------
+------------------------------------------------------------
+FIRST_CINDER_NODE = No
+stop: Unknown instance: 
+cinder-scheduler start/running, process 22871
+stop: Unknown instance: 
+cinder-api start/running, process 22885
+stop: Unknown instance: 
+cinder-volume start/running, process 22899
+stop: Unknown instance: 
+tgt start/running, process 22909
+cinder-scheduler start/running, process 22871
+cinder-api start/running, process 22885
+cinder-volume start/running, process 22899
+tgt start/running, process 22909
+End time of cinder-install:
+2014年 10月 05日 星期日 20:44:48 CST
+Begin time of controller-node-nova-install:
+2014年 10月 05日 星期日 20:44:48 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+python-novaclient is already the newest version.
+nova-api is already the newest version.
+nova-cert is already the newest version.
+nova-scheduler is already the newest version.
+nova-conductor is already the newest version.
+nova-consoleauth is already the newest version.
+nova-novncproxy is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+NETWORK_API_CLASS = nova-network
+FIRST_NOVA_NODE = No
+stop: Unknown instance: 
+nova-api start/running, process 23022
+stop: Unknown instance: 
+nova-cert start/running, process 23036
+stop: Unknown instance: 
+nova-consoleauth start/running, process 23050
+stop: Unknown instance: 
+nova-scheduler start/running, process 23064
+stop: Unknown instance: 
+nova-conductor start/running, process 23080
+stop: Unknown instance: 
+nova-novncproxy start/running, process 23096
+nova-api start/running, process 23022
+nova-cert start/running, process 23036
+nova-consoleauth start/running, process 23050
+nova-scheduler start/running, process 23064
+nova-conductor start/running, process 23080
+nova-novncproxy start/running, process 23096
+End time of controller-node-nova-install:
+2014年 10月 05日 星期日 20:44:50 CST
+NETWORK_API_CLASS = nova-network
+Begin time of horizon-install:
+2014年 10月 05日 星期日 20:44:50 CST
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+memcached is already the newest version.
+apache2 is already the newest version.
+libapache2-mod-wsgi is already the newest version.
+openstack-dashboard is already the newest version.
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Package 'openstack-dashboard-ubuntu-theme' is not installed, so not removed
+下列软件包是自动安装的并且现在不需要了：
+  neutron-common python-jsonrpclib python-neutron
+Use 'apt-get autoremove' to remove them.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+ * Restarting web server apache2
+   ...done.
+Restarting memcached: memcached.
+End time of horizon-install:
+2014年 10月 05日 星期日 20:44:54 CST
+End time of controller-node-part-3-install:
+2014年 10月 05日 星期日 20:44:54 CST

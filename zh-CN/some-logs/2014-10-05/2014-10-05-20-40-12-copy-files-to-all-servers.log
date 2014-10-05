@@ -1,0 +1,101 @@
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+
+sent 7,612 bytes  received 101 bytes  15,426.00 bytes/sec
+total size is 162,937  speedup is 21.12
+sending incremental file list
+101-Server-1-env.sh
+
+sent 6,630 bytes  received 35 bytes  13,330.00 bytes/sec
+total size is 6,531  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+
+sent 7,612 bytes  received 101 bytes  15,426.00 bytes/sec
+total size is 162,937  speedup is 21.12
+sending incremental file list
+101-Server-2-env.sh
+
+sent 6,630 bytes  received 35 bytes  13,330.00 bytes/sec
+total size is 6,531  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+
+sent 6,923 bytes  received 101 bytes  14,048.00 bytes/sec
+total size is 162,937  speedup is 23.20
+sending incremental file list
+101-Server-3-env.sh
+
+sent 6,619 bytes  received 35 bytes  4,436.00 bytes/sec
+total size is 6,520  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+
+sent 6,923 bytes  received 101 bytes  4,682.67 bytes/sec
+total size is 162,937  speedup is 23.20
+sending incremental file list
+101-Server-4-env.sh
+
+sent 6,619 bytes  received 35 bytes  13,308.00 bytes/sec
+total size is 6,520  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+OpenStack-Install-HA/images/
+OpenStack-Install-HA/mysql_galera/
+
+sent 9,000 bytes  received 111 bytes  18,222.00 bytes/sec
+total size is 162,937  speedup is 17.88
+sending incremental file list
+101-Server-5-env.sh
+
+sent 6,636 bytes  received 35 bytes  13,342.00 bytes/sec
+total size is 6,537  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+OpenStack-Install-HA/mysql_galera/
+
+sent 7,612 bytes  received 108 bytes  5,146.67 bytes/sec
+total size is 162,937  speedup is 21.11
+sending incremental file list
+101-Server-6-env.sh
+
+sent 6,633 bytes  received 35 bytes  4,445.33 bytes/sec
+total size is 6,534  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+OpenStack-Install-HA/mysql_galera/
+
+sent 7,612 bytes  received 108 bytes  5,146.67 bytes/sec
+total size is 162,937  speedup is 21.11
+sending incremental file list
+101-Server-7-env.sh
+
+sent 6,633 bytes  received 35 bytes  13,336.00 bytes/sec
+total size is 6,534  speedup is 0.98
+sending incremental file list
+mysql_galera/
+
+sent 159 bytes  received 20 bytes  358.00 bytes/sec
+total size is 18,174,256  speedup is 101,532.16
+sending incremental file list
+mysql_galera/
+
+sent 159 bytes  received 20 bytes  119.33 bytes/sec
+total size is 18,174,256  speedup is 101,532.16
+sending incremental file list
+mysql_galera/
+
+sent 159 bytes  received 20 bytes  358.00 bytes/sec
+total size is 18,174,256  speedup is 101,532.16
+sending incremental file list
+images/
+
+sent 106 bytes  received 20 bytes  84.00 bytes/sec
+total size is 13,167,616  speedup is 104,504.89
