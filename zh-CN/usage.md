@@ -20,9 +20,7 @@
 
 ### 2.2 建立一个OpenStack集群 ###
 
-![功能列表](http://www.lightcloud.cc/static/img/cn/functions.png)
-
-![新增集群](http://www.lightcloud.cc/static/img/cn/add_new_cluster.png)
+![功能列表_新增集群](http://www.lightcloud.cc/static/img/cn/functions_add_new_cluster.png)
 
 ![集群信息](http://www.lightcloud.cc/static/img/cn/cluser_info.png)
 
@@ -67,7 +65,7 @@
 
 ![网络设置nova-network](http://www.lightcloud.cc/static/img/cn/network_setting.png)
 
-- 网络组件使用：neutron
+- 网络组件使用：neutron，管理网络和外部网络使用同一个网口，Tunnel网络使用单独的一个网口。
 
 ![网络设置neutron](http://www.lightcloud.cc/static/img/cn/network_setting_neutron.png)
 
