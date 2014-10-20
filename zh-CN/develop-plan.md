@@ -10,7 +10,7 @@
 
 - <font color=blue>（已实现 2014-10-12）</font>实现neutron下vxlan的配置。
 
-- 将memcache改为主备式。
+- <font color=blue>（已实现 2014-10-18）</font>在Haproxy中将memcached改为主备式。
 
 - 引入Ceph，来提供共享存储。
 
