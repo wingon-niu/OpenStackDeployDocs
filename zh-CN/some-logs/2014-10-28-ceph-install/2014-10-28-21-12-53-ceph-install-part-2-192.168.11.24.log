@@ -1,0 +1,2011 @@
+Now running ceph-install-part-2.sh on hk02
+spawn ssh root@controller01
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Oct 28 21:17:50 CST 2014
+
+  System load:  0.52               Processes:           158
+  Usage of /:   4.5% of 225.03GB   Users logged in:     0
+  Memory usage: 35%                IP address for eth0: 172.16.0.48
+  Swap usage:   11%                IP address for eth1: 192.168.11.48
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+Last login: Tue Oct 28 20:32:42 2014 from 192.168.11.24
+root@controller01:~# ifconfig;exit;
+eth0      Link encap:Ethernet  HWaddr 00:1e:67:03:45:31  
+          inet addr:172.16.0.48  Bcast:172.16.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::21e:67ff:fe03:4531/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1417165 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8335 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:105746905 (105.7 MB)  TX bytes:1055005 (1.0 MB)
+          Interrupt:16 Memory:b1100000-b1120000 
+
+eth1      Link encap:Ethernet  HWaddr 00:1e:67:03:45:30  
+          inet addr:192.168.11.48  Bcast:192.168.11.255  Mask:255.255.255.0
+          inet6 addr: fe80::21e:67ff:fe03:4530/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:511534406 errors:0 dropped:30124 overruns:0 frame:0
+          TX packets:401009080 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:55690649391 (55.6 GB)  TX bytes:80056846452 (80.0 GB)
+          Interrupt:16 Memory:b1000000-b1020000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:6456546 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6456546 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1889710547 (1.8 GB)  TX bytes:1889710547 (1.8 GB)
+
+logout
+Connection to controller01 closed.
+spawn ssh root@controller02
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Oct 28 21:17:51 CST 2014
+
+  System load:  1.06               Processes:           146
+  Usage of /:   2.3% of 225.03GB   Users logged in:     0
+  Memory usage: 38%                IP address for eth0: 172.16.0.49
+  Swap usage:   0%                 IP address for eth1: 192.168.11.49
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+Last login: Tue Oct 28 20:32:43 2014 from 192.168.11.24
+root@controller02:~# ifconfig;exit;
+eth0      Link encap:Ethernet  HWaddr 00:1e:67:03:3f:fd  
+          inet addr:172.16.0.49  Bcast:172.16.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::21e:67ff:fe03:3ffd/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1417341 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8885 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:105685626 (105.6 MB)  TX bytes:1169824 (1.1 MB)
+          Interrupt:16 Memory:b1100000-b1120000 
+
+eth1      Link encap:Ethernet  HWaddr 00:1e:67:03:3f:fc  
+          inet addr:192.168.11.49  Bcast:192.168.11.255  Mask:255.255.255.0
+          inet6 addr: fe80::21e:67ff:fe03:3ffc/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:396271039 errors:0 dropped:56273 overruns:0 frame:0
+          TX packets:311844546 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:47475671259 (47.4 GB)  TX bytes:52523554405 (52.5 GB)
+          Interrupt:16 Memory:b1000000-b1020000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:4274 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:4274 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:339444 (339.4 KB)  TX bytes:339444 (339.4 KB)
+
+logout
+Connection to controller02 closed.
+spawn ssh root@controller03
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Oct 28 21:17:52 CST 2014
+
+  System load:  0.23               Processes:           147
+  Usage of /:   2.6% of 225.03GB   Users logged in:     0
+  Memory usage: 47%                IP address for eth0: 172.16.0.50
+  Swap usage:   1%                 IP address for eth1: 192.168.11.50
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+Last login: Tue Oct 28 20:32:44 2014 from 192.168.11.24
+root@controller03:~# ifconfig;exit;
+eth0      Link encap:Ethernet  HWaddr 00:1e:67:03:3b:7b  
+          inet addr:172.16.0.50  Bcast:172.16.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::21e:67ff:fe03:3b7b/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1415522 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7268 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:105542688 (105.5 MB)  TX bytes:888162 (888.1 KB)
+          Interrupt:16 Memory:b1100000-b1120000 
+
+eth1      Link encap:Ethernet  HWaddr 00:1e:67:03:3b:7a  
+          inet addr:192.168.11.50  Bcast:192.168.11.255  Mask:255.255.255.0
+          inet6 addr: fe80::21e:67ff:fe03:3b7a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:419509229 errors:0 dropped:48314 overruns:0 frame:0
+          TX packets:335835032 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:52122574383 (52.1 GB)  TX bytes:63664002685 (63.6 GB)
+          Interrupt:16 Memory:b1000000-b1020000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:4215 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:4215 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:334297 (334.2 KB)  TX bytes:334297 (334.2 KB)
+
+logout
+Connection to controller03 closed.
+spawn ssh root@computer02
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Oct 28 21:17:53 CST 2014
+
+  System load:  0.0                Users logged in:       0
+  Usage of /:   2.4% of 126.58GB   IP address for eth0:   172.16.0.22
+  Memory usage: 4%                 IP address for eth1:   192.168.11.22
+  Swap usage:   0%                 IP address for virbr0: 192.168.122.1
+  Processes:    170
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+Last login: Tue Oct 28 20:32:44 2014 from 192.168.11.24
+root@computer02:~# ifconfig;exit;
+br-int    Link encap:Ethernet  HWaddr 5e:99:aa:92:c0:4c  
+          inet6 addr: fe80::c4db:8cff:fe71:76fd/64 Scope:Link
+          UP BROADCAST RUNNING  MTU:1500  Metric:1
+          RX packets:1418 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:103573 (103.5 KB)  TX bytes:648 (648.0 B)
+
+br-tun    Link encap:Ethernet  HWaddr f2:9a:1b:b0:70:45  
+          inet6 addr: fe80::e8e9:24ff:fe5a:cf9d/64 Scope:Link
+          UP BROADCAST RUNNING  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:648 (648.0 B)
+
+eth0      Link encap:Ethernet  HWaddr 00:25:90:29:60:78  
+          inet addr:172.16.0.22  Bcast:172.16.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::225:90ff:fe29:6078/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1423633 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14641 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:101562151 (101.5 MB)  TX bytes:2229266 (2.2 MB)
+          Memory:c0000000-c0020000 
+
+eth1      Link encap:Ethernet  HWaddr 00:25:90:29:60:79  
+          inet addr:192.168.11.22  Bcast:192.168.11.255  Mask:255.255.255.0
+          inet6 addr: fe80::225:90ff:fe29:6079/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:18160039 errors:0 dropped:669 overruns:0 frame:0
+          TX packets:4411113 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:2330553283 (2.3 GB)  TX bytes:980334515 (980.3 MB)
+          Memory:c0040000-c0060000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:126 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:126 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:65756 (65.7 KB)  TX bytes:65756 (65.7 KB)
+
+virbr0    Link encap:Ethernet  HWaddr e2:42:28:36:3b:04  
+          inet addr:192.168.122.1  Bcast:192.168.122.255  Mask:255.255.255.0
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+logout
+Connection to computer02 closed.
+spawn ssh root@computer01
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Tue Oct 28 21:17:54 CST 2014
+
+  System load:  0.06                Users logged in:       0
+  Usage of /:   20.7% of 118.71GB   IP address for eth0:   172.16.0.21
+  Memory usage: 9%                  IP address for br-ex:  192.168.11.21
+  Swap usage:   0%                  IP address for virbr0: 192.168.122.1
+  Processes:    211
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+Last login: Tue Oct 28 20:32:45 2014 from 192.168.11.24
+root@computer01:~# ifconfig;exit;
+br-ex     Link encap:Ethernet  HWaddr 00:25:90:28:aa:33  
+          inet addr:192.168.11.21  Bcast:192.168.11.255  Mask:255.255.255.0
+          inet6 addr: fe80::c00c:e5ff:fe75:3f4/64 Scope:Link
+          UP BROADCAST RUNNING  MTU:1500  Metric:1
+          RX packets:18547473 errors:0 dropped:19076 overruns:0 frame:0
+          TX packets:5581764 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:3685714570 (3.6 GB)  TX bytes:1224176134 (1.2 GB)
+
+br-int    Link encap:Ethernet  HWaddr 62:98:be:b4:51:41  
+          inet6 addr: fe80::2cb6:16ff:fe0f:1c3a/64 Scope:Link
+          UP BROADCAST RUNNING  MTU:1500  Metric:1
+          RX packets:2472 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:178179 (178.1 KB)  TX bytes:648 (648.0 B)
+
+br-tun    Link encap:Ethernet  HWaddr 82:9a:da:1c:4c:4a  
+          inet6 addr: fe80::8871:cfff:fe93:7b98/64 Scope:Link
+          UP BROADCAST RUNNING  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:648 (648.0 B)
+
+eth0      Link encap:Ethernet  HWaddr 00:25:90:28:aa:32  
+          inet addr:172.16.0.21  Bcast:172.16.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::225:90ff:fe28:aa32/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1229541 errors:10 dropped:0 overruns:0 frame:10
+          TX packets:9531 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:87766061 (87.7 MB)  TX bytes:1253994 (1.2 MB)
+          Memory:c0000000-c0020000 
+
+eth1      Link encap:Ethernet  HWaddr 00:25:90:28:aa:33  
+          inet6 addr: fe80::225:90ff:fe28:aa33/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:19823313 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:5824484 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:4057450262 (4.0 GB)  TX bytes:1246788855 (1.2 GB)
+          Memory:c0040000-c0060000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:11 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:11 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:736 (736.0 B)  TX bytes:736 (736.0 B)
+
+qbr59befb49-3d Link encap:Ethernet  HWaddr 22:46:c1:8b:be:8c  
+          inet6 addr: fe80::50fb:12ff:fe67:48f4/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:690 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:23844 (23.8 KB)  TX bytes:648 (648.0 B)
+
+qbr62df7bed-48 Link encap:Ethernet  HWaddr 4e:e3:33:a5:d3:ac  
+          inet6 addr: fe80::b44b:33ff:feef:3650/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:742 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:28688 (28.6 KB)  TX bytes:648 (648.0 B)
+
+qbr720bdfa9-0d Link encap:Ethernet  HWaddr a6:a8:a8:a7:77:6b  
+          inet6 addr: fe80::98cf:40ff:fe2c:d514/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:635 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:19004 (19.0 KB)  TX bytes:648 (648.0 B)
+
+qbr73e9a35e-2a Link encap:Ethernet  HWaddr 62:16:a3:06:b4:fe  
+          inet6 addr: fe80::64f6:21ff:fe00:3b8b/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:673 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:22260 (22.2 KB)  TX bytes:648 (648.0 B)
+
+qbrdb357a6a-52 Link encap:Ethernet  HWaddr 4a:9b:4b:80:83:f5  
+          inet6 addr: fe80::6039:c2ff:fe0b:ca7a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:724 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:27036 (27.0 KB)  TX bytes:648 (648.0 B)
+
+qbre2e61923-57 Link encap:Ethernet  HWaddr e6:e6:7a:dd:9c:1c  
+          inet6 addr: fe80::88a3:51ff:fe50:f329/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:708 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:25516 (25.5 KB)  TX bytes:648 (648.0 B)
+
+qvb59befb49-3d Link encap:Ethernet  HWaddr 22:46:c1:8b:be:8c  
+          inet6 addr: fe80::2046:c1ff:fe8b:be8c/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:1711257 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1722684 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:348970467 (348.9 MB)  TX bytes:505079723 (505.0 MB)
+
+qvb62df7bed-48 Link encap:Ethernet  HWaddr 4e:e3:33:a5:d3:ac  
+          inet6 addr: fe80::4ce3:33ff:fea5:d3ac/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:87935 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:81140 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:41619299 (41.6 MB)  TX bytes:11803619 (11.8 MB)
+
+qvb720bdfa9-0d Link encap:Ethernet  HWaddr a6:a8:a8:a7:77:6b  
+          inet6 addr: fe80::a4a8:a8ff:fea7:776b/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:1516667 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1497052 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:488524225 (488.5 MB)  TX bytes:264124029 (264.1 MB)
+
+qvb73e9a35e-2a Link encap:Ethernet  HWaddr 62:16:a3:06:b4:fe  
+          inet6 addr: fe80::6016:a3ff:fe06:b4fe/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:1501610 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1479687 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:477860240 (477.8 MB)  TX bytes:202407781 (202.4 MB)
+
+qvbdb357a6a-52 Link encap:Ethernet  HWaddr 4a:9b:4b:80:83:f5  
+          inet6 addr: fe80::489b:4bff:fe80:83f5/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:46176 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:50214 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:47206920 (47.2 MB)  TX bytes:207335911 (207.3 MB)
+
+qvbe2e61923-57 Link encap:Ethernet  HWaddr e6:e6:7a:dd:9c:1c  
+          inet6 addr: fe80::e4e6:7aff:fedd:9c1c/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:27663 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:22048 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:42786324 (42.7 MB)  TX bytes:1984317 (1.9 MB)
+
+qvo59befb49-3d Link encap:Ethernet  HWaddr 62:d6:cf:6d:0c:00  
+          inet6 addr: fe80::60d6:cfff:fe6d:c00/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:1722684 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1711257 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:505079723 (505.0 MB)  TX bytes:348970467 (348.9 MB)
+
+qvo62df7bed-48 Link encap:Ethernet  HWaddr 4e:78:5a:aa:e6:72  
+          inet6 addr: fe80::4c78:5aff:feaa:e672/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:81140 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:87935 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:11803619 (11.8 MB)  TX bytes:41619299 (41.6 MB)
+
+qvo720bdfa9-0d Link encap:Ethernet  HWaddr 9a:86:98:e2:05:05  
+          inet6 addr: fe80::9886:98ff:fee2:505/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:1497052 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1516667 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:264124029 (264.1 MB)  TX bytes:488524225 (488.5 MB)
+
+qvo73e9a35e-2a Link encap:Ethernet  HWaddr be:4e:d0:6a:b7:1b  
+          inet6 addr: fe80::bc4e:d0ff:fe6a:b71b/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:1479687 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1501610 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:202407781 (202.4 MB)  TX bytes:477860240 (477.8 MB)
+
+qvodb357a6a-52 Link encap:Ethernet  HWaddr 06:d8:e5:c2:27:9b  
+          inet6 addr: fe80::4d8:e5ff:fec2:279b/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:50214 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:46176 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:207335911 (207.3 MB)  TX bytes:47206920 (47.2 MB)
+
+qvoe2e61923-57 Link encap:Ethernet  HWaddr 6a:22:9f:7e:b7:cf  
+          inet6 addr: fe80::6822:9fff:fe7e:b7cf/64 Scope:Link
+          UP BROADCAST RUNNING PROMISC MULTICAST  MTU:1500  Metric:1
+          RX packets:22048 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:27663 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:1984317 (1.9 MB)  TX bytes:42786324 (42.7 MB)
+
+tapdb357a6a-52 Link encap:Ethernet  HWaddr fe:16:3e:4b:dd:a4  
+          inet6 addr: fe80::fc16:3eff:fe4b:dda4/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:50226 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:45702 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:500 
+          RX bytes:207336295 (207.3 MB)  TX bytes:47184832 (47.1 MB)
+
+virbr0    Link encap:Ethernet  HWaddr 9e:5a:6e:8d:46:c8  
+          inet addr:192.168.122.1  Bcast:192.168.122.255  Mask:255.255.255.0
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+logout
+Connection to computer01 closed.
+/root/my-ceph-cluster
+Run command: ceph-deploy new computer01 computer02
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy new computer01 computer02
+[ceph_deploy.new][DEBUG ] Creating new cluster named ceph
+[ceph_deploy.new][INFO  ] making sure passwordless SSH succeeds
+[computer01][DEBUG ] connected to host: hk02 
+[computer01][INFO  ] Running command: ssh -CT -o BatchMode=yes computer01
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[computer01][DEBUG ] find the location of an executable
+[computer01][INFO  ] Running command: /bin/ip link show
+[computer01][INFO  ] Running command: /bin/ip addr show
+[computer01][DEBUG ] IP addresses found: ['192.168.11.21', '172.16.0.21', '192.168.122.1']
+[ceph_deploy.new][DEBUG ] Resolving host computer01
+[ceph_deploy.new][DEBUG ] Monitor computer01 at 192.168.11.21
+[ceph_deploy.new][INFO  ] making sure passwordless SSH succeeds
+[computer02][DEBUG ] connected to host: hk02 
+[computer02][INFO  ] Running command: ssh -CT -o BatchMode=yes computer02
+[computer02][DEBUG ] connected to host: computer02 
+[computer02][DEBUG ] detect platform information from remote host
+[computer02][DEBUG ] detect machine type
+[computer02][DEBUG ] find the location of an executable
+[computer02][INFO  ] Running command: /bin/ip link show
+[computer02][INFO  ] Running command: /bin/ip addr show
+[computer02][DEBUG ] IP addresses found: ['172.16.0.22', '192.168.11.22', '192.168.122.1']
+[ceph_deploy.new][DEBUG ] Resolving host computer02
+[ceph_deploy.new][DEBUG ] Monitor computer02 at 192.168.11.22
+[ceph_deploy.new][DEBUG ] Monitor initial members are ['computer01', 'computer02']
+[ceph_deploy.new][DEBUG ] Monitor addrs are ['192.168.11.21', '192.168.11.22']
+[ceph_deploy.new][DEBUG ] Creating a random mon key...
+[ceph_deploy.new][DEBUG ] Writing monitor keyring to ceph.mon.keyring...
+[ceph_deploy.new][DEBUG ] Writing initial config to ceph.conf...
+Ceph public  network : 192.168.11.21   192.168.11.0/24
+Ceph cluster network : 192.168.11.21  192.168.11.0/24
+Run command: ceph-deploy install computer02 computer01
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy install computer02 computer01
+[ceph_deploy.install][DEBUG ] Installing stable version firefly on cluster ceph hosts computer02 computer01
+[ceph_deploy.install][DEBUG ] Detecting platform for host computer02 ...
+[computer02][DEBUG ] connected to host: computer02 
+[computer02][DEBUG ] detect platform information from remote host
+[computer02][DEBUG ] detect machine type
+[ceph_deploy.install][INFO  ] Distro info: Ubuntu 14.04 trusty
+[computer02][INFO  ] installing ceph on computer02
+[computer02][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive apt-get -q install --assume-yes ca-certificates
+[computer02][DEBUG ] 正在读取软件包列表...
+[computer02][DEBUG ] 正在分析软件包的依赖关系树...
+[computer02][DEBUG ] 正在读取状态信息...
+[computer02][DEBUG ] ca-certificates is already the newest version.
+[computer02][DEBUG ] 升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[computer02][INFO  ] Running command: wget -O release.asc https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[computer02][WARNING] --2014-10-28 21:18:05--  https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[computer02][WARNING] Resolving ceph.com (ceph.com)... 208.113.241.137, 2607:f298:4:147::b05:fe2a
+[computer02][WARNING] Connecting to ceph.com (ceph.com)|208.113.241.137|:443... connected.
+[computer02][WARNING] HTTP request sent, awaiting response... 200 OK
+[computer02][WARNING] Length: unspecified [text/plain]
+[computer02][WARNING] Saving to: ‘release.asc’
+[computer02][WARNING] 
+[computer02][WARNING]      0K .                                                       620K=0.003s
+[computer02][WARNING] 
+[computer02][WARNING] 2014-10-28 21:18:06 (620 KB/s) - ‘release.asc’ saved [1752]
+[computer02][WARNING] 
+[computer02][INFO  ] Running command: apt-key add release.asc
+[computer02][DEBUG ] OK
+[computer02][DEBUG ] add deb repo to sources.list
+[computer02][INFO  ] Running command: apt-get -q update
+[computer02][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse InRelease
+[computer02][DEBUG ] 忽略 http://192.168.11.63 trusty InRelease
+[computer02][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release.gpg
+[computer02][DEBUG ] 忽略 http://192.168.11.63 trusty-security InRelease
+[computer02][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release
+[computer02][DEBUG ] 忽略 http://192.168.11.63 trusty-updates InRelease
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty Release.gpg
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security Release.gpg
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release.gpg
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty Release
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security Release
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release
+[computer02][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main amd64 Packages
+[computer02][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/main Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/universe Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/main amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/universe amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse amd64 Packages
+[computer02][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh_CN
+[computer02][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/main i386 Packages
+[computer02][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/universe i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-zh_CN
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-zh_CN
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-zh_CN
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-zh_CN
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/main amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/main i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Sources
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse amd64 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse i386 Packages
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Translation-en
+[computer02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Translation-en
+[computer02][DEBUG ] 忽略 http://192.168.11.63 trusty/main Translation-zh
+[computer02][DEBUG ] 忽略 http://192.168.11.63 trusty/multiverse Translation-zh
+[computer02][DEBUG ] 忽略 http://192.168.11.63 trusty/restricted Translation-zh
+[computer02][DEBUG ] 忽略 http://192.168.11.63 trusty/universe Translation-zh
+[computer02][DEBUG ] 获取：1 http://ceph.com trusty InRelease [6,849 B]
+[computer02][DEBUG ] 获取：2 http://ceph.com trusty/main amd64 Packages [6,316 B]
+[computer02][DEBUG ] 获取：3 http://ceph.com trusty/main i386 Packages [806 B]
+[computer02][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh_CN
+[computer02][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh
+[computer02][DEBUG ] 忽略 http://ceph.com trusty/main Translation-en
+[computer02][DEBUG ] 下载 14.0 kB，耗时 4秒 (3,226 B/s)
+[computer02][DEBUG ] 正在读取软件包列表...
+[computer02][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get -q -o Dpkg::Options::=--force-confnew --no-install-recommends --assume-yes install -- ceph ceph-mds ceph-common ceph-fs-common gdisk
+[computer02][DEBUG ] 正在读取软件包列表...
+[computer02][DEBUG ] 正在分析软件包的依赖关系树...
+[computer02][DEBUG ] 正在读取状态信息...
+[computer02][DEBUG ] 将会安装下列额外的软件包：
+[computer02][DEBUG ]   libgoogle-perftools4 libicu52 libleveldb1 librados2 librbd1 libsnappy1
+[computer02][DEBUG ]   libtcmalloc-minimal4 libunwind8 python-ceph python-flask python-itsdangerous
+[computer02][DEBUG ]   python-werkzeug
+[computer02][DEBUG ] 建议安装的软件包：
+[computer02][DEBUG ]   python-flask-doc ipython python-genshi python-redis python-pylibmc
+[computer02][DEBUG ]   python-memcache python-werkzeug-doc
+[computer02][DEBUG ] 推荐安装的软件包：
+[computer02][DEBUG ]   ceph-fuse libcephfs1 python-blinker python-pyinotify
+[computer02][DEBUG ] 下列【新】软件包将被安装：
+[computer02][DEBUG ]   ceph ceph-common ceph-fs-common ceph-mds gdisk libgoogle-perftools4 libicu52
+[computer02][DEBUG ]   libleveldb1 libsnappy1 libtcmalloc-minimal4 libunwind8 python-ceph
+[computer02][DEBUG ]   python-flask python-itsdangerous python-werkzeug
+[computer02][DEBUG ] 下列软件包将被升级：
+[computer02][DEBUG ]   librados2 librbd1
+[computer02][DEBUG ] 升级了 2 个软件包，新安装了 15 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[computer02][DEBUG ] 需要下载 21.1 MB 的软件包。
+[computer02][DEBUG ] 解压缩后会消耗掉 97.0 MB 的额外空间。
+[computer02][DEBUG ] 获取：1 http://192.168.11.63/ubuntu/ trusty/main libicu52 amd64 52.1-3 [6,770 kB]
+[computer02][DEBUG ] 获取：2 http://ceph.com/debian-firefly/ trusty/main librbd1 amd64 0.80.7-1trusty [319 kB]
+[computer02][DEBUG ] 获取：3 http://192.168.11.63/ubuntu/ trusty/main libsnappy1 amd64 1.1.0-1ubuntu1 [11.2 kB]
+[computer02][DEBUG ] 获取：4 http://192.168.11.63/ubuntu/ trusty/main libleveldb1 amd64 1.15.0-2 [117 kB]
+[computer02][DEBUG ] 获取：5 http://192.168.11.63/ubuntu/ trusty/main libunwind8 amd64 1.1-2.2ubuntu3 [48.3 kB]
+[computer02][DEBUG ] 获取：6 http://192.168.11.63/ubuntu/ trusty/main libtcmalloc-minimal4 amd64 2.1-2ubuntu1 [104 kB]
+[computer02][DEBUG ] 获取：7 http://192.168.11.63/ubuntu/ trusty/main libgoogle-perftools4 amd64 2.1-2ubuntu1 [184 kB]
+[computer02][DEBUG ] 获取：8 http://192.168.11.63/ubuntu/ trusty/main python-werkzeug all 0.9.4+dfsg-1.1ubuntu1 [236 kB]
+[computer02][DEBUG ] 获取：9 http://192.168.11.63/ubuntu/ trusty/main python-itsdangerous all 0.22+dfsg1-1build1 [11.5 kB]
+[computer02][DEBUG ] 获取：10 http://192.168.11.63/ubuntu/ trusty/main python-flask all 0.10.1-2build1 [51.7 kB]
+[computer02][DEBUG ] 获取：11 http://192.168.11.63/ubuntu/ trusty/main gdisk amd64 0.8.8-1build1 [186 kB]
+[computer02][DEBUG ] 获取：12 http://ceph.com/debian-firefly/ trusty/main librados2 amd64 0.80.7-1trusty [1,427 kB]
+[computer02][DEBUG ] 获取：13 http://ceph.com/debian-firefly/ trusty/main python-ceph amd64 0.80.7-1trusty [36.3 kB]
+[computer02][DEBUG ] 获取：14 http://ceph.com/debian-firefly/ trusty/main ceph-common amd64 0.80.7-1trusty [3,945 kB]
+[computer02][DEBUG ] 获取：15 http://ceph.com/debian-firefly/ trusty/main ceph amd64 0.80.7-1trusty [5,538 kB]
+[computer02][DEBUG ] 获取：16 http://ceph.com/debian-firefly/ trusty/main ceph-fs-common amd64 0.80.7-1trusty [25.4 kB]
+[computer02][DEBUG ] 获取：17 http://ceph.com/debian-firefly/ trusty/main ceph-mds amd64 0.80.7-1trusty [2,099 kB]
+[computer02][DEBUG ] 下载 21.1 MB，耗时 58秒 (362 kB/s)
+[computer02][DEBUG ] Selecting previously unselected package libicu52:amd64.
+[computer02][DEBUG ] (正在读取数据库 ... 系统当前共安装有 105038 个文件和目录。)
+[computer02][DEBUG ] Preparing to unpack .../libicu52_52.1-3_amd64.deb ...
+[computer02][DEBUG ] Unpacking libicu52:amd64 (52.1-3) ...
+[computer02][DEBUG ] Selecting previously unselected package libsnappy1.
+[computer02][DEBUG ] Preparing to unpack .../libsnappy1_1.1.0-1ubuntu1_amd64.deb ...
+[computer02][DEBUG ] Unpacking libsnappy1 (1.1.0-1ubuntu1) ...
+[computer02][DEBUG ] Selecting previously unselected package libleveldb1:amd64.
+[computer02][DEBUG ] Preparing to unpack .../libleveldb1_1.15.0-2_amd64.deb ...
+[computer02][DEBUG ] Unpacking libleveldb1:amd64 (1.15.0-2) ...
+[computer02][DEBUG ] Selecting previously unselected package libunwind8.
+[computer02][DEBUG ] Preparing to unpack .../libunwind8_1.1-2.2ubuntu3_amd64.deb ...
+[computer02][DEBUG ] Unpacking libunwind8 (1.1-2.2ubuntu3) ...
+[computer02][DEBUG ] Preparing to unpack .../librbd1_0.80.7-1trusty_amd64.deb ...
+[computer02][DEBUG ] Unpacking librbd1 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[computer02][DEBUG ] Preparing to unpack .../librados2_0.80.7-1trusty_amd64.deb ...
+[computer02][DEBUG ] Unpacking librados2 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[computer02][DEBUG ] Selecting previously unselected package libtcmalloc-minimal4.
+[computer02][DEBUG ] Preparing to unpack .../libtcmalloc-minimal4_2.1-2ubuntu1_amd64.deb ...
+[computer02][DEBUG ] Unpacking libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[computer02][DEBUG ] Selecting previously unselected package libgoogle-perftools4.
+[computer02][DEBUG ] Preparing to unpack .../libgoogle-perftools4_2.1-2ubuntu1_amd64.deb ...
+[computer02][DEBUG ] Unpacking libgoogle-perftools4 (2.1-2ubuntu1) ...
+[computer02][DEBUG ] Selecting previously unselected package python-werkzeug.
+[computer02][DEBUG ] Preparing to unpack .../python-werkzeug_0.9.4+dfsg-1.1ubuntu1_all.deb ...
+[computer02][DEBUG ] Unpacking python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[computer02][DEBUG ] Selecting previously unselected package python-itsdangerous.
+[computer02][DEBUG ] Preparing to unpack .../python-itsdangerous_0.22+dfsg1-1build1_all.deb ...
+[computer02][DEBUG ] Unpacking python-itsdangerous (0.22+dfsg1-1build1) ...
+[computer02][DEBUG ] Selecting previously unselected package python-flask.
+[computer02][DEBUG ] Preparing to unpack .../python-flask_0.10.1-2build1_all.deb ...
+[computer02][DEBUG ] Unpacking python-flask (0.10.1-2build1) ...
+[computer02][DEBUG ] Selecting previously unselected package python-ceph.
+[computer02][DEBUG ] Preparing to unpack .../python-ceph_0.80.7-1trusty_amd64.deb ...
+[computer02][DEBUG ] Unpacking python-ceph (0.80.7-1trusty) ...
+[computer02][DEBUG ] Selecting previously unselected package ceph-common.
+[computer02][DEBUG ] Preparing to unpack .../ceph-common_0.80.7-1trusty_amd64.deb ...
+[computer02][DEBUG ] Unpacking ceph-common (0.80.7-1trusty) ...
+[computer02][DEBUG ] Selecting previously unselected package gdisk.
+[computer02][DEBUG ] Preparing to unpack .../gdisk_0.8.8-1build1_amd64.deb ...
+[computer02][DEBUG ] Unpacking gdisk (0.8.8-1build1) ...
+[computer02][DEBUG ] Selecting previously unselected package ceph.
+[computer02][DEBUG ] Preparing to unpack .../ceph_0.80.7-1trusty_amd64.deb ...
+[computer02][DEBUG ] Unpacking ceph (0.80.7-1trusty) ...
+[computer02][DEBUG ] Selecting previously unselected package ceph-fs-common.
+[computer02][DEBUG ] Preparing to unpack .../ceph-fs-common_0.80.7-1trusty_amd64.deb ...
+[computer02][DEBUG ] Unpacking ceph-fs-common (0.80.7-1trusty) ...
+[computer02][DEBUG ] Selecting previously unselected package ceph-mds.
+[computer02][DEBUG ] Preparing to unpack .../ceph-mds_0.80.7-1trusty_amd64.deb ...
+[computer02][DEBUG ] Unpacking ceph-mds (0.80.7-1trusty) ...
+[computer02][DEBUG ] Processing triggers for man-db (2.6.7.1-1) ...
+[computer02][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[computer02][DEBUG ] 正在设置 libicu52:amd64 (52.1-3) ...
+[computer02][DEBUG ] 正在设置 libsnappy1 (1.1.0-1ubuntu1) ...
+[computer02][DEBUG ] 正在设置 libleveldb1:amd64 (1.15.0-2) ...
+[computer02][DEBUG ] 正在设置 libunwind8 (1.1-2.2ubuntu3) ...
+[computer02][DEBUG ] 正在设置 librados2 (0.80.7-1trusty) ...
+[computer02][DEBUG ] 正在设置 librbd1 (0.80.7-1trusty) ...
+[computer02][DEBUG ] 正在设置 libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[computer02][DEBUG ] 正在设置 libgoogle-perftools4 (2.1-2ubuntu1) ...
+[computer02][DEBUG ] 正在设置 python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[computer02][DEBUG ] 正在设置 python-itsdangerous (0.22+dfsg1-1build1) ...
+[computer02][DEBUG ] 正在设置 python-flask (0.10.1-2build1) ...
+[computer02][DEBUG ] 正在设置 python-ceph (0.80.7-1trusty) ...
+[computer02][DEBUG ] 正在设置 ceph-common (0.80.7-1trusty) ...
+[computer02][DEBUG ] 正在设置 gdisk (0.8.8-1build1) ...
+[computer02][DEBUG ] 正在设置 ceph-fs-common (0.80.7-1trusty) ...
+[computer02][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[computer02][DEBUG ] 正在设置 ceph (0.80.7-1trusty) ...
+[computer02][DEBUG ] ceph-all start/running
+[computer02][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[computer02][DEBUG ] 正在设置 ceph-mds (0.80.7-1trusty) ...
+[computer02][DEBUG ] ceph-mds-all start/running
+[computer02][DEBUG ] Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+[computer02][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[computer02][INFO  ] Running command: ceph --version
+[computer02][DEBUG ] ceph version 0.80.7 (6c0127fcb58008793d3c8b62d925bc91963672a3)
+[ceph_deploy.install][DEBUG ] Detecting platform for host computer01 ...
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[ceph_deploy.install][INFO  ] Distro info: Ubuntu 14.04 trusty
+[computer01][INFO  ] installing ceph on computer01
+[computer01][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive apt-get -q install --assume-yes ca-certificates
+[computer01][DEBUG ] 正在读取软件包列表...
+[computer01][DEBUG ] 正在分析软件包的依赖关系树...
+[computer01][DEBUG ] 正在读取状态信息...
+[computer01][DEBUG ] ca-certificates is already the newest version.
+[computer01][DEBUG ] 升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[computer01][INFO  ] Running command: wget -O release.asc https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[computer01][WARNING] --2014-10-28 21:19:29--  https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[computer01][WARNING] Resolving ceph.com (ceph.com)... 208.113.241.137
+[computer01][WARNING] Connecting to ceph.com (ceph.com)|208.113.241.137|:443... connected.
+[computer01][WARNING] HTTP request sent, awaiting response... 200 OK
+[computer01][WARNING] Length: unspecified [text/plain]
+[computer01][WARNING] Saving to: ‘release.asc’
+[computer01][WARNING] 
+[computer01][WARNING]      0K .                                                      3.95M=0s
+[computer01][WARNING] 
+[computer01][WARNING] 2014-10-28 21:19:30 (3.95 MB/s) - ‘release.asc’ saved [1752]
+[computer01][WARNING] 
+[computer01][INFO  ] Running command: apt-key add release.asc
+[computer01][DEBUG ] OK
+[computer01][DEBUG ] add deb repo to sources.list
+[computer01][INFO  ] Running command: apt-get -q update
+[computer01][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse InRelease
+[computer01][DEBUG ] 忽略 http://192.168.11.63 trusty InRelease
+[computer01][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release.gpg
+[computer01][DEBUG ] 忽略 http://192.168.11.63 trusty-security InRelease
+[computer01][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release
+[computer01][DEBUG ] 忽略 http://192.168.11.63 trusty-updates InRelease
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty Release.gpg
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security Release.gpg
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release.gpg
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty Release
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security Release
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release
+[computer01][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main amd64 Packages
+[computer01][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/main Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/universe Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/main amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/universe amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/main i386 Packages
+[computer01][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh_CN
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/universe i386 Packages
+[computer01][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh
+[computer01][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-zh_CN
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-zh_CN
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-zh_CN
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-zh_CN
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/main amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/main i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Sources
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse amd64 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse i386 Packages
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Translation-en
+[computer01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Translation-en
+[computer01][DEBUG ] 忽略 http://192.168.11.63 trusty/main Translation-zh
+[computer01][DEBUG ] 忽略 http://192.168.11.63 trusty/multiverse Translation-zh
+[computer01][DEBUG ] 忽略 http://192.168.11.63 trusty/restricted Translation-zh
+[computer01][DEBUG ] 忽略 http://192.168.11.63 trusty/universe Translation-zh
+[computer01][DEBUG ] 获取：1 http://ceph.com trusty InRelease [6,849 B]
+[computer01][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh_CN
+[computer01][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh
+[computer01][DEBUG ] 忽略 http://ceph.com trusty/main Translation-en
+[computer01][DEBUG ] 错误 http://ceph.com trusty/main amd64 Packages
+[computer01][DEBUG ]   
+[computer01][DEBUG ] 获取：2 http://ceph.com trusty/main amd64 Packages [6,476 B]
+[computer01][DEBUG ] 获取：3 http://ceph.com trusty/main i386 Packages [696 B]
+[computer01][DEBUG ] 下载 14.0 kB，耗时 2分 1秒 (115 B/s)
+[computer01][DEBUG ] 正在读取软件包列表...
+[computer01][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get -q -o Dpkg::Options::=--force-confnew --no-install-recommends --assume-yes install -- ceph ceph-mds ceph-common ceph-fs-common gdisk
+[computer01][DEBUG ] 正在读取软件包列表...
+[computer01][DEBUG ] 正在分析软件包的依赖关系树...
+[computer01][DEBUG ] 正在读取状态信息...
+[computer01][DEBUG ] 将会安装下列额外的软件包：
+[computer01][DEBUG ]   libgoogle-perftools4 libicu52 libleveldb1 librados2 librbd1 libsnappy1
+[computer01][DEBUG ]   libtcmalloc-minimal4 libunwind8 python-ceph python-flask python-itsdangerous
+[computer01][DEBUG ]   python-werkzeug
+[computer01][DEBUG ] 建议安装的软件包：
+[computer01][DEBUG ]   python-flask-doc ipython python-genshi python-redis python-pylibmc
+[computer01][DEBUG ]   python-memcache python-werkzeug-doc
+[computer01][DEBUG ] 推荐安装的软件包：
+[computer01][DEBUG ]   ceph-fuse libcephfs1 python-blinker python-pyinotify
+[computer01][DEBUG ] 下列【新】软件包将被安装：
+[computer01][DEBUG ]   ceph ceph-common ceph-fs-common ceph-mds gdisk libgoogle-perftools4 libicu52
+[computer01][DEBUG ]   libleveldb1 libsnappy1 libtcmalloc-minimal4 libunwind8 python-ceph
+[computer01][DEBUG ]   python-flask python-itsdangerous python-werkzeug
+[computer01][DEBUG ] 下列软件包将被升级：
+[computer01][DEBUG ]   librados2 librbd1
+[computer01][DEBUG ] 升级了 2 个软件包，新安装了 15 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[computer01][DEBUG ] 需要下载 21.1 MB 的软件包。
+[computer01][DEBUG ] 解压缩后会消耗掉 97.0 MB 的额外空间。
+[computer01][DEBUG ] 获取：1 http://192.168.11.63/ubuntu/ trusty/main libicu52 amd64 52.1-3 [6,770 kB]
+[computer01][DEBUG ] 获取：2 http://ceph.com/debian-firefly/ trusty/main librbd1 amd64 0.80.7-1trusty [319 kB]
+[computer01][DEBUG ] 获取：3 http://192.168.11.63/ubuntu/ trusty/main libsnappy1 amd64 1.1.0-1ubuntu1 [11.2 kB]
+[computer01][DEBUG ] 获取：4 http://192.168.11.63/ubuntu/ trusty/main libleveldb1 amd64 1.15.0-2 [117 kB]
+[computer01][DEBUG ] 获取：5 http://192.168.11.63/ubuntu/ trusty/main libunwind8 amd64 1.1-2.2ubuntu3 [48.3 kB]
+[computer01][DEBUG ] 获取：6 http://192.168.11.63/ubuntu/ trusty/main libtcmalloc-minimal4 amd64 2.1-2ubuntu1 [104 kB]
+[computer01][DEBUG ] 获取：7 http://192.168.11.63/ubuntu/ trusty/main libgoogle-perftools4 amd64 2.1-2ubuntu1 [184 kB]
+[computer01][DEBUG ] 获取：8 http://192.168.11.63/ubuntu/ trusty/main python-werkzeug all 0.9.4+dfsg-1.1ubuntu1 [236 kB]
+[computer01][DEBUG ] 获取：9 http://192.168.11.63/ubuntu/ trusty/main python-itsdangerous all 0.22+dfsg1-1build1 [11.5 kB]
+[computer01][DEBUG ] 获取：10 http://192.168.11.63/ubuntu/ trusty/main python-flask all 0.10.1-2build1 [51.7 kB]
+[computer01][DEBUG ] 获取：11 http://192.168.11.63/ubuntu/ trusty/main gdisk amd64 0.8.8-1build1 [186 kB]
+[computer01][DEBUG ] 获取：12 http://ceph.com/debian-firefly/ trusty/main librados2 amd64 0.80.7-1trusty [1,427 kB]
+[computer01][DEBUG ] 获取：13 http://ceph.com/debian-firefly/ trusty/main python-ceph amd64 0.80.7-1trusty [36.3 kB]
+[computer01][DEBUG ] 获取：14 http://ceph.com/debian-firefly/ trusty/main ceph-common amd64 0.80.7-1trusty [3,945 kB]
+[computer01][DEBUG ] 获取：15 http://ceph.com/debian-firefly/ trusty/main ceph amd64 0.80.7-1trusty [5,538 kB]
+[computer01][DEBUG ] 获取：16 http://ceph.com/debian-firefly/ trusty/main ceph-fs-common amd64 0.80.7-1trusty [25.4 kB]
+[computer01][DEBUG ] 获取：17 http://ceph.com/debian-firefly/ trusty/main ceph-mds amd64 0.80.7-1trusty [2,099 kB]
+[computer01][DEBUG ] 下载 21.1 MB，耗时 52秒 (400 kB/s)
+[computer01][DEBUG ] Selecting previously unselected package libicu52:amd64.
+[computer01][DEBUG ] (正在读取数据库 ... 系统当前共安装有 105097 个文件和目录。)
+[computer01][DEBUG ] Preparing to unpack .../libicu52_52.1-3_amd64.deb ...
+[computer01][DEBUG ] Unpacking libicu52:amd64 (52.1-3) ...
+[computer01][DEBUG ] Selecting previously unselected package libsnappy1.
+[computer01][DEBUG ] Preparing to unpack .../libsnappy1_1.1.0-1ubuntu1_amd64.deb ...
+[computer01][DEBUG ] Unpacking libsnappy1 (1.1.0-1ubuntu1) ...
+[computer01][DEBUG ] Selecting previously unselected package libleveldb1:amd64.
+[computer01][DEBUG ] Preparing to unpack .../libleveldb1_1.15.0-2_amd64.deb ...
+[computer01][DEBUG ] Unpacking libleveldb1:amd64 (1.15.0-2) ...
+[computer01][DEBUG ] Selecting previously unselected package libunwind8.
+[computer01][DEBUG ] Preparing to unpack .../libunwind8_1.1-2.2ubuntu3_amd64.deb ...
+[computer01][DEBUG ] Unpacking libunwind8 (1.1-2.2ubuntu3) ...
+[computer01][DEBUG ] Preparing to unpack .../librbd1_0.80.7-1trusty_amd64.deb ...
+[computer01][DEBUG ] Unpacking librbd1 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[computer01][DEBUG ] Preparing to unpack .../librados2_0.80.7-1trusty_amd64.deb ...
+[computer01][DEBUG ] Unpacking librados2 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[computer01][DEBUG ] Selecting previously unselected package libtcmalloc-minimal4.
+[computer01][DEBUG ] Preparing to unpack .../libtcmalloc-minimal4_2.1-2ubuntu1_amd64.deb ...
+[computer01][DEBUG ] Unpacking libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[computer01][DEBUG ] Selecting previously unselected package libgoogle-perftools4.
+[computer01][DEBUG ] Preparing to unpack .../libgoogle-perftools4_2.1-2ubuntu1_amd64.deb ...
+[computer01][DEBUG ] Unpacking libgoogle-perftools4 (2.1-2ubuntu1) ...
+[computer01][DEBUG ] Selecting previously unselected package python-werkzeug.
+[computer01][DEBUG ] Preparing to unpack .../python-werkzeug_0.9.4+dfsg-1.1ubuntu1_all.deb ...
+[computer01][DEBUG ] Unpacking python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[computer01][DEBUG ] Selecting previously unselected package python-itsdangerous.
+[computer01][DEBUG ] Preparing to unpack .../python-itsdangerous_0.22+dfsg1-1build1_all.deb ...
+[computer01][DEBUG ] Unpacking python-itsdangerous (0.22+dfsg1-1build1) ...
+[computer01][DEBUG ] Selecting previously unselected package python-flask.
+[computer01][DEBUG ] Preparing to unpack .../python-flask_0.10.1-2build1_all.deb ...
+[computer01][DEBUG ] Unpacking python-flask (0.10.1-2build1) ...
+[computer01][DEBUG ] Selecting previously unselected package python-ceph.
+[computer01][DEBUG ] Preparing to unpack .../python-ceph_0.80.7-1trusty_amd64.deb ...
+[computer01][DEBUG ] Unpacking python-ceph (0.80.7-1trusty) ...
+[computer01][DEBUG ] Selecting previously unselected package ceph-common.
+[computer01][DEBUG ] Preparing to unpack .../ceph-common_0.80.7-1trusty_amd64.deb ...
+[computer01][DEBUG ] Unpacking ceph-common (0.80.7-1trusty) ...
+[computer01][DEBUG ] Selecting previously unselected package gdisk.
+[computer01][DEBUG ] Preparing to unpack .../gdisk_0.8.8-1build1_amd64.deb ...
+[computer01][DEBUG ] Unpacking gdisk (0.8.8-1build1) ...
+[computer01][DEBUG ] Selecting previously unselected package ceph.
+[computer01][DEBUG ] Preparing to unpack .../ceph_0.80.7-1trusty_amd64.deb ...
+[computer01][DEBUG ] Unpacking ceph (0.80.7-1trusty) ...
+[computer01][DEBUG ] Selecting previously unselected package ceph-fs-common.
+[computer01][DEBUG ] Preparing to unpack .../ceph-fs-common_0.80.7-1trusty_amd64.deb ...
+[computer01][DEBUG ] Unpacking ceph-fs-common (0.80.7-1trusty) ...
+[computer01][DEBUG ] Selecting previously unselected package ceph-mds.
+[computer01][DEBUG ] Preparing to unpack .../ceph-mds_0.80.7-1trusty_amd64.deb ...
+[computer01][DEBUG ] Unpacking ceph-mds (0.80.7-1trusty) ...
+[computer01][DEBUG ] Processing triggers for man-db (2.6.7.1-1) ...
+[computer01][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[computer01][DEBUG ] ureadahead will be reprofiled on next reboot
+[computer01][DEBUG ] 正在设置 libicu52:amd64 (52.1-3) ...
+[computer01][DEBUG ] 正在设置 libsnappy1 (1.1.0-1ubuntu1) ...
+[computer01][DEBUG ] 正在设置 libleveldb1:amd64 (1.15.0-2) ...
+[computer01][DEBUG ] 正在设置 libunwind8 (1.1-2.2ubuntu3) ...
+[computer01][DEBUG ] 正在设置 librados2 (0.80.7-1trusty) ...
+[computer01][DEBUG ] 正在设置 librbd1 (0.80.7-1trusty) ...
+[computer01][DEBUG ] 正在设置 libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[computer01][DEBUG ] 正在设置 libgoogle-perftools4 (2.1-2ubuntu1) ...
+[computer01][DEBUG ] 正在设置 python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[computer01][DEBUG ] 正在设置 python-itsdangerous (0.22+dfsg1-1build1) ...
+[computer01][DEBUG ] 正在设置 python-flask (0.10.1-2build1) ...
+[computer01][DEBUG ] 正在设置 python-ceph (0.80.7-1trusty) ...
+[computer01][DEBUG ] 正在设置 ceph-common (0.80.7-1trusty) ...
+[computer01][DEBUG ] 正在设置 gdisk (0.8.8-1build1) ...
+[computer01][DEBUG ] 正在设置 ceph-fs-common (0.80.7-1trusty) ...
+[computer01][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[computer01][DEBUG ] 正在设置 ceph (0.80.7-1trusty) ...
+[computer01][DEBUG ] ceph-all start/running
+[computer01][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[computer01][DEBUG ] 正在设置 ceph-mds (0.80.7-1trusty) ...
+[computer01][DEBUG ] ceph-mds-all start/running
+[computer01][DEBUG ] Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+[computer01][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[computer01][INFO  ] Running command: ceph --version
+[computer01][DEBUG ] ceph version 0.80.7 (6c0127fcb58008793d3c8b62d925bc91963672a3)
+Run command: ceph-deploy mon create-initial
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy mon create-initial
+[ceph_deploy.mon][DEBUG ] Deploying mon, cluster ceph hosts computer01 computer02
+[ceph_deploy.mon][DEBUG ] detecting platform for host computer01 ...
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[ceph_deploy.mon][INFO  ] distro info: Ubuntu 14.04 trusty
+[computer01][DEBUG ] determining if provided host has same hostname in remote
+[computer01][DEBUG ] get remote short hostname
+[computer01][DEBUG ] deploying mon to computer01
+[computer01][DEBUG ] get remote short hostname
+[computer01][DEBUG ] remote hostname: computer01
+[computer01][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[computer01][DEBUG ] create the mon path if it does not exist
+[computer01][DEBUG ] checking for done path: /var/lib/ceph/mon/ceph-computer01/done
+[computer01][DEBUG ] done path does not exist: /var/lib/ceph/mon/ceph-computer01/done
+[computer01][INFO  ] creating keyring file: /var/lib/ceph/tmp/ceph-computer01.mon.keyring
+[computer01][DEBUG ] create the monitor keyring file
+[computer01][INFO  ] Running command: ceph-mon --cluster ceph --mkfs -i computer01 --keyring /var/lib/ceph/tmp/ceph-computer01.mon.keyring
+[computer01][DEBUG ] ceph-mon: renaming mon.noname-a 192.168.11.21:6789/0 to mon.computer01
+[computer01][DEBUG ] ceph-mon: set fsid to e148ffac-b18f-4d32-88aa-1ad6d04dabd3
+[computer01][DEBUG ] ceph-mon: created monfs at /var/lib/ceph/mon/ceph-computer01 for mon.computer01
+[computer01][INFO  ] unlinking keyring file /var/lib/ceph/tmp/ceph-computer01.mon.keyring
+[computer01][DEBUG ] create a done file to avoid re-doing the mon deployment
+[computer01][DEBUG ] create the init path if it does not exist
+[computer01][DEBUG ] locating the `service` executable...
+[computer01][INFO  ] Running command: initctl emit ceph-mon cluster=ceph id=computer01
+[computer01][INFO  ] Running command: ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.computer01.asok mon_status
+[computer01][DEBUG ] ********************************************************************************
+[computer01][DEBUG ] status for monitor: mon.computer01
+[computer01][DEBUG ] {
+[computer01][DEBUG ]   "election_epoch": 0, 
+[computer01][DEBUG ]   "extra_probe_peers": [
+[computer01][DEBUG ]     "192.168.11.22:6789/0"
+[computer01][DEBUG ]   ], 
+[computer01][DEBUG ]   "monmap": {
+[computer01][DEBUG ]     "created": "0.000000", 
+[computer01][DEBUG ]     "epoch": 0, 
+[computer01][DEBUG ]     "fsid": "e148ffac-b18f-4d32-88aa-1ad6d04dabd3", 
+[computer01][DEBUG ]     "modified": "0.000000", 
+[computer01][DEBUG ]     "mons": [
+[computer01][DEBUG ]       {
+[computer01][DEBUG ]         "addr": "192.168.11.21:6789/0", 
+[computer01][DEBUG ]         "name": "computer01", 
+[computer01][DEBUG ]         "rank": 0
+[computer01][DEBUG ]       }, 
+[computer01][DEBUG ]       {
+[computer01][DEBUG ]         "addr": "0.0.0.0:0/1", 
+[computer01][DEBUG ]         "name": "computer02", 
+[computer01][DEBUG ]         "rank": 1
+[computer01][DEBUG ]       }
+[computer01][DEBUG ]     ]
+[computer01][DEBUG ]   }, 
+[computer01][DEBUG ]   "name": "computer01", 
+[computer01][DEBUG ]   "outside_quorum": [
+[computer01][DEBUG ]     "computer01"
+[computer01][DEBUG ]   ], 
+[computer01][DEBUG ]   "quorum": [], 
+[computer01][DEBUG ]   "rank": 0, 
+[computer01][DEBUG ]   "state": "probing", 
+[computer01][DEBUG ]   "sync_provider": []
+[computer01][DEBUG ] }
+[computer01][DEBUG ] ********************************************************************************
+[computer01][INFO  ] monitor: mon.computer01 is running
+[computer01][INFO  ] Running command: ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.computer01.asok mon_status
+[ceph_deploy.mon][DEBUG ] detecting platform for host computer02 ...
+[computer02][DEBUG ] connected to host: computer02 
+[computer02][DEBUG ] detect platform information from remote host
+[computer02][DEBUG ] detect machine type
+[ceph_deploy.mon][INFO  ] distro info: Ubuntu 14.04 trusty
+[computer02][DEBUG ] determining if provided host has same hostname in remote
+[computer02][DEBUG ] get remote short hostname
+[computer02][DEBUG ] deploying mon to computer02
+[computer02][DEBUG ] get remote short hostname
+[computer02][DEBUG ] remote hostname: computer02
+[computer02][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[computer02][DEBUG ] create the mon path if it does not exist
+[computer02][DEBUG ] checking for done path: /var/lib/ceph/mon/ceph-computer02/done
+[computer02][DEBUG ] done path does not exist: /var/lib/ceph/mon/ceph-computer02/done
+[computer02][INFO  ] creating keyring file: /var/lib/ceph/tmp/ceph-computer02.mon.keyring
+[computer02][DEBUG ] create the monitor keyring file
+[computer02][INFO  ] Running command: ceph-mon --cluster ceph --mkfs -i computer02 --keyring /var/lib/ceph/tmp/ceph-computer02.mon.keyring
+[computer02][DEBUG ] ceph-mon: renaming mon.noname-b 192.168.11.22:6789/0 to mon.computer02
+[computer02][DEBUG ] ceph-mon: set fsid to e148ffac-b18f-4d32-88aa-1ad6d04dabd3
+[computer02][DEBUG ] ceph-mon: created monfs at /var/lib/ceph/mon/ceph-computer02 for mon.computer02
+[computer02][INFO  ] unlinking keyring file /var/lib/ceph/tmp/ceph-computer02.mon.keyring
+[computer02][DEBUG ] create a done file to avoid re-doing the mon deployment
+[computer02][DEBUG ] create the init path if it does not exist
+[computer02][DEBUG ] locating the `service` executable...
+[computer02][INFO  ] Running command: initctl emit ceph-mon cluster=ceph id=computer02
+[computer02][INFO  ] Running command: ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.computer02.asok mon_status
+[computer02][DEBUG ] ********************************************************************************
+[computer02][DEBUG ] status for monitor: mon.computer02
+[computer02][DEBUG ] {
+[computer02][DEBUG ]   "election_epoch": 1, 
+[computer02][DEBUG ]   "extra_probe_peers": [
+[computer02][DEBUG ]     "192.168.11.21:6789/0"
+[computer02][DEBUG ]   ], 
+[computer02][DEBUG ]   "monmap": {
+[computer02][DEBUG ]     "created": "0.000000", 
+[computer02][DEBUG ]     "epoch": 0, 
+[computer02][DEBUG ]     "fsid": "e148ffac-b18f-4d32-88aa-1ad6d04dabd3", 
+[computer02][DEBUG ]     "modified": "0.000000", 
+[computer02][DEBUG ]     "mons": [
+[computer02][DEBUG ]       {
+[computer02][DEBUG ]         "addr": "192.168.11.21:6789/0", 
+[computer02][DEBUG ]         "name": "computer01", 
+[computer02][DEBUG ]         "rank": 0
+[computer02][DEBUG ]       }, 
+[computer02][DEBUG ]       {
+[computer02][DEBUG ]         "addr": "192.168.11.22:6789/0", 
+[computer02][DEBUG ]         "name": "computer02", 
+[computer02][DEBUG ]         "rank": 1
+[computer02][DEBUG ]       }
+[computer02][DEBUG ]     ]
+[computer02][DEBUG ]   }, 
+[computer02][DEBUG ]   "name": "computer02", 
+[computer02][DEBUG ]   "outside_quorum": [], 
+[computer02][DEBUG ]   "quorum": [], 
+[computer02][DEBUG ]   "rank": 1, 
+[computer02][DEBUG ]   "state": "electing", 
+[computer02][DEBUG ]   "sync_provider": []
+[computer02][DEBUG ] }
+[computer02][DEBUG ] ********************************************************************************
+[computer02][INFO  ] monitor: mon.computer02 is running
+[computer02][INFO  ] Running command: ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.computer02.asok mon_status
+[ceph_deploy.mon][INFO  ] processing monitor mon.computer01
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][INFO  ] Running command: ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.computer01.asok mon_status
+[ceph_deploy.mon][WARNING] mon.computer01 monitor is not yet in quorum, tries left: 5
+[ceph_deploy.mon][WARNING] waiting 5 seconds before retrying
+[computer01][INFO  ] Running command: ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.computer01.asok mon_status
+[ceph_deploy.mon][INFO  ] mon.computer01 monitor has reached quorum!
+[ceph_deploy.mon][INFO  ] processing monitor mon.computer02
+[computer02][DEBUG ] connected to host: computer02 
+[computer02][INFO  ] Running command: ceph --cluster=ceph --admin-daemon /var/run/ceph/ceph-mon.computer02.asok mon_status
+[ceph_deploy.mon][INFO  ] mon.computer02 monitor has reached quorum!
+[ceph_deploy.mon][INFO  ] all initial monitors are running and have formed quorum
+[ceph_deploy.mon][INFO  ] Running gatherkeys...
+[ceph_deploy.gatherkeys][DEBUG ] Checking computer01 for /etc/ceph/ceph.client.admin.keyring
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[computer01][DEBUG ] fetch remote file
+[ceph_deploy.gatherkeys][DEBUG ] Got ceph.client.admin.keyring key from computer01.
+[ceph_deploy.gatherkeys][DEBUG ] Have ceph.mon.keyring
+[ceph_deploy.gatherkeys][DEBUG ] Checking computer01 for /var/lib/ceph/bootstrap-osd/ceph.keyring
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[computer01][DEBUG ] fetch remote file
+[ceph_deploy.gatherkeys][DEBUG ] Got ceph.bootstrap-osd.keyring key from computer01.
+[ceph_deploy.gatherkeys][DEBUG ] Checking computer01 for /var/lib/ceph/bootstrap-mds/ceph.keyring
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[computer01][DEBUG ] fetch remote file
+[ceph_deploy.gatherkeys][DEBUG ] Got ceph.bootstrap-mds.keyring key from computer01.
+Run command on computer01: mkdir -p /data/osd
+Run command on computer02: mkdir -p /data/osd
+Run command: ceph-deploy osd prepare  computer01:/data/osd computer02:/data/osd
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy osd prepare computer01:/data/osd computer02:/data/osd
+[ceph_deploy.osd][DEBUG ] Preparing cluster ceph disks computer01:/data/osd: computer02:/data/osd:
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[ceph_deploy.osd][INFO  ] Distro info: Ubuntu 14.04 trusty
+[ceph_deploy.osd][DEBUG ] Deploying osd to computer01
+[computer01][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[computer01][INFO  ] Running command: udevadm trigger --subsystem-match=block --action=add
+[ceph_deploy.osd][DEBUG ] Preparing host computer01 disk /data/osd journal None activate False
+[computer01][INFO  ] Running command: ceph-disk -v prepare --fs-type xfs --cluster ceph -- /data/osd
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-osd --cluster=ceph --show-config-value=fsid
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_mkfs_options_xfs
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_fs_mkfs_options_xfs
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_mount_options_xfs
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_fs_mount_options_xfs
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-osd --cluster=ceph --show-config-value=osd_journal_size
+[computer01][WARNING] DEBUG:ceph-disk:Preparing osd data dir /data/osd
+[computer01][INFO  ] checking OSD status...
+[computer01][INFO  ] Running command: ceph --cluster=ceph osd stat --format=json
+[ceph_deploy.osd][DEBUG ] Host computer01 is now ready for osd use.
+[computer02][DEBUG ] connected to host: computer02 
+[computer02][DEBUG ] detect platform information from remote host
+[computer02][DEBUG ] detect machine type
+[ceph_deploy.osd][INFO  ] Distro info: Ubuntu 14.04 trusty
+[ceph_deploy.osd][DEBUG ] Deploying osd to computer02
+[computer02][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[computer02][INFO  ] Running command: udevadm trigger --subsystem-match=block --action=add
+[ceph_deploy.osd][DEBUG ] Preparing host computer02 disk /data/osd journal None activate False
+[computer02][INFO  ] Running command: ceph-disk -v prepare --fs-type xfs --cluster ceph -- /data/osd
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-osd --cluster=ceph --show-config-value=fsid
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_mkfs_options_xfs
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_fs_mkfs_options_xfs
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_mount_options_xfs
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-conf --cluster=ceph --name=osd. --lookup osd_fs_mount_options_xfs
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-osd --cluster=ceph --show-config-value=osd_journal_size
+[computer02][WARNING] DEBUG:ceph-disk:Preparing osd data dir /data/osd
+[computer02][INFO  ] checking OSD status...
+[computer02][INFO  ] Running command: ceph --cluster=ceph osd stat --format=json
+[ceph_deploy.osd][DEBUG ] Host computer02 is now ready for osd use.
+Run command: ceph-deploy osd activate computer01:/data/osd computer02:/data/osd
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy osd activate computer01:/data/osd computer02:/data/osd
+[ceph_deploy.osd][DEBUG ] Activating cluster ceph disks computer01:/data/osd: computer02:/data/osd:
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[ceph_deploy.osd][INFO  ] Distro info: Ubuntu 14.04 trusty
+[ceph_deploy.osd][DEBUG ] activating host computer01 disk /data/osd
+[ceph_deploy.osd][DEBUG ] will use init type: upstart
+[computer01][INFO  ] Running command: ceph-disk -v activate --mark-init upstart --mount /data/osd
+[computer01][WARNING] DEBUG:ceph-disk:Cluster uuid is e148ffac-b18f-4d32-88aa-1ad6d04dabd3
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-osd --cluster=ceph --show-config-value=fsid
+[computer01][WARNING] DEBUG:ceph-disk:Cluster name is ceph
+[computer01][WARNING] DEBUG:ceph-disk:OSD uuid is 9ba3f14b-55d7-43c7-9d67-9d85606e5f3c
+[computer01][WARNING] DEBUG:ceph-disk:Allocating OSD id...
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph --cluster ceph --name client.bootstrap-osd --keyring /var/lib/ceph/bootstrap-osd/ceph.keyring osd create --concise 9ba3f14b-55d7-43c7-9d67-9d85606e5f3c
+[computer01][WARNING] DEBUG:ceph-disk:OSD id is 0
+[computer01][WARNING] DEBUG:ceph-disk:Initializing OSD...
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph --cluster ceph --name client.bootstrap-osd --keyring /var/lib/ceph/bootstrap-osd/ceph.keyring mon getmap -o /data/osd/activate.monmap
+[computer01][WARNING] got monmap epoch 1
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-osd --cluster ceph --mkfs --mkkey -i 0 --monmap /data/osd/activate.monmap --osd-data /data/osd --osd-journal /data/osd/journal --osd-uuid 9ba3f14b-55d7-43c7-9d67-9d85606e5f3c --keyring /data/osd/keyring
+[computer01][WARNING] 2014-10-28 21:23:23.769654 7fd3a1630800 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+[computer01][WARNING] 2014-10-28 21:23:24.146037 7fd3a1630800 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+[computer01][WARNING] 2014-10-28 21:23:24.151614 7fd3a1630800 -1 filestore(/data/osd) could not find 23c2fcde/osd_superblock/0//-1 in index: (2) No such file or directory
+[computer01][WARNING] 2014-10-28 21:23:24.313333 7fd3a1630800 -1 created object store /data/osd journal /data/osd/journal for osd.0 fsid e148ffac-b18f-4d32-88aa-1ad6d04dabd3
+[computer01][WARNING] 2014-10-28 21:23:24.313417 7fd3a1630800 -1 auth: error reading file: /data/osd/keyring: can't open /data/osd/keyring: (2) No such file or directory
+[computer01][WARNING] 2014-10-28 21:23:24.313554 7fd3a1630800 -1 created new key in keyring /data/osd/keyring
+[computer01][WARNING] DEBUG:ceph-disk:Marking with init system upstart
+[computer01][WARNING] DEBUG:ceph-disk:Authorizing OSD key...
+[computer01][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph --cluster ceph --name client.bootstrap-osd --keyring /var/lib/ceph/bootstrap-osd/ceph.keyring auth add osd.0 -i /data/osd/keyring osd allow * mon allow profile osd
+[computer01][WARNING] added key for osd.0
+[computer01][WARNING] DEBUG:ceph-disk:ceph osd.0 data dir is ready at /data/osd
+[computer01][WARNING] DEBUG:ceph-disk:Creating symlink /var/lib/ceph/osd/ceph-0 -> /data/osd
+[computer01][WARNING] DEBUG:ceph-disk:Starting ceph osd.0...
+[computer01][WARNING] INFO:ceph-disk:Running command: /sbin/initctl emit --no-wait -- ceph-osd cluster=ceph id=0
+[computer01][INFO  ] checking OSD status...
+[computer01][INFO  ] Running command: ceph --cluster=ceph osd stat --format=json
+[computer02][DEBUG ] connected to host: computer02 
+[computer02][DEBUG ] detect platform information from remote host
+[computer02][DEBUG ] detect machine type
+[ceph_deploy.osd][INFO  ] Distro info: Ubuntu 14.04 trusty
+[ceph_deploy.osd][DEBUG ] activating host computer02 disk /data/osd
+[ceph_deploy.osd][DEBUG ] will use init type: upstart
+[computer02][INFO  ] Running command: ceph-disk -v activate --mark-init upstart --mount /data/osd
+[computer02][WARNING] DEBUG:ceph-disk:Cluster uuid is e148ffac-b18f-4d32-88aa-1ad6d04dabd3
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-osd --cluster=ceph --show-config-value=fsid
+[computer02][WARNING] DEBUG:ceph-disk:Cluster name is ceph
+[computer02][WARNING] DEBUG:ceph-disk:OSD uuid is 862f9c14-5d85-472b-ad86-e57aacaf517d
+[computer02][WARNING] DEBUG:ceph-disk:Allocating OSD id...
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph --cluster ceph --name client.bootstrap-osd --keyring /var/lib/ceph/bootstrap-osd/ceph.keyring osd create --concise 862f9c14-5d85-472b-ad86-e57aacaf517d
+[computer02][WARNING] DEBUG:ceph-disk:OSD id is 1
+[computer02][WARNING] DEBUG:ceph-disk:Initializing OSD...
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph --cluster ceph --name client.bootstrap-osd --keyring /var/lib/ceph/bootstrap-osd/ceph.keyring mon getmap -o /data/osd/activate.monmap
+[computer02][WARNING] got monmap epoch 1
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph-osd --cluster ceph --mkfs --mkkey -i 1 --monmap /data/osd/activate.monmap --osd-data /data/osd --osd-journal /data/osd/journal --osd-uuid 862f9c14-5d85-472b-ad86-e57aacaf517d --keyring /data/osd/keyring
+[computer02][WARNING] 2014-10-28 21:23:31.859192 7f6b6bc20800 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+[computer02][WARNING] 2014-10-28 21:23:32.231992 7f6b6bc20800 -1 journal FileJournal::_open: disabling aio for non-block journal.  Use journal_force_aio to force use of aio anyway
+[computer02][WARNING] 2014-10-28 21:23:32.239651 7f6b6bc20800 -1 filestore(/data/osd) could not find 23c2fcde/osd_superblock/0//-1 in index: (2) No such file or directory
+[computer02][WARNING] 2014-10-28 21:23:32.391244 7f6b6bc20800 -1 created object store /data/osd journal /data/osd/journal for osd.1 fsid e148ffac-b18f-4d32-88aa-1ad6d04dabd3
+[computer02][WARNING] 2014-10-28 21:23:32.391308 7f6b6bc20800 -1 auth: error reading file: /data/osd/keyring: can't open /data/osd/keyring: (2) No such file or directory
+[computer02][WARNING] 2014-10-28 21:23:32.391404 7f6b6bc20800 -1 created new key in keyring /data/osd/keyring
+[computer02][WARNING] DEBUG:ceph-disk:Marking with init system upstart
+[computer02][WARNING] DEBUG:ceph-disk:Authorizing OSD key...
+[computer02][WARNING] INFO:ceph-disk:Running command: /usr/bin/ceph --cluster ceph --name client.bootstrap-osd --keyring /var/lib/ceph/bootstrap-osd/ceph.keyring auth add osd.1 -i /data/osd/keyring osd allow * mon allow profile osd
+[computer02][WARNING] added key for osd.1
+[computer02][WARNING] DEBUG:ceph-disk:ceph osd.1 data dir is ready at /data/osd
+[computer02][WARNING] DEBUG:ceph-disk:Creating symlink /var/lib/ceph/osd/ceph-1 -> /data/osd
+[computer02][WARNING] DEBUG:ceph-disk:Starting ceph osd.1...
+[computer02][WARNING] INFO:ceph-disk:Running command: /sbin/initctl emit --no-wait -- ceph-osd cluster=ceph id=1
+[computer02][INFO  ] checking OSD status...
+[computer02][INFO  ] Running command: ceph --cluster=ceph osd stat --format=json
+Run command: ceph-deploy admin computer02 computer01
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy admin computer02 computer01
+[ceph_deploy.admin][DEBUG ] Pushing admin keys and conf to computer02
+[computer02][DEBUG ] connected to host: computer02 
+[computer02][DEBUG ] detect platform information from remote host
+[computer02][DEBUG ] detect machine type
+[computer02][DEBUG ] get remote short hostname
+[computer02][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[ceph_deploy.admin][DEBUG ] Pushing admin keys and conf to computer01
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[computer01][DEBUG ] get remote short hostname
+[computer01][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+Run command on computer02: chmod +r /etc/ceph/ceph.client.admin.keyring
+Run command on computer01: chmod +r /etc/ceph/ceph.client.admin.keyring
+Run command: ceph-deploy mds create computer01
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy mds create computer01
+[ceph_deploy.mds][DEBUG ] Deploying mds, cluster ceph hosts computer01:computer01
+[computer01][DEBUG ] connected to host: computer01 
+[computer01][DEBUG ] detect platform information from remote host
+[computer01][DEBUG ] detect machine type
+[ceph_deploy.mds][INFO  ] Distro info: Ubuntu 14.04 trusty
+[ceph_deploy.mds][DEBUG ] remote host will use upstart
+[ceph_deploy.mds][DEBUG ] deploying mds bootstrap to computer01
+[computer01][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[computer01][DEBUG ] create path if it doesn't exist
+[computer01][INFO  ] Running command: ceph --cluster ceph --name client.bootstrap-mds --keyring /var/lib/ceph/bootstrap-mds/ceph.keyring auth get-or-create mds.computer01 osd allow rwx mds allow mon allow profile mds -o /var/lib/ceph/mds/ceph-computer01/keyring
+[computer01][INFO  ] Running command: initctl emit ceph-mds cluster=ceph id=computer01
+Run command: ceph-deploy install controller01 controller02 controller03
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy install controller01 controller02 controller03
+[ceph_deploy.install][DEBUG ] Installing stable version firefly on cluster ceph hosts controller01 controller02 controller03
+[ceph_deploy.install][DEBUG ] Detecting platform for host controller01 ...
+[controller01][DEBUG ] connected to host: controller01 
+[controller01][DEBUG ] detect platform information from remote host
+[controller01][DEBUG ] detect machine type
+[ceph_deploy.install][INFO  ] Distro info: Ubuntu 14.04 trusty
+[controller01][INFO  ] installing ceph on controller01
+[controller01][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive apt-get -q install --assume-yes ca-certificates
+[controller01][DEBUG ] 正在读取软件包列表...
+[controller01][DEBUG ] 正在分析软件包的依赖关系树...
+[controller01][DEBUG ] 正在读取状态信息...
+[controller01][DEBUG ] ca-certificates is already the newest version.
+[controller01][DEBUG ] 升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[controller01][INFO  ] Running command: wget -O release.asc https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[controller01][WARNING] --2014-10-28 21:23:44--  https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[controller01][WARNING] Resolving ceph.com (ceph.com)... 208.113.241.137, 2607:f298:4:147::b05:fe2a
+[controller01][WARNING] Connecting to ceph.com (ceph.com)|208.113.241.137|:443... connected.
+[controller01][WARNING] HTTP request sent, awaiting response... 200 OK
+[controller01][WARNING] Length: unspecified [text/plain]
+[controller01][WARNING] Saving to: ‘release.asc’
+[controller01][WARNING] 
+[controller01][WARNING]      0K .                                                      1.85M=0.001s
+[controller01][WARNING] 
+[controller01][WARNING] 2014-10-28 21:23:46 (1.85 MB/s) - ‘release.asc’ saved [1752]
+[controller01][WARNING] 
+[controller01][INFO  ] Running command: apt-key add release.asc
+[controller01][DEBUG ] OK
+[controller01][DEBUG ] add deb repo to sources.list
+[controller01][INFO  ] Running command: apt-get -q update
+[controller01][DEBUG ] 忽略 http://192.168.11.63 trusty InRelease
+[controller01][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse InRelease
+[controller01][DEBUG ] 忽略 http://192.168.11.63 trusty-security InRelease
+[controller01][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release.gpg
+[controller01][DEBUG ] 忽略 http://192.168.11.63 trusty-updates InRelease
+[controller01][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty Release.gpg
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security Release.gpg
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release.gpg
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty Release
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security Release
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release
+[controller01][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main amd64 Packages
+[controller01][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main i386 Packages
+[controller01][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh_CN
+[controller01][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh
+[controller01][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/main Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/universe Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/main amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/universe amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/main i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/universe i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-zh_CN
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-zh_CN
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-zh_CN
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-zh_CN
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/main amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/main i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Sources
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse amd64 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse i386 Packages
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Translation-en
+[controller01][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Translation-en
+[controller01][DEBUG ] 忽略 http://192.168.11.63 trusty/main Translation-zh
+[controller01][DEBUG ] 忽略 http://192.168.11.63 trusty/multiverse Translation-zh
+[controller01][DEBUG ] 忽略 http://192.168.11.63 trusty/restricted Translation-zh
+[controller01][DEBUG ] 忽略 http://192.168.11.63 trusty/universe Translation-zh
+[controller01][DEBUG ] 获取：1 http://ceph.com trusty InRelease [6,849 B]
+[controller01][DEBUG ] 获取：2 http://ceph.com trusty/main i386 Packages [806 B]
+[controller01][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh_CN
+[controller01][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh
+[controller01][DEBUG ] 忽略 http://ceph.com trusty/main Translation-en
+[controller01][DEBUG ] 错误 http://ceph.com trusty/main amd64 Packages
+[controller01][DEBUG ]   
+[controller01][DEBUG ] 错误 http://ceph.com trusty/main amd64 Packages
+[controller01][DEBUG ]   
+[controller01][DEBUG ] 获取：3 http://ceph.com trusty/main amd64 Packages [29.7 kB]
+[controller01][DEBUG ] 下载 37.3 kB，耗时 4分 2秒 (154 B/s)
+[controller01][DEBUG ] 正在读取软件包列表...
+[controller01][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get -q -o Dpkg::Options::=--force-confnew --no-install-recommends --assume-yes install -- ceph ceph-mds ceph-common ceph-fs-common gdisk
+[controller01][DEBUG ] 正在读取软件包列表...
+[controller01][DEBUG ] 正在分析软件包的依赖关系树...
+[controller01][DEBUG ] 正在读取状态信息...
+[controller01][DEBUG ] 将会安装下列额外的软件包：
+[controller01][DEBUG ]   cryptsetup-bin libcryptsetup4 libgoogle-perftools4 libicu52 libleveldb1
+[controller01][DEBUG ]   librados2 librbd1 libsnappy1 libtcmalloc-minimal4 libunwind8 python-ceph
+[controller01][DEBUG ]   python-flask python-itsdangerous python-werkzeug xfsprogs
+[controller01][DEBUG ] 建议安装的软件包：
+[controller01][DEBUG ]   python-flask-doc ipython python-genshi python-redis python-werkzeug-doc
+[controller01][DEBUG ]   xfsdump acl attr quota
+[controller01][DEBUG ] 推荐安装的软件包：
+[controller01][DEBUG ]   btrfs-tools ceph-fuse libcephfs1 python-blinker python-pyinotify
+[controller01][DEBUG ] 下列【新】软件包将被安装：
+[controller01][DEBUG ]   ceph ceph-common ceph-fs-common ceph-mds cryptsetup-bin gdisk libcryptsetup4
+[controller01][DEBUG ]   libgoogle-perftools4 libicu52 libleveldb1 libsnappy1 libtcmalloc-minimal4
+[controller01][DEBUG ]   libunwind8 python-ceph python-flask python-itsdangerous python-werkzeug
+[controller01][DEBUG ]   xfsprogs
+[controller01][DEBUG ] 下列软件包将被升级：
+[controller01][DEBUG ]   librados2 librbd1
+[controller01][DEBUG ] 升级了 2 个软件包，新安装了 18 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[controller01][DEBUG ] 需要下载 21.8 MB 的软件包。
+[controller01][DEBUG ] 解压缩后会消耗掉 100 MB 的额外空间。
+[controller01][DEBUG ] 获取：1 http://192.168.11.63/ubuntu/ trusty/main libicu52 amd64 52.1-3 [6,770 kB]
+[controller01][DEBUG ] 获取：2 http://ceph.com/debian-firefly/ trusty/main librbd1 amd64 0.80.7-1trusty [319 kB]
+[controller01][DEBUG ] 获取：3 http://192.168.11.63/ubuntu/ trusty/main libsnappy1 amd64 1.1.0-1ubuntu1 [11.2 kB]
+[controller01][DEBUG ] 获取：4 http://192.168.11.63/ubuntu/ trusty/main libleveldb1 amd64 1.15.0-2 [117 kB]
+[controller01][DEBUG ] 获取：5 http://192.168.11.63/ubuntu/ trusty/main libunwind8 amd64 1.1-2.2ubuntu3 [48.3 kB]
+[controller01][DEBUG ] 获取：6 http://192.168.11.63/ubuntu/ trusty/main libtcmalloc-minimal4 amd64 2.1-2ubuntu1 [104 kB]
+[controller01][DEBUG ] 获取：7 http://192.168.11.63/ubuntu/ trusty/main libgoogle-perftools4 amd64 2.1-2ubuntu1 [184 kB]
+[controller01][DEBUG ] 获取：8 http://192.168.11.63/ubuntu/ trusty/main python-werkzeug all 0.9.4+dfsg-1.1ubuntu1 [236 kB]
+[controller01][DEBUG ] 获取：9 http://192.168.11.63/ubuntu/ trusty/main python-itsdangerous all 0.22+dfsg1-1build1 [11.5 kB]
+[controller01][DEBUG ] 获取：10 http://192.168.11.63/ubuntu/ trusty/main python-flask all 0.10.1-2build1 [51.7 kB]
+[controller01][DEBUG ] 获取：11 http://192.168.11.63/ubuntu/ trusty/main libcryptsetup4 amd64 2:1.6.1-1ubuntu1 [77.0 kB]
+[controller01][DEBUG ] 获取：12 http://192.168.11.63/ubuntu/ trusty/main cryptsetup-bin amd64 2:1.6.1-1ubuntu1 [80.4 kB]
+[controller01][DEBUG ] 获取：13 http://192.168.11.63/ubuntu/ trusty/main gdisk amd64 0.8.8-1build1 [186 kB]
+[controller01][DEBUG ] 获取：14 http://192.168.11.63/ubuntu/ trusty/main xfsprogs amd64 3.1.9ubuntu2 [508 kB]
+[controller01][DEBUG ] 获取：15 http://ceph.com/debian-firefly/ trusty/main librados2 amd64 0.80.7-1trusty [1,427 kB]
+[controller01][DEBUG ] 获取：16 http://ceph.com/debian-firefly/ trusty/main python-ceph amd64 0.80.7-1trusty [36.3 kB]
+[controller01][DEBUG ] 获取：17 http://ceph.com/debian-firefly/ trusty/main ceph-common amd64 0.80.7-1trusty [3,945 kB]
+[controller01][DEBUG ] 获取：18 http://ceph.com/debian-firefly/ trusty/main ceph amd64 0.80.7-1trusty [5,538 kB]
+[controller01][DEBUG ] 获取：19 http://ceph.com/debian-firefly/ trusty/main ceph-fs-common amd64 0.80.7-1trusty [25.4 kB]
+[controller01][DEBUG ] 获取：20 http://ceph.com/debian-firefly/ trusty/main ceph-mds amd64 0.80.7-1trusty [2,099 kB]
+[controller01][DEBUG ] 下载 21.8 MB，耗时 49秒 (441 kB/s)
+[controller01][DEBUG ] Selecting previously unselected package libicu52:amd64.
+[controller01][DEBUG ] (正在读取数据库 ... 系统当前共安装有 114533 个文件和目录。)
+[controller01][DEBUG ] Preparing to unpack .../libicu52_52.1-3_amd64.deb ...
+[controller01][DEBUG ] Unpacking libicu52:amd64 (52.1-3) ...
+[controller01][DEBUG ] Selecting previously unselected package libsnappy1.
+[controller01][DEBUG ] Preparing to unpack .../libsnappy1_1.1.0-1ubuntu1_amd64.deb ...
+[controller01][DEBUG ] Unpacking libsnappy1 (1.1.0-1ubuntu1) ...
+[controller01][DEBUG ] Selecting previously unselected package libleveldb1:amd64.
+[controller01][DEBUG ] Preparing to unpack .../libleveldb1_1.15.0-2_amd64.deb ...
+[controller01][DEBUG ] Unpacking libleveldb1:amd64 (1.15.0-2) ...
+[controller01][DEBUG ] Selecting previously unselected package libunwind8.
+[controller01][DEBUG ] Preparing to unpack .../libunwind8_1.1-2.2ubuntu3_amd64.deb ...
+[controller01][DEBUG ] Unpacking libunwind8 (1.1-2.2ubuntu3) ...
+[controller01][DEBUG ] Preparing to unpack .../librbd1_0.80.7-1trusty_amd64.deb ...
+[controller01][DEBUG ] Unpacking librbd1 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[controller01][DEBUG ] Preparing to unpack .../librados2_0.80.7-1trusty_amd64.deb ...
+[controller01][DEBUG ] Unpacking librados2 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[controller01][DEBUG ] Selecting previously unselected package libtcmalloc-minimal4.
+[controller01][DEBUG ] Preparing to unpack .../libtcmalloc-minimal4_2.1-2ubuntu1_amd64.deb ...
+[controller01][DEBUG ] Unpacking libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[controller01][DEBUG ] Selecting previously unselected package libgoogle-perftools4.
+[controller01][DEBUG ] Preparing to unpack .../libgoogle-perftools4_2.1-2ubuntu1_amd64.deb ...
+[controller01][DEBUG ] Unpacking libgoogle-perftools4 (2.1-2ubuntu1) ...
+[controller01][DEBUG ] Selecting previously unselected package python-werkzeug.
+[controller01][DEBUG ] Preparing to unpack .../python-werkzeug_0.9.4+dfsg-1.1ubuntu1_all.deb ...
+[controller01][DEBUG ] Unpacking python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[controller01][DEBUG ] Selecting previously unselected package python-itsdangerous.
+[controller01][DEBUG ] Preparing to unpack .../python-itsdangerous_0.22+dfsg1-1build1_all.deb ...
+[controller01][DEBUG ] Unpacking python-itsdangerous (0.22+dfsg1-1build1) ...
+[controller01][DEBUG ] Selecting previously unselected package python-flask.
+[controller01][DEBUG ] Preparing to unpack .../python-flask_0.10.1-2build1_all.deb ...
+[controller01][DEBUG ] Unpacking python-flask (0.10.1-2build1) ...
+[controller01][DEBUG ] Selecting previously unselected package python-ceph.
+[controller01][DEBUG ] Preparing to unpack .../python-ceph_0.80.7-1trusty_amd64.deb ...
+[controller01][DEBUG ] Unpacking python-ceph (0.80.7-1trusty) ...
+[controller01][DEBUG ] Selecting previously unselected package ceph-common.
+[controller01][DEBUG ] Preparing to unpack .../ceph-common_0.80.7-1trusty_amd64.deb ...
+[controller01][DEBUG ] Unpacking ceph-common (0.80.7-1trusty) ...
+[controller01][DEBUG ] Selecting previously unselected package libcryptsetup4.
+[controller01][DEBUG ] Preparing to unpack .../libcryptsetup4_2%3a1.6.1-1ubuntu1_amd64.deb ...
+[controller01][DEBUG ] Unpacking libcryptsetup4 (2:1.6.1-1ubuntu1) ...
+[controller01][DEBUG ] Selecting previously unselected package cryptsetup-bin.
+[controller01][DEBUG ] Preparing to unpack .../cryptsetup-bin_2%3a1.6.1-1ubuntu1_amd64.deb ...
+[controller01][DEBUG ] Unpacking cryptsetup-bin (2:1.6.1-1ubuntu1) ...
+[controller01][DEBUG ] Selecting previously unselected package gdisk.
+[controller01][DEBUG ] Preparing to unpack .../gdisk_0.8.8-1build1_amd64.deb ...
+[controller01][DEBUG ] Unpacking gdisk (0.8.8-1build1) ...
+[controller01][DEBUG ] Selecting previously unselected package xfsprogs.
+[controller01][DEBUG ] Preparing to unpack .../xfsprogs_3.1.9ubuntu2_amd64.deb ...
+[controller01][DEBUG ] Unpacking xfsprogs (3.1.9ubuntu2) ...
+[controller01][DEBUG ] Selecting previously unselected package ceph.
+[controller01][DEBUG ] Preparing to unpack .../ceph_0.80.7-1trusty_amd64.deb ...
+[controller01][DEBUG ] Unpacking ceph (0.80.7-1trusty) ...
+[controller01][DEBUG ] Selecting previously unselected package ceph-fs-common.
+[controller01][DEBUG ] Preparing to unpack .../ceph-fs-common_0.80.7-1trusty_amd64.deb ...
+[controller01][DEBUG ] Unpacking ceph-fs-common (0.80.7-1trusty) ...
+[controller01][DEBUG ] Selecting previously unselected package ceph-mds.
+[controller01][DEBUG ] Preparing to unpack .../ceph-mds_0.80.7-1trusty_amd64.deb ...
+[controller01][DEBUG ] Unpacking ceph-mds (0.80.7-1trusty) ...
+[controller01][DEBUG ] Processing triggers for man-db (2.6.7.1-1) ...
+[controller01][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller01][DEBUG ] 正在设置 libicu52:amd64 (52.1-3) ...
+[controller01][DEBUG ] 正在设置 libsnappy1 (1.1.0-1ubuntu1) ...
+[controller01][DEBUG ] 正在设置 libleveldb1:amd64 (1.15.0-2) ...
+[controller01][DEBUG ] 正在设置 libunwind8 (1.1-2.2ubuntu3) ...
+[controller01][DEBUG ] 正在设置 librados2 (0.80.7-1trusty) ...
+[controller01][DEBUG ] 正在设置 librbd1 (0.80.7-1trusty) ...
+[controller01][DEBUG ] 正在设置 libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[controller01][DEBUG ] 正在设置 libgoogle-perftools4 (2.1-2ubuntu1) ...
+[controller01][DEBUG ] 正在设置 python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[controller01][DEBUG ] 正在设置 python-itsdangerous (0.22+dfsg1-1build1) ...
+[controller01][DEBUG ] 正在设置 python-flask (0.10.1-2build1) ...
+[controller01][DEBUG ] 正在设置 python-ceph (0.80.7-1trusty) ...
+[controller01][DEBUG ] 正在设置 ceph-common (0.80.7-1trusty) ...
+[controller01][DEBUG ] 正在设置 libcryptsetup4 (2:1.6.1-1ubuntu1) ...
+[controller01][DEBUG ] 正在设置 cryptsetup-bin (2:1.6.1-1ubuntu1) ...
+[controller01][DEBUG ] 正在设置 gdisk (0.8.8-1build1) ...
+[controller01][DEBUG ] 正在设置 xfsprogs (3.1.9ubuntu2) ...
+[controller01][DEBUG ] 正在设置 ceph-fs-common (0.80.7-1trusty) ...
+[controller01][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller01][DEBUG ] 正在设置 ceph (0.80.7-1trusty) ...
+[controller01][DEBUG ] ceph-all start/running
+[controller01][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller01][DEBUG ] 正在设置 ceph-mds (0.80.7-1trusty) ...
+[controller01][DEBUG ] ceph-mds-all start/running
+[controller01][DEBUG ] Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+[controller01][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller01][INFO  ] Running command: ceph --version
+[controller01][DEBUG ] ceph version 0.80.7 (6c0127fcb58008793d3c8b62d925bc91963672a3)
+[ceph_deploy.install][DEBUG ] Detecting platform for host controller02 ...
+[controller02][DEBUG ] connected to host: controller02 
+[controller02][DEBUG ] detect platform information from remote host
+[controller02][DEBUG ] detect machine type
+[ceph_deploy.install][INFO  ] Distro info: Ubuntu 14.04 trusty
+[controller02][INFO  ] installing ceph on controller02
+[controller02][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive apt-get -q install --assume-yes ca-certificates
+[controller02][DEBUG ] 正在读取软件包列表...
+[controller02][DEBUG ] 正在分析软件包的依赖关系树...
+[controller02][DEBUG ] 正在读取状态信息...
+[controller02][DEBUG ] ca-certificates is already the newest version.
+[controller02][DEBUG ] 升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[controller02][INFO  ] Running command: wget -O release.asc https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[controller02][WARNING] --2014-10-28 21:29:15--  https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[controller02][WARNING] Resolving ceph.com (ceph.com)... 208.113.241.137, 2607:f298:4:147::b05:fe2a
+[controller02][WARNING] Connecting to ceph.com (ceph.com)|208.113.241.137|:443... connected.
+[controller02][WARNING] HTTP request sent, awaiting response... 200 OK
+[controller02][WARNING] Length: unspecified [text/plain]
+[controller02][WARNING] Saving to: ‘release.asc’
+[controller02][WARNING] 
+[controller02][WARNING]      0K .                                                      1.23M=0.001s
+[controller02][WARNING] 
+[controller02][WARNING] 2014-10-28 21:29:16 (1.23 MB/s) - ‘release.asc’ saved [1752]
+[controller02][WARNING] 
+[controller02][INFO  ] Running command: apt-key add release.asc
+[controller02][DEBUG ] OK
+[controller02][DEBUG ] add deb repo to sources.list
+[controller02][INFO  ] Running command: apt-get -q update
+[controller02][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse InRelease
+[controller02][DEBUG ] 忽略 http://192.168.11.63 trusty InRelease
+[controller02][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release.gpg
+[controller02][DEBUG ] 忽略 http://192.168.11.63 trusty-security InRelease
+[controller02][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release
+[controller02][DEBUG ] 忽略 http://192.168.11.63 trusty-updates InRelease
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty Release.gpg
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security Release.gpg
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release.gpg
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty Release
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security Release
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release
+[controller02][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main amd64 Packages
+[controller02][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/main Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/universe Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/main amd64 Packages
+[controller02][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh_CN
+[controller02][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted amd64 Packages
+[controller02][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/universe amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/main i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/universe i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-zh_CN
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-zh_CN
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-zh_CN
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-zh_CN
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/main amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/main i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Sources
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse amd64 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse i386 Packages
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Translation-en
+[controller02][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Translation-en
+[controller02][DEBUG ] 忽略 http://192.168.11.63 trusty/main Translation-zh
+[controller02][DEBUG ] 忽略 http://192.168.11.63 trusty/multiverse Translation-zh
+[controller02][DEBUG ] 忽略 http://192.168.11.63 trusty/restricted Translation-zh
+[controller02][DEBUG ] 忽略 http://192.168.11.63 trusty/universe Translation-zh
+[controller02][DEBUG ] 获取：1 http://ceph.com trusty InRelease [6,849 B]
+[controller02][DEBUG ] 获取：2 http://ceph.com trusty/main amd64 Packages [6,316 B]
+[controller02][DEBUG ] 获取：3 http://ceph.com trusty/main i386 Packages [806 B]
+[controller02][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh_CN
+[controller02][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh
+[controller02][DEBUG ] 忽略 http://ceph.com trusty/main Translation-en
+[controller02][DEBUG ] 下载 14.0 kB，耗时 4秒 (3,095 B/s)
+[controller02][DEBUG ] 正在读取软件包列表...
+[controller02][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get -q -o Dpkg::Options::=--force-confnew --no-install-recommends --assume-yes install -- ceph ceph-mds ceph-common ceph-fs-common gdisk
+[controller02][DEBUG ] 正在读取软件包列表...
+[controller02][DEBUG ] 正在分析软件包的依赖关系树...
+[controller02][DEBUG ] 正在读取状态信息...
+[controller02][DEBUG ] 将会安装下列额外的软件包：
+[controller02][DEBUG ]   cryptsetup-bin libcryptsetup4 libgoogle-perftools4 libicu52 libleveldb1
+[controller02][DEBUG ]   librados2 librbd1 libsnappy1 libtcmalloc-minimal4 libunwind8 python-ceph
+[controller02][DEBUG ]   python-flask python-itsdangerous python-werkzeug xfsprogs
+[controller02][DEBUG ] 建议安装的软件包：
+[controller02][DEBUG ]   python-flask-doc ipython python-genshi python-redis python-werkzeug-doc
+[controller02][DEBUG ]   xfsdump acl attr quota
+[controller02][DEBUG ] 推荐安装的软件包：
+[controller02][DEBUG ]   btrfs-tools ceph-fuse libcephfs1 python-blinker python-pyinotify
+[controller02][DEBUG ] 下列【新】软件包将被安装：
+[controller02][DEBUG ]   ceph ceph-common ceph-fs-common ceph-mds cryptsetup-bin gdisk libcryptsetup4
+[controller02][DEBUG ]   libgoogle-perftools4 libicu52 libleveldb1 libsnappy1 libtcmalloc-minimal4
+[controller02][DEBUG ]   libunwind8 python-ceph python-flask python-itsdangerous python-werkzeug
+[controller02][DEBUG ]   xfsprogs
+[controller02][DEBUG ] 下列软件包将被升级：
+[controller02][DEBUG ]   librados2 librbd1
+[controller02][DEBUG ] 升级了 2 个软件包，新安装了 18 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[controller02][DEBUG ] 需要下载 21.8 MB 的软件包。
+[controller02][DEBUG ] 解压缩后会消耗掉 100 MB 的额外空间。
+[controller02][DEBUG ] 获取：1 http://192.168.11.63/ubuntu/ trusty/main libicu52 amd64 52.1-3 [6,770 kB]
+[controller02][DEBUG ] 获取：2 http://ceph.com/debian-firefly/ trusty/main librbd1 amd64 0.80.7-1trusty [319 kB]
+[controller02][DEBUG ] 获取：3 http://192.168.11.63/ubuntu/ trusty/main libsnappy1 amd64 1.1.0-1ubuntu1 [11.2 kB]
+[controller02][DEBUG ] 获取：4 http://192.168.11.63/ubuntu/ trusty/main libleveldb1 amd64 1.15.0-2 [117 kB]
+[controller02][DEBUG ] 获取：5 http://192.168.11.63/ubuntu/ trusty/main libunwind8 amd64 1.1-2.2ubuntu3 [48.3 kB]
+[controller02][DEBUG ] 获取：6 http://192.168.11.63/ubuntu/ trusty/main libtcmalloc-minimal4 amd64 2.1-2ubuntu1 [104 kB]
+[controller02][DEBUG ] 获取：7 http://192.168.11.63/ubuntu/ trusty/main libgoogle-perftools4 amd64 2.1-2ubuntu1 [184 kB]
+[controller02][DEBUG ] 获取：8 http://192.168.11.63/ubuntu/ trusty/main python-werkzeug all 0.9.4+dfsg-1.1ubuntu1 [236 kB]
+[controller02][DEBUG ] 获取：9 http://192.168.11.63/ubuntu/ trusty/main python-itsdangerous all 0.22+dfsg1-1build1 [11.5 kB]
+[controller02][DEBUG ] 获取：10 http://192.168.11.63/ubuntu/ trusty/main python-flask all 0.10.1-2build1 [51.7 kB]
+[controller02][DEBUG ] 获取：11 http://192.168.11.63/ubuntu/ trusty/main libcryptsetup4 amd64 2:1.6.1-1ubuntu1 [77.0 kB]
+[controller02][DEBUG ] 获取：12 http://192.168.11.63/ubuntu/ trusty/main cryptsetup-bin amd64 2:1.6.1-1ubuntu1 [80.4 kB]
+[controller02][DEBUG ] 获取：13 http://192.168.11.63/ubuntu/ trusty/main gdisk amd64 0.8.8-1build1 [186 kB]
+[controller02][DEBUG ] 获取：14 http://192.168.11.63/ubuntu/ trusty/main xfsprogs amd64 3.1.9ubuntu2 [508 kB]
+[controller02][DEBUG ] 获取：15 http://ceph.com/debian-firefly/ trusty/main librados2 amd64 0.80.7-1trusty [1,427 kB]
+[controller02][DEBUG ] 获取：16 http://ceph.com/debian-firefly/ trusty/main python-ceph amd64 0.80.7-1trusty [36.3 kB]
+[controller02][DEBUG ] 获取：17 http://ceph.com/debian-firefly/ trusty/main ceph-common amd64 0.80.7-1trusty [3,945 kB]
+[controller02][DEBUG ] 获取：18 http://ceph.com/debian-firefly/ trusty/main ceph amd64 0.80.7-1trusty [5,538 kB]
+[controller02][DEBUG ] 获取：19 http://ceph.com/debian-firefly/ trusty/main ceph-fs-common amd64 0.80.7-1trusty [25.4 kB]
+[controller02][DEBUG ] 获取：20 http://ceph.com/debian-firefly/ trusty/main ceph-mds amd64 0.80.7-1trusty [2,099 kB]
+[controller02][DEBUG ] 下载 21.8 MB，耗时 60秒 (357 kB/s)
+[controller02][DEBUG ] Selecting previously unselected package libicu52:amd64.
+[controller02][DEBUG ] (正在读取数据库 ... 系统当前共安装有 114533 个文件和目录。)
+[controller02][DEBUG ] Preparing to unpack .../libicu52_52.1-3_amd64.deb ...
+[controller02][DEBUG ] Unpacking libicu52:amd64 (52.1-3) ...
+[controller02][DEBUG ] Selecting previously unselected package libsnappy1.
+[controller02][DEBUG ] Preparing to unpack .../libsnappy1_1.1.0-1ubuntu1_amd64.deb ...
+[controller02][DEBUG ] Unpacking libsnappy1 (1.1.0-1ubuntu1) ...
+[controller02][DEBUG ] Selecting previously unselected package libleveldb1:amd64.
+[controller02][DEBUG ] Preparing to unpack .../libleveldb1_1.15.0-2_amd64.deb ...
+[controller02][DEBUG ] Unpacking libleveldb1:amd64 (1.15.0-2) ...
+[controller02][DEBUG ] Selecting previously unselected package libunwind8.
+[controller02][DEBUG ] Preparing to unpack .../libunwind8_1.1-2.2ubuntu3_amd64.deb ...
+[controller02][DEBUG ] Unpacking libunwind8 (1.1-2.2ubuntu3) ...
+[controller02][DEBUG ] Preparing to unpack .../librbd1_0.80.7-1trusty_amd64.deb ...
+[controller02][DEBUG ] Unpacking librbd1 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[controller02][DEBUG ] Preparing to unpack .../librados2_0.80.7-1trusty_amd64.deb ...
+[controller02][DEBUG ] Unpacking librados2 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[controller02][DEBUG ] Selecting previously unselected package libtcmalloc-minimal4.
+[controller02][DEBUG ] Preparing to unpack .../libtcmalloc-minimal4_2.1-2ubuntu1_amd64.deb ...
+[controller02][DEBUG ] Unpacking libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[controller02][DEBUG ] Selecting previously unselected package libgoogle-perftools4.
+[controller02][DEBUG ] Preparing to unpack .../libgoogle-perftools4_2.1-2ubuntu1_amd64.deb ...
+[controller02][DEBUG ] Unpacking libgoogle-perftools4 (2.1-2ubuntu1) ...
+[controller02][DEBUG ] Selecting previously unselected package python-werkzeug.
+[controller02][DEBUG ] Preparing to unpack .../python-werkzeug_0.9.4+dfsg-1.1ubuntu1_all.deb ...
+[controller02][DEBUG ] Unpacking python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[controller02][DEBUG ] Selecting previously unselected package python-itsdangerous.
+[controller02][DEBUG ] Preparing to unpack .../python-itsdangerous_0.22+dfsg1-1build1_all.deb ...
+[controller02][DEBUG ] Unpacking python-itsdangerous (0.22+dfsg1-1build1) ...
+[controller02][DEBUG ] Selecting previously unselected package python-flask.
+[controller02][DEBUG ] Preparing to unpack .../python-flask_0.10.1-2build1_all.deb ...
+[controller02][DEBUG ] Unpacking python-flask (0.10.1-2build1) ...
+[controller02][DEBUG ] Selecting previously unselected package python-ceph.
+[controller02][DEBUG ] Preparing to unpack .../python-ceph_0.80.7-1trusty_amd64.deb ...
+[controller02][DEBUG ] Unpacking python-ceph (0.80.7-1trusty) ...
+[controller02][DEBUG ] Selecting previously unselected package ceph-common.
+[controller02][DEBUG ] Preparing to unpack .../ceph-common_0.80.7-1trusty_amd64.deb ...
+[controller02][DEBUG ] Unpacking ceph-common (0.80.7-1trusty) ...
+[controller02][DEBUG ] Selecting previously unselected package libcryptsetup4.
+[controller02][DEBUG ] Preparing to unpack .../libcryptsetup4_2%3a1.6.1-1ubuntu1_amd64.deb ...
+[controller02][DEBUG ] Unpacking libcryptsetup4 (2:1.6.1-1ubuntu1) ...
+[controller02][DEBUG ] Selecting previously unselected package cryptsetup-bin.
+[controller02][DEBUG ] Preparing to unpack .../cryptsetup-bin_2%3a1.6.1-1ubuntu1_amd64.deb ...
+[controller02][DEBUG ] Unpacking cryptsetup-bin (2:1.6.1-1ubuntu1) ...
+[controller02][DEBUG ] Selecting previously unselected package gdisk.
+[controller02][DEBUG ] Preparing to unpack .../gdisk_0.8.8-1build1_amd64.deb ...
+[controller02][DEBUG ] Unpacking gdisk (0.8.8-1build1) ...
+[controller02][DEBUG ] Selecting previously unselected package xfsprogs.
+[controller02][DEBUG ] Preparing to unpack .../xfsprogs_3.1.9ubuntu2_amd64.deb ...
+[controller02][DEBUG ] Unpacking xfsprogs (3.1.9ubuntu2) ...
+[controller02][DEBUG ] Selecting previously unselected package ceph.
+[controller02][DEBUG ] Preparing to unpack .../ceph_0.80.7-1trusty_amd64.deb ...
+[controller02][DEBUG ] Unpacking ceph (0.80.7-1trusty) ...
+[controller02][DEBUG ] Selecting previously unselected package ceph-fs-common.
+[controller02][DEBUG ] Preparing to unpack .../ceph-fs-common_0.80.7-1trusty_amd64.deb ...
+[controller02][DEBUG ] Unpacking ceph-fs-common (0.80.7-1trusty) ...
+[controller02][DEBUG ] Selecting previously unselected package ceph-mds.
+[controller02][DEBUG ] Preparing to unpack .../ceph-mds_0.80.7-1trusty_amd64.deb ...
+[controller02][DEBUG ] Unpacking ceph-mds (0.80.7-1trusty) ...
+[controller02][DEBUG ] Processing triggers for man-db (2.6.7.1-1) ...
+[controller02][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller02][DEBUG ] 正在设置 libicu52:amd64 (52.1-3) ...
+[controller02][DEBUG ] 正在设置 libsnappy1 (1.1.0-1ubuntu1) ...
+[controller02][DEBUG ] 正在设置 libleveldb1:amd64 (1.15.0-2) ...
+[controller02][DEBUG ] 正在设置 libunwind8 (1.1-2.2ubuntu3) ...
+[controller02][DEBUG ] 正在设置 librados2 (0.80.7-1trusty) ...
+[controller02][DEBUG ] 正在设置 librbd1 (0.80.7-1trusty) ...
+[controller02][DEBUG ] 正在设置 libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[controller02][DEBUG ] 正在设置 libgoogle-perftools4 (2.1-2ubuntu1) ...
+[controller02][DEBUG ] 正在设置 python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[controller02][DEBUG ] 正在设置 python-itsdangerous (0.22+dfsg1-1build1) ...
+[controller02][DEBUG ] 正在设置 python-flask (0.10.1-2build1) ...
+[controller02][DEBUG ] 正在设置 python-ceph (0.80.7-1trusty) ...
+[controller02][DEBUG ] 正在设置 ceph-common (0.80.7-1trusty) ...
+[controller02][DEBUG ] 正在设置 libcryptsetup4 (2:1.6.1-1ubuntu1) ...
+[controller02][DEBUG ] 正在设置 cryptsetup-bin (2:1.6.1-1ubuntu1) ...
+[controller02][DEBUG ] 正在设置 gdisk (0.8.8-1build1) ...
+[controller02][DEBUG ] 正在设置 xfsprogs (3.1.9ubuntu2) ...
+[controller02][DEBUG ] 正在设置 ceph-fs-common (0.80.7-1trusty) ...
+[controller02][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller02][DEBUG ] 正在设置 ceph (0.80.7-1trusty) ...
+[controller02][DEBUG ] ceph-all start/running
+[controller02][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller02][DEBUG ] 正在设置 ceph-mds (0.80.7-1trusty) ...
+[controller02][DEBUG ] ceph-mds-all start/running
+[controller02][DEBUG ] Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+[controller02][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller02][INFO  ] Running command: ceph --version
+[controller02][DEBUG ] ceph version 0.80.7 (6c0127fcb58008793d3c8b62d925bc91963672a3)
+[ceph_deploy.install][DEBUG ] Detecting platform for host controller03 ...
+[controller03][DEBUG ] connected to host: controller03 
+[controller03][DEBUG ] detect platform information from remote host
+[controller03][DEBUG ] detect machine type
+[ceph_deploy.install][INFO  ] Distro info: Ubuntu 14.04 trusty
+[controller03][INFO  ] installing ceph on controller03
+[controller03][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive apt-get -q install --assume-yes ca-certificates
+[controller03][DEBUG ] 正在读取软件包列表...
+[controller03][DEBUG ] 正在分析软件包的依赖关系树...
+[controller03][DEBUG ] 正在读取状态信息...
+[controller03][DEBUG ] ca-certificates is already the newest version.
+[controller03][DEBUG ] 升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[controller03][INFO  ] Running command: wget -O release.asc https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[controller03][WARNING] --2014-10-28 21:30:54--  https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+[controller03][WARNING] Resolving ceph.com (ceph.com)... 208.113.241.137, 2607:f298:4:147::b05:fe2a
+[controller03][WARNING] Connecting to ceph.com (ceph.com)|208.113.241.137|:443... connected.
+[controller03][WARNING] HTTP request sent, awaiting response... 200 OK
+[controller03][WARNING] Length: unspecified [text/plain]
+[controller03][WARNING] Saving to: ‘release.asc’
+[controller03][WARNING] 
+[controller03][WARNING]      0K .                                                      34.5M=0s
+[controller03][WARNING] 
+[controller03][WARNING] 2014-10-28 21:30:55 (34.5 MB/s) - ‘release.asc’ saved [1752]
+[controller03][WARNING] 
+[controller03][INFO  ] Running command: apt-key add release.asc
+[controller03][DEBUG ] OK
+[controller03][DEBUG ] add deb repo to sources.list
+[controller03][INFO  ] Running command: apt-get -q update
+[controller03][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse InRelease
+[controller03][DEBUG ] 忽略 http://192.168.11.63 trusty InRelease
+[controller03][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release.gpg
+[controller03][DEBUG ] 忽略 http://192.168.11.63 trusty-security InRelease
+[controller03][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse Release
+[controller03][DEBUG ] 忽略 http://192.168.11.63 trusty-updates InRelease
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty Release.gpg
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security Release.gpg
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release.gpg
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty Release
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security Release
+[controller03][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates Release
+[controller03][DEBUG ] 命中 http://172.16.0.63 precise-updates/icehouse/main i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/main Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/universe Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/main amd64 Packages
+[controller03][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh_CN
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/restricted amd64 Packages
+[controller03][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh
+[controller03][DEBUG ] 忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/universe amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/main i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/restricted i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/universe i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-zh_CN
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/main Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-zh_CN
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/multiverse Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-zh_CN
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/restricted Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-zh_CN
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty/universe Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/main amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/main i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/main Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/multiverse Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/restricted Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-security/universe Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Sources
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse amd64 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse i386 Packages
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/main Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/multiverse Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/restricted Translation-en
+[controller03][DEBUG ] 命中 http://192.168.11.63 trusty-updates/universe Translation-en
+[controller03][DEBUG ] 忽略 http://192.168.11.63 trusty/main Translation-zh
+[controller03][DEBUG ] 忽略 http://192.168.11.63 trusty/multiverse Translation-zh
+[controller03][DEBUG ] 忽略 http://192.168.11.63 trusty/restricted Translation-zh
+[controller03][DEBUG ] 忽略 http://192.168.11.63 trusty/universe Translation-zh
+[controller03][DEBUG ] 获取：1 http://ceph.com trusty InRelease [6,849 B]
+[controller03][DEBUG ] 获取：2 http://ceph.com trusty/main amd64 Packages [6,316 B]
+[controller03][DEBUG ] 获取：3 http://ceph.com trusty/main i386 Packages [806 B]
+[controller03][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh_CN
+[controller03][DEBUG ] 忽略 http://ceph.com trusty/main Translation-zh
+[controller03][DEBUG ] 忽略 http://ceph.com trusty/main Translation-en
+[controller03][DEBUG ] 下载 14.0 kB，耗时 4秒 (3,049 B/s)
+[controller03][DEBUG ] 正在读取软件包列表...
+[controller03][INFO  ] Running command: env DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt-get -q -o Dpkg::Options::=--force-confnew --no-install-recommends --assume-yes install -- ceph ceph-mds ceph-common ceph-fs-common gdisk
+[controller03][DEBUG ] 正在读取软件包列表...
+[controller03][DEBUG ] 正在分析软件包的依赖关系树...
+[controller03][DEBUG ] 正在读取状态信息...
+[controller03][DEBUG ] 将会安装下列额外的软件包：
+[controller03][DEBUG ]   cryptsetup-bin libcryptsetup4 libgoogle-perftools4 libicu52 libleveldb1
+[controller03][DEBUG ]   librados2 librbd1 libsnappy1 libtcmalloc-minimal4 libunwind8 python-ceph
+[controller03][DEBUG ]   python-flask python-itsdangerous python-werkzeug xfsprogs
+[controller03][DEBUG ] 建议安装的软件包：
+[controller03][DEBUG ]   python-flask-doc ipython python-genshi python-redis python-werkzeug-doc
+[controller03][DEBUG ]   xfsdump acl attr quota
+[controller03][DEBUG ] 推荐安装的软件包：
+[controller03][DEBUG ]   btrfs-tools ceph-fuse libcephfs1 python-blinker python-pyinotify
+[controller03][DEBUG ] 下列【新】软件包将被安装：
+[controller03][DEBUG ]   ceph ceph-common ceph-fs-common ceph-mds cryptsetup-bin gdisk libcryptsetup4
+[controller03][DEBUG ]   libgoogle-perftools4 libicu52 libleveldb1 libsnappy1 libtcmalloc-minimal4
+[controller03][DEBUG ]   libunwind8 python-ceph python-flask python-itsdangerous python-werkzeug
+[controller03][DEBUG ]   xfsprogs
+[controller03][DEBUG ] 下列软件包将被升级：
+[controller03][DEBUG ]   librados2 librbd1
+[controller03][DEBUG ] 升级了 2 个软件包，新安装了 18 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+[controller03][DEBUG ] 需要下载 21.8 MB 的软件包。
+[controller03][DEBUG ] 解压缩后会消耗掉 100 MB 的额外空间。
+[controller03][DEBUG ] 获取：1 http://192.168.11.63/ubuntu/ trusty/main libicu52 amd64 52.1-3 [6,770 kB]
+[controller03][DEBUG ] 获取：2 http://ceph.com/debian-firefly/ trusty/main librbd1 amd64 0.80.7-1trusty [319 kB]
+[controller03][DEBUG ] 获取：3 http://192.168.11.63/ubuntu/ trusty/main libsnappy1 amd64 1.1.0-1ubuntu1 [11.2 kB]
+[controller03][DEBUG ] 获取：4 http://192.168.11.63/ubuntu/ trusty/main libleveldb1 amd64 1.15.0-2 [117 kB]
+[controller03][DEBUG ] 获取：5 http://192.168.11.63/ubuntu/ trusty/main libunwind8 amd64 1.1-2.2ubuntu3 [48.3 kB]
+[controller03][DEBUG ] 获取：6 http://192.168.11.63/ubuntu/ trusty/main libtcmalloc-minimal4 amd64 2.1-2ubuntu1 [104 kB]
+[controller03][DEBUG ] 获取：7 http://192.168.11.63/ubuntu/ trusty/main libgoogle-perftools4 amd64 2.1-2ubuntu1 [184 kB]
+[controller03][DEBUG ] 获取：8 http://192.168.11.63/ubuntu/ trusty/main python-werkzeug all 0.9.4+dfsg-1.1ubuntu1 [236 kB]
+[controller03][DEBUG ] 获取：9 http://192.168.11.63/ubuntu/ trusty/main python-itsdangerous all 0.22+dfsg1-1build1 [11.5 kB]
+[controller03][DEBUG ] 获取：10 http://192.168.11.63/ubuntu/ trusty/main python-flask all 0.10.1-2build1 [51.7 kB]
+[controller03][DEBUG ] 获取：11 http://192.168.11.63/ubuntu/ trusty/main libcryptsetup4 amd64 2:1.6.1-1ubuntu1 [77.0 kB]
+[controller03][DEBUG ] 获取：12 http://192.168.11.63/ubuntu/ trusty/main cryptsetup-bin amd64 2:1.6.1-1ubuntu1 [80.4 kB]
+[controller03][DEBUG ] 获取：13 http://192.168.11.63/ubuntu/ trusty/main gdisk amd64 0.8.8-1build1 [186 kB]
+[controller03][DEBUG ] 获取：14 http://192.168.11.63/ubuntu/ trusty/main xfsprogs amd64 3.1.9ubuntu2 [508 kB]
+[controller03][DEBUG ] 获取：15 http://ceph.com/debian-firefly/ trusty/main librados2 amd64 0.80.7-1trusty [1,427 kB]
+[controller03][DEBUG ] 获取：16 http://ceph.com/debian-firefly/ trusty/main python-ceph amd64 0.80.7-1trusty [36.3 kB]
+[controller03][DEBUG ] 获取：17 http://ceph.com/debian-firefly/ trusty/main ceph-common amd64 0.80.7-1trusty [3,945 kB]
+[controller03][DEBUG ] 获取：18 http://ceph.com/debian-firefly/ trusty/main ceph amd64 0.80.7-1trusty [5,538 kB]
+[controller03][DEBUG ] 获取：19 http://ceph.com/debian-firefly/ trusty/main ceph-fs-common amd64 0.80.7-1trusty [25.4 kB]
+[controller03][DEBUG ] 获取：20 http://ceph.com/debian-firefly/ trusty/main ceph-mds amd64 0.80.7-1trusty [2,099 kB]
+[controller03][DEBUG ] 下载 21.8 MB，耗时 1分 15秒 (289 kB/s)
+[controller03][DEBUG ] Selecting previously unselected package libicu52:amd64.
+[controller03][DEBUG ] (正在读取数据库 ... 系统当前共安装有 114533 个文件和目录。)
+[controller03][DEBUG ] Preparing to unpack .../libicu52_52.1-3_amd64.deb ...
+[controller03][DEBUG ] Unpacking libicu52:amd64 (52.1-3) ...
+[controller03][DEBUG ] Selecting previously unselected package libsnappy1.
+[controller03][DEBUG ] Preparing to unpack .../libsnappy1_1.1.0-1ubuntu1_amd64.deb ...
+[controller03][DEBUG ] Unpacking libsnappy1 (1.1.0-1ubuntu1) ...
+[controller03][DEBUG ] Selecting previously unselected package libleveldb1:amd64.
+[controller03][DEBUG ] Preparing to unpack .../libleveldb1_1.15.0-2_amd64.deb ...
+[controller03][DEBUG ] Unpacking libleveldb1:amd64 (1.15.0-2) ...
+[controller03][DEBUG ] Selecting previously unselected package libunwind8.
+[controller03][DEBUG ] Preparing to unpack .../libunwind8_1.1-2.2ubuntu3_amd64.deb ...
+[controller03][DEBUG ] Unpacking libunwind8 (1.1-2.2ubuntu3) ...
+[controller03][DEBUG ] Preparing to unpack .../librbd1_0.80.7-1trusty_amd64.deb ...
+[controller03][DEBUG ] Unpacking librbd1 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[controller03][DEBUG ] Preparing to unpack .../librados2_0.80.7-1trusty_amd64.deb ...
+[controller03][DEBUG ] Unpacking librados2 (0.80.7-1trusty) over (0.80.5-0ubuntu0.14.04.1) ...
+[controller03][DEBUG ] Selecting previously unselected package libtcmalloc-minimal4.
+[controller03][DEBUG ] Preparing to unpack .../libtcmalloc-minimal4_2.1-2ubuntu1_amd64.deb ...
+[controller03][DEBUG ] Unpacking libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[controller03][DEBUG ] Selecting previously unselected package libgoogle-perftools4.
+[controller03][DEBUG ] Preparing to unpack .../libgoogle-perftools4_2.1-2ubuntu1_amd64.deb ...
+[controller03][DEBUG ] Unpacking libgoogle-perftools4 (2.1-2ubuntu1) ...
+[controller03][DEBUG ] Selecting previously unselected package python-werkzeug.
+[controller03][DEBUG ] Preparing to unpack .../python-werkzeug_0.9.4+dfsg-1.1ubuntu1_all.deb ...
+[controller03][DEBUG ] Unpacking python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[controller03][DEBUG ] Selecting previously unselected package python-itsdangerous.
+[controller03][DEBUG ] Preparing to unpack .../python-itsdangerous_0.22+dfsg1-1build1_all.deb ...
+[controller03][DEBUG ] Unpacking python-itsdangerous (0.22+dfsg1-1build1) ...
+[controller03][DEBUG ] Selecting previously unselected package python-flask.
+[controller03][DEBUG ] Preparing to unpack .../python-flask_0.10.1-2build1_all.deb ...
+[controller03][DEBUG ] Unpacking python-flask (0.10.1-2build1) ...
+[controller03][DEBUG ] Selecting previously unselected package python-ceph.
+[controller03][DEBUG ] Preparing to unpack .../python-ceph_0.80.7-1trusty_amd64.deb ...
+[controller03][DEBUG ] Unpacking python-ceph (0.80.7-1trusty) ...
+[controller03][DEBUG ] Selecting previously unselected package ceph-common.
+[controller03][DEBUG ] Preparing to unpack .../ceph-common_0.80.7-1trusty_amd64.deb ...
+[controller03][DEBUG ] Unpacking ceph-common (0.80.7-1trusty) ...
+[controller03][DEBUG ] Selecting previously unselected package libcryptsetup4.
+[controller03][DEBUG ] Preparing to unpack .../libcryptsetup4_2%3a1.6.1-1ubuntu1_amd64.deb ...
+[controller03][DEBUG ] Unpacking libcryptsetup4 (2:1.6.1-1ubuntu1) ...
+[controller03][DEBUG ] Selecting previously unselected package cryptsetup-bin.
+[controller03][DEBUG ] Preparing to unpack .../cryptsetup-bin_2%3a1.6.1-1ubuntu1_amd64.deb ...
+[controller03][DEBUG ] Unpacking cryptsetup-bin (2:1.6.1-1ubuntu1) ...
+[controller03][DEBUG ] Selecting previously unselected package gdisk.
+[controller03][DEBUG ] Preparing to unpack .../gdisk_0.8.8-1build1_amd64.deb ...
+[controller03][DEBUG ] Unpacking gdisk (0.8.8-1build1) ...
+[controller03][DEBUG ] Selecting previously unselected package xfsprogs.
+[controller03][DEBUG ] Preparing to unpack .../xfsprogs_3.1.9ubuntu2_amd64.deb ...
+[controller03][DEBUG ] Unpacking xfsprogs (3.1.9ubuntu2) ...
+[controller03][DEBUG ] Selecting previously unselected package ceph.
+[controller03][DEBUG ] Preparing to unpack .../ceph_0.80.7-1trusty_amd64.deb ...
+[controller03][DEBUG ] Unpacking ceph (0.80.7-1trusty) ...
+[controller03][DEBUG ] Selecting previously unselected package ceph-fs-common.
+[controller03][DEBUG ] Preparing to unpack .../ceph-fs-common_0.80.7-1trusty_amd64.deb ...
+[controller03][DEBUG ] Unpacking ceph-fs-common (0.80.7-1trusty) ...
+[controller03][DEBUG ] Selecting previously unselected package ceph-mds.
+[controller03][DEBUG ] Preparing to unpack .../ceph-mds_0.80.7-1trusty_amd64.deb ...
+[controller03][DEBUG ] Unpacking ceph-mds (0.80.7-1trusty) ...
+[controller03][DEBUG ] Processing triggers for man-db (2.6.7.1-1) ...
+[controller03][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller03][DEBUG ] 正在设置 libicu52:amd64 (52.1-3) ...
+[controller03][DEBUG ] 正在设置 libsnappy1 (1.1.0-1ubuntu1) ...
+[controller03][DEBUG ] 正在设置 libleveldb1:amd64 (1.15.0-2) ...
+[controller03][DEBUG ] 正在设置 libunwind8 (1.1-2.2ubuntu3) ...
+[controller03][DEBUG ] 正在设置 librados2 (0.80.7-1trusty) ...
+[controller03][DEBUG ] 正在设置 librbd1 (0.80.7-1trusty) ...
+[controller03][DEBUG ] 正在设置 libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+[controller03][DEBUG ] 正在设置 libgoogle-perftools4 (2.1-2ubuntu1) ...
+[controller03][DEBUG ] 正在设置 python-werkzeug (0.9.4+dfsg-1.1ubuntu1) ...
+[controller03][DEBUG ] 正在设置 python-itsdangerous (0.22+dfsg1-1build1) ...
+[controller03][DEBUG ] 正在设置 python-flask (0.10.1-2build1) ...
+[controller03][DEBUG ] 正在设置 python-ceph (0.80.7-1trusty) ...
+[controller03][DEBUG ] 正在设置 ceph-common (0.80.7-1trusty) ...
+[controller03][DEBUG ] 正在设置 libcryptsetup4 (2:1.6.1-1ubuntu1) ...
+[controller03][DEBUG ] 正在设置 cryptsetup-bin (2:1.6.1-1ubuntu1) ...
+[controller03][DEBUG ] 正在设置 gdisk (0.8.8-1build1) ...
+[controller03][DEBUG ] 正在设置 xfsprogs (3.1.9ubuntu2) ...
+[controller03][DEBUG ] 正在设置 ceph-fs-common (0.80.7-1trusty) ...
+[controller03][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller03][DEBUG ] 正在设置 ceph (0.80.7-1trusty) ...
+[controller03][DEBUG ] ceph-all start/running
+[controller03][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller03][DEBUG ] 正在设置 ceph-mds (0.80.7-1trusty) ...
+[controller03][DEBUG ] ceph-mds-all start/running
+[controller03][DEBUG ] Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+[controller03][DEBUG ] Processing triggers for ureadahead (0.100.0-16) ...
+[controller03][INFO  ] Running command: ceph --version
+[controller03][DEBUG ] ceph version 0.80.7 (6c0127fcb58008793d3c8b62d925bc91963672a3)
+Run command: ceph-deploy admin controller01 controller02 controller03
+[ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[ceph_deploy.cli][INFO  ] Invoked (1.5.17): /usr/bin/ceph-deploy admin controller01 controller02 controller03
+[ceph_deploy.admin][DEBUG ] Pushing admin keys and conf to controller01
+[controller01][DEBUG ] connected to host: controller01 
+[controller01][DEBUG ] detect platform information from remote host
+[controller01][DEBUG ] detect machine type
+[controller01][DEBUG ] get remote short hostname
+[controller01][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[ceph_deploy.admin][DEBUG ] Pushing admin keys and conf to controller02
+[controller02][DEBUG ] connected to host: controller02 
+[controller02][DEBUG ] detect platform information from remote host
+[controller02][DEBUG ] detect machine type
+[controller02][DEBUG ] get remote short hostname
+[controller02][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+[ceph_deploy.admin][DEBUG ] Pushing admin keys and conf to controller03
+[controller03][DEBUG ] connected to host: controller03 
+[controller03][DEBUG ] detect platform information from remote host
+[controller03][DEBUG ] detect machine type
+[controller03][DEBUG ] get remote short hostname
+[controller03][DEBUG ] write cluster configuration to /etc/ceph/{cluster}.conf
+Run command on controller01: chmod +r /etc/ceph/ceph.client.admin.keyring
+Run command on controller02: chmod +r /etc/ceph/ceph.client.admin.keyring
+Run command on controller03: chmod +r /etc/ceph/ceph.client.admin.keyring

@@ -1,0 +1,130 @@
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+
+sent 10,776 bytes  received 101 bytes  7,251.33 bytes/sec
+total size is 208,643  speedup is 19.18
+sending incremental file list
+101-Server-1-env.sh
+
+sent 6,648 bytes  received 35 bytes  4,455.33 bytes/sec
+total size is 6,544  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+
+sent 10,776 bytes  received 101 bytes  7,251.33 bytes/sec
+total size is 208,643  speedup is 19.18
+sending incremental file list
+101-Server-2-env.sh
+
+sent 6,648 bytes  received 35 bytes  4,455.33 bytes/sec
+total size is 6,544  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+
+sent 9,397 bytes  received 101 bytes  6,332.00 bytes/sec
+total size is 208,643  speedup is 21.97
+sending incremental file list
+101-Server-3-env.sh
+
+sent 6,639 bytes  received 35 bytes  13,348.00 bytes/sec
+total size is 6,535  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+
+sent 9,397 bytes  received 101 bytes  18,996.00 bytes/sec
+total size is 208,643  speedup is 21.97
+sending incremental file list
+101-Server-4-env.sh
+
+sent 6,639 bytes  received 35 bytes  13,348.00 bytes/sec
+total size is 6,535  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+OpenStack-Install-HA/images/
+OpenStack-Install-HA/mysql_galera/
+
+sent 10,078 bytes  received 111 bytes  6,792.67 bytes/sec
+total size is 208,643  speedup is 20.48
+sending incremental file list
+101-Server-5-env.sh
+
+sent 6,660 bytes  received 35 bytes  4,463.33 bytes/sec
+total size is 6,556  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+OpenStack-Install-HA/mysql_galera/
+
+sent 10,078 bytes  received 108 bytes  6,790.67 bytes/sec
+total size is 208,643  speedup is 20.48
+sending incremental file list
+101-Server-6-env.sh
+
+sent 6,657 bytes  received 35 bytes  4,461.33 bytes/sec
+total size is 6,553  speedup is 0.98
+sending incremental file list
+OpenStack-Install-HA/
+OpenStack-Install-HA/env.sh
+OpenStack-Install-HA/mysql_galera/
+
+sent 10,078 bytes  received 108 bytes  20,372.00 bytes/sec
+total size is 208,643  speedup is 20.48
+sending incremental file list
+101-Server-7-env.sh
+
+sent 6,657 bytes  received 35 bytes  13,384.00 bytes/sec
+total size is 6,553  speedup is 0.98
+sending incremental file list
+mysql_galera/
+
+sent 155 bytes  received 20 bytes  350.00 bytes/sec
+total size is 18,174,256  speedup is 103,852.89
+sending incremental file list
+mysql_galera/
+
+sent 155 bytes  received 20 bytes  116.67 bytes/sec
+total size is 18,174,256  speedup is 103,852.89
+sending incremental file list
+mysql_galera/
+
+sent 155 bytes  received 20 bytes  350.00 bytes/sec
+total size is 18,174,256  speedup is 103,852.89
+sending incremental file list
+images/
+
+sent 102 bytes  received 20 bytes  244.00 bytes/sec
+total size is 13,167,616  speedup is 107,931.28
+sending incremental file list
+Ceph-Install/
+Ceph-Install/.ceph-install-part-1.sh.swp
+Ceph-Install/.ceph-install-part-2.sh.swp
+Ceph-Install/.check-ssh-connect.expect.swp
+Ceph-Install/ceph-install-part-1.sh
+Ceph-Install/ceph-install-part-2.sh
+Ceph-Install/check-ssh-connect.expect
+Ceph-Install/delete-file2-in-file1.sh
+Ceph-Install/gen-server-info-list.sh
+Ceph-Install/gen-ssh-key.expect
+Ceph-Install/conf/
+Ceph-Install/conf/.blank
+Ceph-Install/conf/ceph-admin-node-ext-ip.txt
+Ceph-Install/conf/ceph-client-hostname-info.txt
+Ceph-Install/conf/ceph-client-nodes-hosts.txt
+Ceph-Install/conf/ceph-client-nodes.txt
+Ceph-Install/conf/ceph-client-server-nodes-ext-ip.txt
+Ceph-Install/conf/ceph-mds-ip-hostname-info.txt
+Ceph-Install/conf/ceph-mon-ip-hostname-info.txt
+Ceph-Install/conf/ceph-osd-ip-hostname-info.txt
+Ceph-Install/conf/ceph-server-hostname-info.txt
+Ceph-Install/conf/ceph-server-nodes-hosts.txt
+Ceph-Install/conf/ceph-server-nodes.txt
+Ceph-Install/log/
+Ceph-Install/log/.blank
+
+sent 9,320 bytes  received 948 bytes  20,536.00 bytes/sec
+total size is 47,354  speedup is 4.61

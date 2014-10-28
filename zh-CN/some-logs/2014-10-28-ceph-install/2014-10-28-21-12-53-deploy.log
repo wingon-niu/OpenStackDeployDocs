@@ -1,0 +1,136 @@
+Welcome
+Checking OpenStack cluster servers...
+------------------------------
+can ping 192.168.11.21
+can ping 192.168.11.22
+can ping 192.168.11.23
+can ping 192.168.11.24
+can ping 192.168.11.48
+can ping 192.168.11.49
+can ping 192.168.11.50
+------------------------------
+can ssh 192.168.11.21
+can ssh 192.168.11.22
+can ssh 192.168.11.23
+can ssh 192.168.11.24
+can ssh 192.168.11.48
+can ssh 192.168.11.49
+can ssh 192.168.11.50
+------------------------------
+All servers are now running.
+1.Copy files to OpenStack cluster servers, use 'screen -r niu' to see the process...
+....
+Modify /etc/hosts for ceph nodes
+192.168.11.48
+receiving incremental file list
+hosts
+
+sent 43 bytes  received 491 bytes  356.00 bytes/sec
+total size is 400  speedup is 0.75
+sending incremental file list
+hosts
+
+sent 90 bytes  received 41 bytes  262.00 bytes/sec
+total size is 400  speedup is 3.05
+192.168.11.49
+receiving incremental file list
+hosts
+
+sent 49 bytes  received 491 bytes  360.00 bytes/sec
+total size is 400  speedup is 0.74
+sending incremental file list
+hosts
+
+sent 90 bytes  received 41 bytes  262.00 bytes/sec
+total size is 400  speedup is 3.05
+192.168.11.50
+receiving incremental file list
+hosts
+
+sent 49 bytes  received 491 bytes  1,080.00 bytes/sec
+total size is 400  speedup is 0.74
+sending incremental file list
+hosts
+
+sent 91 bytes  received 41 bytes  88.00 bytes/sec
+total size is 400  speedup is 3.03
+192.168.11.22
+receiving incremental file list
+hosts
+
+sent 49 bytes  received 372 bytes  842.00 bytes/sec
+total size is 281  speedup is 0.67
+sending incremental file list
+hosts
+
+sent 91 bytes  received 41 bytes  88.00 bytes/sec
+total size is 281  speedup is 2.13
+192.168.11.21
+receiving incremental file list
+hosts
+
+sent 49 bytes  received 372 bytes  842.00 bytes/sec
+total size is 281  speedup is 0.67
+sending incremental file list
+hosts
+
+sent 91 bytes  received 41 bytes  88.00 bytes/sec
+total size is 281  speedup is 2.13
+192.168.11.24
+receiving incremental file list
+hosts
+
+sent 49 bytes  received 444 bytes  986.00 bytes/sec
+total size is 353  speedup is 0.72
+sending incremental file list
+hosts
+
+sent 91 bytes  received 41 bytes  88.00 bytes/sec
+total size is 353  speedup is 2.67
+### 1 ### : Now installing ceph cluster part 1, please wait, use 'screen -r niu' to see the process...
+...................................................
+Get and save log files...
+receiving incremental file list
+2014-10-28-21-12-53-ceph-install-part-1-192.168.11.24.log
+
+sent 43 bytes  received 6,437 bytes  4,320.00 bytes/sec
+total size is 6,294  speedup is 0.97
+Copy ssh public key of ceph admin node to ceph client and server nodes
+receiving incremental file list
+id_rsa.pub
+
+sent 43 bytes  received 487 bytes  1,060.00 bytes/sec
+total size is 391  speedup is 0.74
+sending incremental file list
+id_rsa.pub
+
+sent 487 bytes  received 35 bytes  348.00 bytes/sec
+total size is 391  speedup is 0.75
+sending incremental file list
+id_rsa.pub
+
+sent 487 bytes  received 35 bytes  1,044.00 bytes/sec
+total size is 391  speedup is 0.75
+sending incremental file list
+id_rsa.pub
+
+sent 487 bytes  received 35 bytes  1,044.00 bytes/sec
+total size is 391  speedup is 0.75
+sending incremental file list
+id_rsa.pub
+
+sent 487 bytes  received 35 bytes  1,044.00 bytes/sec
+total size is 391  speedup is 0.75
+sending incremental file list
+id_rsa.pub
+
+sent 487 bytes  received 35 bytes  1,044.00 bytes/sec
+total size is 391  speedup is 0.75
+### 2 ### : Now installing ceph cluster part 2, please wait, use 'screen -r niu' to see the process...
+....................................................................................................................................................................................
+Get and save log files...
+receiving incremental file list
+2014-10-28-21-12-53-ceph-install-part-2-192.168.11.24.log
+
+sent 43 bytes  received 145,590 bytes  291,266.00 bytes/sec
+total size is 145,420  speedup is 1.00

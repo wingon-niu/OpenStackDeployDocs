@@ -1,0 +1,120 @@
+Now running ceph-install-part-1.sh on hk02
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+expect is already the newest version.
+wget is already the newest version.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+gpg: no valid OpenPGP data found.
+deb http://ceph.com/debian-firefly/ trusty main
+忽略 http://172.16.0.63 precise-updates/icehouse InRelease
+忽略 http://192.168.11.63 trusty InRelease
+命中 http://172.16.0.63 precise-updates/icehouse Release.gpg
+忽略 http://192.168.11.63 trusty-security InRelease
+命中 http://172.16.0.63 precise-updates/icehouse Release
+忽略 http://192.168.11.63 trusty-updates InRelease
+命中 http://192.168.11.63 trusty Release.gpg
+命中 http://192.168.11.63 trusty-security Release.gpg
+命中 http://192.168.11.63 trusty-updates Release.gpg
+命中 http://192.168.11.63 trusty Release
+命中 http://192.168.11.63 trusty-security Release
+命中 http://192.168.11.63 trusty-updates Release
+命中 http://172.16.0.63 precise-updates/icehouse/main amd64 Packages
+命中 http://172.16.0.63 precise-updates/icehouse/main i386 Packages
+命中 http://192.168.11.63 trusty/main Sources
+命中 http://192.168.11.63 trusty/restricted Sources
+命中 http://192.168.11.63 trusty/universe Sources
+命中 http://192.168.11.63 trusty/multiverse Sources
+命中 http://192.168.11.63 trusty/main amd64 Packages
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh_CN
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-zh
+命中 http://192.168.11.63 trusty/restricted amd64 Packages
+命中 http://192.168.11.63 trusty/universe amd64 Packages
+忽略 http://172.16.0.63 precise-updates/icehouse/main Translation-en
+命中 http://192.168.11.63 trusty/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty/main i386 Packages
+命中 http://192.168.11.63 trusty/restricted i386 Packages
+命中 http://192.168.11.63 trusty/universe i386 Packages
+命中 http://192.168.11.63 trusty/multiverse i386 Packages
+命中 http://192.168.11.63 trusty/main Translation-zh_CN
+命中 http://192.168.11.63 trusty/main Translation-en
+命中 http://192.168.11.63 trusty/multiverse Translation-zh_CN
+命中 http://192.168.11.63 trusty/multiverse Translation-en
+命中 http://192.168.11.63 trusty/restricted Translation-zh_CN
+命中 http://192.168.11.63 trusty/restricted Translation-en
+命中 http://192.168.11.63 trusty/universe Translation-zh_CN
+命中 http://192.168.11.63 trusty/universe Translation-en
+命中 http://192.168.11.63 trusty-security/main Sources
+命中 http://192.168.11.63 trusty-security/restricted Sources
+命中 http://192.168.11.63 trusty-security/universe Sources
+命中 http://192.168.11.63 trusty-security/multiverse Sources
+命中 http://192.168.11.63 trusty-security/main amd64 Packages
+命中 http://192.168.11.63 trusty-security/restricted amd64 Packages
+命中 http://192.168.11.63 trusty-security/universe amd64 Packages
+命中 http://192.168.11.63 trusty-security/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty-security/main i386 Packages
+命中 http://192.168.11.63 trusty-security/restricted i386 Packages
+命中 http://192.168.11.63 trusty-security/universe i386 Packages
+命中 http://192.168.11.63 trusty-security/multiverse i386 Packages
+命中 http://192.168.11.63 trusty-security/main Translation-en
+命中 http://192.168.11.63 trusty-security/multiverse Translation-en
+命中 http://192.168.11.63 trusty-security/restricted Translation-en
+命中 http://192.168.11.63 trusty-security/universe Translation-en
+命中 http://192.168.11.63 trusty-updates/main Sources
+命中 http://192.168.11.63 trusty-updates/restricted Sources
+命中 http://192.168.11.63 trusty-updates/universe Sources
+命中 http://192.168.11.63 trusty-updates/multiverse Sources
+命中 http://192.168.11.63 trusty-updates/main amd64 Packages
+命中 http://192.168.11.63 trusty-updates/restricted amd64 Packages
+命中 http://192.168.11.63 trusty-updates/universe amd64 Packages
+命中 http://192.168.11.63 trusty-updates/multiverse amd64 Packages
+命中 http://192.168.11.63 trusty-updates/main i386 Packages
+命中 http://192.168.11.63 trusty-updates/restricted i386 Packages
+命中 http://192.168.11.63 trusty-updates/universe i386 Packages
+命中 http://192.168.11.63 trusty-updates/multiverse i386 Packages
+命中 http://192.168.11.63 trusty-updates/main Translation-en
+命中 http://192.168.11.63 trusty-updates/multiverse Translation-en
+命中 http://192.168.11.63 trusty-updates/restricted Translation-en
+命中 http://192.168.11.63 trusty-updates/universe Translation-en
+忽略 http://192.168.11.63 trusty/main Translation-zh
+忽略 http://192.168.11.63 trusty/multiverse Translation-zh
+忽略 http://192.168.11.63 trusty/restricted Translation-zh
+忽略 http://192.168.11.63 trusty/universe Translation-zh
+命中 http://ceph.com trusty InRelease
+命中 http://ceph.com trusty/main i386 Packages
+忽略 http://ceph.com trusty/main Translation-zh_CN
+忽略 http://ceph.com trusty/main Translation-zh
+忽略 http://ceph.com trusty/main Translation-en
+错误 http://ceph.com trusty/main amd64 Packages
+  
+错误 http://ceph.com trusty/main amd64 Packages
+  
+命中 http://ceph.com trusty/main amd64 Packages
+正在读取软件包列表...
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+ceph-deploy is already the newest version.
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
+spawn rm -f /root/.ssh/id_rsa
+spawn ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+fd:cd:aa:e5:1c:9d:0c:90:22:0c:42:d7:56:76:ed:d2 root@hk02
+The key's randomart image is:
++--[ RSA 2048]----+
+| .o o. .o ..     |
+|   o oo. . ..    |
+|     .o . oo     |
+|       . o..E    |
+|        S ...    |
+|           . * . |
+|            + *  |
+|           + o   |
+|          ..+    |
++-----------------+
