@@ -10,7 +10,7 @@
 
 ### 修正记录　2014-10-18 ###
 
-- <font color=blue>A04</font>　解决了与memcached相关的部分，在Haproxy上面将三台控制节点上面的memcached做成了主备式，其它相关服务（Horizon、nova-novncproxy、nova-consoleauth）可以同时运行在三台控制节点上面。
+- <font color=blue>A04</font>　解决了与memcached相关的部分，在Haproxy上面将三台控制节点上面的memcached做成了主备式，所有相关服务（Horizon、nova-novncproxy、nova-consoleauth、memcached）可以同时运行在三台控制节点上面。
 
 ### 修正记录　2014-10-12 ###
 
