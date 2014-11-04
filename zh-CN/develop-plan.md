@@ -12,7 +12,7 @@
 
 - <font color=blue>（已实现 2014-10-18）</font>在Haproxy中将memcached改为主备式。
 
-- 引入Ceph，来提供共享存储。
+- <font color=blue>（已实现 2014-11-02）</font>实现自动化安装部署ceph，并且glance、cinder、nova-compute使用ceph block devices做为后端存储。
 
 - 实现对已安装的OpenStack组件进行完全卸载的功能。
 
