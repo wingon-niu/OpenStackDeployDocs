@@ -166,6 +166,8 @@
 - 安装部署过程中具体做了哪些操作步骤，请查看本网站首页上面《架构介绍》中的相关部分。
 - 上图中的日志文件，可以在如下链接中访问到：
 - [https://github.com/wingon-niu/OpenStackDeployDocs/tree/master/zh-CN/some-logs/2014-10-05](https://github.com/wingon-niu/OpenStackDeployDocs/tree/master/zh-CN/some-logs/2014-10-05 "OpenStackDeploy-logs-2014-10-05") 
+- 如果使用Ceph做为后端存储，则安装Ceph的时候也会生成对应的日志文件，示例见下面的链接：
+- [https://github.com/wingon-niu/OpenStackDeployDocs/tree/master/zh-CN/some-logs/2014-10-28-ceph-install](https://github.com/wingon-niu/OpenStackDeployDocs/tree/master/zh-CN/some-logs/2014-10-28-ceph-install "OpenStackDeploy-logs-2014-10-28-ceph-install") 
 
 <br>
 ##### <center> 2014-10-7 14:10:12 </center> #####
