@@ -130,7 +130,7 @@
 
 ![下载mysql_galera_cirros](http://www.lightcloud.cc/static/img/mysql_galera_images.png)
 
-- 如果要使用Ceph做为glance、cinder、nova-compute的后端存储，则需要运行下面两条命令，以更新配置信息，在后面的安装过程中将使用第2个前端节点做为ceph-deploy admin node，所有的计算节点做为mon和osd，第1个计算节点做为mds。同时前提条件是最少有2个计算节点。（由于现在尚未在网页上面实现安装配置Ceph的功能，所以需要手动执行这个步骤。如果不使用Ceph，则不需要执行这个步骤。）
+- 如果要使用Ceph做为glance、cinder、nova-compute的后端存储，则需要运行下面两条命令，以更新配置信息，在后面的安装过程中将使用第2个前端节点做为ceph-deploy admin node，所有的计算节点做为mon和osd，第1个计算节点做为mds。同时前提条件是最少有2个计算节点，而且所有计算节点与控制节点不能使用相同的服务器。（由于现在尚未在网页上面实现安装配置Ceph的功能，所以需要手动执行这个步骤。如果不使用Ceph，则不需要执行这个步骤。）
 
     cd /root/OpenStackDeploy
 
