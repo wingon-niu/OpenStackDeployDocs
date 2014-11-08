@@ -130,7 +130,7 @@
 
 ![下载mysql_galera_cirros](http://www.lightcloud.cc/static/img/mysql_galera_images.png)
 
-- 在确保上面的下载命令成功完成之后，运行下面两条命令，然后等待命令执行完成。
+- 在确保上面的下载命令成功完成之后，运行下面两条命令，然后等待命令执行完成，就可全部完成OpenStack集群的安装部署。
 
     cd /root/OpenStackDeploy
 
