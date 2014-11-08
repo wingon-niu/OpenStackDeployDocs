@@ -169,6 +169,13 @@
 - 如果使用Ceph做为后端存储，则安装Ceph的时候也会生成对应的日志文件，示例见下面的链接：
 - [https://github.com/wingon-niu/OpenStackDeployDocs/tree/master/zh-CN/some-logs/2014-10-28-ceph-install](https://github.com/wingon-niu/OpenStackDeployDocs/tree/master/zh-CN/some-logs/2014-10-28-ceph-install "OpenStackDeploy-logs-2014-10-28-ceph-install") 
 
+### 3.4 在安装部署结束之后启动虚拟机 ###
+
+- 使用admin用户在OpenStack Horizon界面登录，可以看到已经创建了相关的路由器、网络、安全组、镜像、云硬盘（如果使用Ceph）等等。
+- 如果使用Ceph，在创建虚拟机的时候，可以选择“从云硬盘启动”或者“从镜像启动（创建一个新卷）”。
+- 如果未使用Ceph，在创建虚拟机的时候，可以选择“从镜像启动”。
+
+
 <br>
 ##### <center> 2014-10-7 14:10:12 </center> #####
 <br>
