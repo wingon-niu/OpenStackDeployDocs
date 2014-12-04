@@ -1,12 +1,10 @@
 # 开发计划 #
 
-##### 　　　　本文档用于说明下一步将要开发的内容或者将要实现的功能。 #####
-
-<br><br>
+<br><br><br>
 
 ### 计划内容　　2014-10-07 ###
 
-- <font color=blue>（已实现 2014-10-12）</font>实现OpenStack网络模式采用neutron时，管理网络和外部网络共用同一个网口，Tunnel网络单独使用一个网口。（这个功能其实现在就有，需要修改的地方，是keepalived和haproxy的配置方法。）
+- <font color=blue>（已实现 2014-10-12）</font>实现OpenStack网络模式采用neutron时，管理网络和外部网络共用同一个网口，Tunnel网络单独使用一个网口。
 
 - <font color=blue>（已实现 2014-10-12）</font>实现neutron下vxlan的配置。
 
@@ -16,7 +14,7 @@
 
 - <font color=blue>（已实现 2014-11-15）</font>跟随OpenStack本身的升级，升级到安装部署 Juno 版本。
 
-- 实现对已安装的OpenStack组件进行完全卸载的功能。
+- <font color=blue>（已实现 2014-11-29）</font>实现对OpenStack集群和Ceph集群进行完全卸载的功能。
 
 - 实现在OpenStack集群中新增计算节点的功能。
 
@@ -26,10 +24,8 @@
 
 - <font color=red>（寻合作）</font>实现在同样的安装部署方式下，支持RedHat/CentOS等操作系统。
 
-- <font color=red>（寻合作）</font>实现像FUEL那样可以连操作系统一起安装的功能。
+- <font color=red>（寻合作）</font>实现像FUEL那样可以直接在裸机上连同操作系统一起安装的功能。
 
-- 网站上的所有文档，都放上Github，同时寻高手，给翻译成E文。
-
-
+- 网站上的所有文档，都放上Github，同时寻高手翻译成E文。
 
 <br><br><br>
