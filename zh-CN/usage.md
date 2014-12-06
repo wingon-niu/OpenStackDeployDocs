@@ -163,7 +163,7 @@
 
     ./download-pkg.sh
 
-- 上面的 ./download-pkg.sh 用于从互联网下载 Mysql Galera 的安装包和cirros镜像文件，共3个文件，总共30M左右。命令成功结束之后，会在 /root 目录下，创建两个子目录，mysql_galera 和 images，在里面存放下载到的文件。请务必保证这3个文件能够正常下载成功，后续的安装部署过程中会使用到。正常的下载文件结果如下图所示：
+- 上面的 ./download-pkg.sh 用于从互联网下载 Mysql Galera 的安装包和cirros镜像文件，共3个文件，总共30M左右。命令成功结束之后，会在 /root/OpenStackDeploy 目录下，创建两个子目录，mysql_galera 和 images，在里面存放下载到的文件。请务必保证这3个文件能够正常下载成功，后续的安装部署过程中会使用到。正常的下载文件结果如下图所示：
 
 ![下载mysql_galera_cirros](http://www.lightcloud.cc/static/img/mysql_galera_images.png)
 
