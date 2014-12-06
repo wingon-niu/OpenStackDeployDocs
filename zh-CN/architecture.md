@@ -4,13 +4,13 @@
 
 - OpenStack集群的HA架构实现方式与OpenStack官方文档中的一致，采用主主式（Active/Active）。
 - 在两台前端节点上面运行着Keepalived和Haproxy，其中Keepalived负责管理虚拟IP，Haproxy负责对三台控制节点上面的相关服务进行负载均衡。
-- 具体架构请参考下图：
+- 具体架构请参考下图(网络组件使用nova-network)：
 
 ![architecture_nova_network](http://www.lightcloud.cc/static/img/architecture_nova_network.png)
 
-## 2. Master机与OpenStack集群的关系 ##
+## 2. Master节点与OpenStack集群的关系 ##
 
-- 目前，Master机本身不能是OpenStack集群中的服务器。需要一台OpenStack集群以外的单独的服务器，做为Master机。在Master机上面，向OpenStack集群中的服务器，发出各种安装部署时需要执行的命令。
+- 目前，Master节点本身不能是OpenStack集群中的服务器。需要一台OpenStack集群以外的单独的服务器，做为Master节点。在Master节点上面，向OpenStack集群中的服务器，发出各种安装部署时需要执行的命令。
 
 ## 3. OpenStackDeploy安装部署程序运行流程 ##
 
@@ -18,11 +18,11 @@
 
 ### 3.0 连通性检查 ###
 
-- 首先检查Master机是否能够正常访问到OpenStack集群中的所有服务器，通过ping和ssh。
+- 首先检查Master节点是否能够正常访问到OpenStack集群中的所有服务器，通过ping和ssh。
 
 ### 3.1 复制文件 ###
 
-- 将安装部署过程中需要的文件，从Master机复制到所有OpenStack集群服务器上面。
+- 将安装部署过程中需要的文件，从Master节点复制到所有OpenStack集群服务器上面。
 
 ### 3.2 基本环境安装配置 ###
 
